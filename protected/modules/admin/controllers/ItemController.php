@@ -76,28 +76,19 @@ class ItemController extends Controller
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
-	/**
-	 * Lists all models.
-	 */
-	public function actionIndex()
-	{
-		$dataProvider=new CActiveDataProvider('Item');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
 
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionIndex()
 	{
 		$model=new Item('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Item']))
 			$model->attributes=$_GET['Item'];
 
-		$this->render('admin',array(
+                $this->layout = 'column1';
+		$this->render('index',array(
 			'model'=>$model,
 		));
 	}
