@@ -8,7 +8,7 @@
  * @property string $customer_name
  * @property string $customer_phone
  * @property string $customer_email
- * @property string $customer_username
+ * @property string $customer_civil_id
  * @property string $customer_password
  *
  * The followings are the available model relations:
