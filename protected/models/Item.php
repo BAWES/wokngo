@@ -6,13 +6,14 @@
  * The followings are the available columns in table 'item':
  * @property integer $item_id
  * @property integer $customer_id
- * @property integer $charity_id
  * @property string $item_name
  * @property string $item_ingredients
+ * @property string $item_image
+ * @property string $item_description
  *
  * The followings are the available model relations:
+ * @property Approval[] $approvals
  * @property Customer $customer
- * @property Charity $charity
  * @property Sale[] $sales
  */
 class Item extends CActiveRecord {
@@ -31,12 +32,14 @@ class Item extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('item_id, customer_id, charity_id, item_name, item_ingredients', 'required'),
-            array('item_id, customer_id, charity_id', 'numerical', 'integerOnly' => true),
+            array('item_id, customer_id, item_name, item_ingredients', 'required'),
+            array('item_id, customer_id', 'numerical', 'integerOnly' => true),
             array('item_name', 'length', 'max' => 120),
+            array('item_image', 'length', 'max' => 80),
+            array('item_description', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('item_id, customer_id, charity_id, item_name, item_ingredients', 'safe', 'on' => 'search'),
+            array('item_id, customer_id, item_name, item_ingredients, item_image, item_description', 'safe', 'on' => 'search'),
         );
     }
 
@@ -47,8 +50,8 @@ class Item extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
+            'approvals' => array(self::HAS_MANY, 'Approval', 'item_id'),
             'customer' => array(self::BELONGS_TO, 'Customer', 'customer_id'),
-            'charity' => array(self::BELONGS_TO, 'Charity', 'charity_id'),
             'sales' => array(self::HAS_MANY, 'Sale', 'item_id'),
         );
     }
@@ -60,9 +63,10 @@ class Item extends CActiveRecord {
         return array(
             'item_id' => 'Item',
             'customer_id' => 'Customer',
-            'charity_id' => 'Charity',
             'item_name' => 'Item Name',
             'item_ingredients' => 'Item Ingredients',
+            'item_image' => 'Item Image',
+            'item_description' => 'Item Description',
         );
     }
 
@@ -85,9 +89,10 @@ class Item extends CActiveRecord {
 
         $criteria->compare('item_id', $this->item_id);
         $criteria->compare('customer_id', $this->customer_id);
-        $criteria->compare('charity_id', $this->charity_id);
         $criteria->compare('item_name', $this->item_name, true);
         $criteria->compare('item_ingredients', $this->item_ingredients, true);
+        $criteria->compare('item_image', $this->item_image, true);
+        $criteria->compare('item_description', $this->item_description, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
