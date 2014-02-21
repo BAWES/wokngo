@@ -4,7 +4,6 @@ class DefaultController extends Controller {
 
     public function actionIndex() {
         $this->layout='column1';
-        echo "YESYESYESYS";
         
         $this->render('index');
     }
