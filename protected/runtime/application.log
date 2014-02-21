@@ -452,3 +452,31 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/wokngo/index.php/admin
 ---
+2014/02/21 12:29:01 [error] [php] Undefined variable: model (C:\wamp\www\wokngo\protected\modules\admin\views\item\index.php:38)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(869): ItemController->renderFile()
+#1 C:\wamp\yii\framework\web\CController.php(782): ItemController->renderPartial()
+#2 C:\wamp\www\wokngo\protected\modules\admin\controllers\ItemController.php(87): ItemController->render()
+#3 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): ItemController->actionIndex()
+#4 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\yii\framework\web\CController.php(286): ItemController->runAction()
+#6 C:\wamp\yii\framework\web\CController.php(265): ItemController->runActionWithFilters()
+#7 C:\wamp\yii\framework\web\CWebApplication.php(282): ItemController->run()
+#8 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/admin/item/index
+2014/02/21 12:37:57 [error] [php] Undefined variable: model (C:\wamp\www\wokngo\protected\modules\admin\views\customer\index.php:38)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(869): CustomerController->renderFile()
+#1 C:\wamp\yii\framework\web\CController.php(782): CustomerController->renderPartial()
+#2 C:\wamp\www\wokngo\protected\modules\admin\controllers\CustomerController.php(88): CustomerController->render()
+#3 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): CustomerController->actionIndex()
+#4 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\yii\framework\web\CController.php(286): CustomerController->runAction()
+#6 C:\wamp\yii\framework\web\CController.php(265): CustomerController->runActionWithFilters()
+#7 C:\wamp\yii\framework\web\CWebApplication.php(282): CustomerController->run()
+#8 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/admin/customer/index
