@@ -3,7 +3,7 @@
 /* @var $model Item */
 
 $this->breadcrumbs=array(
-	'Items'=>array('index'),
+	'Boxes'=>array('index'),
 	$model->item_id,
 );
 
@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Item #<?php echo $model->item_id; ?></h1>
+<h1>View Box #<?php echo $model->item_id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

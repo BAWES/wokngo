@@ -3,7 +3,7 @@
 /* @var $model Item */
 
 $this->breadcrumbs=array(
-	'Items'=>array('index'),
+	'Boxes'=>array('index'),
 	'Create',
 );
 
@@ -13,6 +13,6 @@ $this->menu=array(
 );
 ?>
 
-<h1>Create Item</h1>
+<h1>Create Box</h1>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>
