@@ -1,0 +1,14 @@
+
+@media screen and (min-width:62.5em) { 
+    /*fix drop-float issue*/
+    nav li{overflow: auto; zoom:1; float:left;}
+    #wokersArea,#feeds,#about{overflow: auto; zoom:1; float:left;}
+    .wokersList .boxList{position:relative;}
+    
+    #socialLinks{display:block; position:absolute; top:10px;right:0; width:156px;}
+    #socialLinks a{display:block; width:40px; height:40px; background:url(../images/socialicons.jpg) top left no-repeat;
+                   margin-right:12px;}
+    #socialLinks a.facebook{background-position: 0; position:absolute; top:0; left:0;}
+    #socialLinks a.twitter{background-position: -40px 0; position:absolute; top:0; left:52px}
+    #socialLinks a.instagram{background-position: -80px 0; position:absolute; top:0; left:104px;}
+}
