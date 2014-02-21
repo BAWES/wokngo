@@ -77,27 +77,17 @@ class CustomerController extends Controller
 	}
 
 	/**
-	 * Lists all models.
+	 * Manages all models.
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Customer');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
-	/**
-	 * Manages all models.
-	 */
-	public function actionAdmin()
-	{
+                $this->layout = "column1";
 		$model=new Customer('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Customer']))
 			$model->attributes=$_GET['Customer'];
 
-		$this->render('admin',array(
+		$this->render('index',array(
 			'model'=>$model,
 		));
 	}
