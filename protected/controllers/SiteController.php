@@ -25,8 +25,9 @@ class SiteController extends Controller {
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
-        /*
+        /* 
          * SOAP TEST **
+         * Use this to test the integration
          * 
         $client = new SoapClient('http://localhost/wokngo/index.php/service/soap');
         echo $client->deleteCustomer(2);
