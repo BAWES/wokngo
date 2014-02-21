@@ -31,7 +31,10 @@
                     'lastItemCssClass'=>'floatRight',
 			'items'=>array(
 				array('label'=>'Dashboard', 'url'=>array('/admin/default/index')),
-				array('label'=>'Admins', 'url'=>array('/admin/admin/index')),
+				array('label'=>'Customers', 'url'=>array('/admin/customer/index')),
+				array('label'=>'Boxes', 'url'=>array('/admin/item/index')),
+				array('label'=>'Sales', 'url'=>array('/admin/sale/index')),
+				array('label'=>'Approval', 'url'=>array('/admin/approval/index')),
 				array('label'=>'Login', 'url'=>array('/admin/default/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/admin/default/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
