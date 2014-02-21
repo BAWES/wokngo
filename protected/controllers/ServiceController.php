@@ -16,7 +16,7 @@ class ServiceController extends Controller {
      * @param string customer Name
      * @param string customer Phone Number
      * @param string customer Email
-     * @param int customer Civil Id
+     * @param string customer Civil Id
      * @return string confirmation message "created"
      * @soap
      */
@@ -55,7 +55,6 @@ class ServiceController extends Controller {
 
         $customer = Customer::model()->findByPk($customerId);
         if ($customer) {
-            $customer->scenario = 'changePw';
             $customer->customer_id = $customerId;
             $customer->customer_name = $customerName;
             $customer->customer_phone = $customerPhone;
