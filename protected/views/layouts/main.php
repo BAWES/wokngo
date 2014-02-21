@@ -32,10 +32,6 @@
 				array('label'=>'Home', 'url'=>array('/site/index')),
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Charity', 'url'=>array('/charity/admin')),
-				array('label'=>'Items', 'url'=>array('/item/admin')),
-				array('label'=>'Customers', 'url'=>array('/customer/admin')),
-				array('label'=>'Sales', 'url'=>array('/sale/admin')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
