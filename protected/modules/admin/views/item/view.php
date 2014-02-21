@@ -8,11 +8,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Item', 'url'=>array('index')),
-	array('label'=>'Create Item', 'url'=>array('create')),
-	array('label'=>'Update Item', 'url'=>array('update', 'id'=>$model->item_id)),
-	array('label'=>'Delete Item', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->item_id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Item', 'url'=>array('admin')),
+	array('label'=>'Manage Boxes', 'url'=>array('index')),
+	array('label'=>'Update Box', 'url'=>array('update', 'id'=>$model->item_id)),
+	array('label'=>'Delete Box', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->item_id),'confirm'=>'Are you sure you want to delete this item?')),
 );
 ?>
 
