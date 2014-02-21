@@ -16,12 +16,11 @@ class ServiceController extends Controller {
      * @param string customer Name
      * @param string customer Phone Number
      * @param string customer Email
-     * @param string customer Username
-     * @param string customer Password
+     * @param int customer Civil Id
      * @return string confirmation message "created"
      * @soap
      */
-    public function createCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerUsername, $customerPassword) {
+    public function createCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId) {
         $customerId = (int) $customerId;
 
         $customer = Customer::model()->findByPk($customerId);
@@ -31,8 +30,7 @@ class ServiceController extends Controller {
             $customer->customer_name = $customerName;
             $customer->customer_phone = $customerPhone;
             $customer->customer_email = $customerEmail;
-            $customer->customer_username = $customerUsername;
-            $customer->customer_password = $customerPassword;
+            $customer->customer_civil_id = $customerCivilId;
 
             if ($customer->save())
                 return "created";
@@ -48,12 +46,11 @@ class ServiceController extends Controller {
      * @param string customer Name
      * @param string customer Phone Number
      * @param string customer Email
-     * @param string customer Username
-     * @param string customer Password
+     * @param int customer Civil Id
      * @return string confirmation message "updated"
      * @soap
      */
-    public function updateCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerUsername, $customerPassword) {
+    public function updateCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId) {
         $customerId = (int) $customerId;
 
         $customer = Customer::model()->findByPk($customerId);
@@ -63,8 +60,7 @@ class ServiceController extends Controller {
             $customer->customer_name = $customerName;
             $customer->customer_phone = $customerPhone;
             $customer->customer_email = $customerEmail;
-            $customer->customer_username = $customerUsername;
-            $customer->customer_password = $customerPassword;
+            $customer->customer_civil_id = $customerCivilId;
 
             if ($customer->save())
                 return "updated";
@@ -88,21 +84,19 @@ class ServiceController extends Controller {
     
     /**
      * @param int The Item/Box ID
-     * @param int The charity organization id
      * @param int customer ID
      * @param string item name
      * @param string items ingredients
      * @return string confirmation message "created"
      * @soap
      */
-    public function createItem($itemId, $charityId, $customerId, $itemName, $itemIngredients) {
+    public function createItem($itemId, $customerId, $itemName, $itemIngredients) {
         $itemId = (int) $itemId;
 
         $item = Item::model()->findByPk($itemId);
         if (!$item) {
             $item = new Item();
             $item->item_id = $itemId;
-            $item->charity_id = (int) $charityId;
             $item->customer_id = (int) $customerId;
             $item->item_name = $itemName;
             $item->item_ingredients = $itemIngredients;
@@ -118,21 +112,19 @@ class ServiceController extends Controller {
 
     /**
      * @param int The Item/Box ID
-     * @param int The charity organization id
      * @param int customer ID
      * @param string item name
      * @param string items ingredients
      * @return string confirmation message "updated"
      * @soap
      */
-    public function updateItem($itemId, $charityId, $customerId, $itemName, $itemIngredients) {
+    public function updateItem($itemId, $customerId, $itemName, $itemIngredients) {
         $itemId = (int) $itemId;
 
         $item = Item::model()->findByPk($itemId);
         if ($item) {
             //$item->scenario = 'changePw';
             $item->item_id = $itemId;
-            $item->charity_id = (int) $charityId;
             $item->customer_id = (int) $customerId;
             $item->item_name = $itemName;
             $item->item_ingredients = $itemIngredients;

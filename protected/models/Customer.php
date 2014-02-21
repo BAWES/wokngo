@@ -50,8 +50,13 @@ class Customer extends CActiveRecord {
 
     protected function beforeSave() {
         if (parent::beforeSave()) {
-            if ($this->isNewRecord)
-                $this->customer_password = $this->hashPassword($this->customer_password, $this->salt);
+            if ($this->isNewRecord){
+                //Generate password
+                $uniquePassword = rand(10000,99999);
+                    //email/sms this password to customer
+                
+                $this->customer_password = $this->hashPassword($uniquePassword, $this->salt);
+            }
 
             return true;
         }
