@@ -31,12 +31,7 @@
                     'lastItemCssClass'=>'floatRight',
 			'items'=>array(
 				array('label'=>'Dashboard', 'url'=>array('/admin/default/index')),
-				array('label'=>'Admins', 'url'=>array('/admin/admin/index')), 
-				array('label'=>'Clients', 'url'=>array('/admin/client/index')), 
-				array('label'=>'Agents', 'url'=>array('/admin/agent/index')), 
-				array('label'=>'Tenants', 'url'=>array('/admin/tenant/index')), 
-				array('label'=>'Tenant Files', 'url'=>array('/admin/tenantFile/index')), 
-				array('label'=>'Areas', 'url'=>array('/admin/area/index')), 
+				array('label'=>'Admins', 'url'=>array('/admin/admin/index')),
 				array('label'=>'Login', 'url'=>array('/admin/default/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/admin/default/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
