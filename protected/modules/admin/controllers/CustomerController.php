@@ -2,7 +2,7 @@
 
 class CustomerController extends Controller
 {
-	public $layout='//layouts/column2';
+	public $layout='column2';
 
 	/**
 	 * Displays a particular model.
