@@ -16,8 +16,8 @@ class UserIdentity extends CUserIdentity {
         if ($adminUser != $adminUser || $adminPass != $this->password)
             $this->errorCode = self::ERROR_PASSWORD_INVALID;
         else {
-            $this->_id = $adminRecord->admin_id;
-            $this->setState('name', $adminRecord->admin_name);
+            $this->_id = 1;
+            $this->setState('name', "Admin");
             //user type
             $this->setState('ut', 'admin');
             $this->errorCode = self::ERROR_NONE;

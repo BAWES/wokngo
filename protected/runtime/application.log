@@ -380,3 +380,75 @@ Stack trace:
 REQUEST_URI=/wokngo/index.php/item/1
 HTTP_REFERER=http://localhost/wokngo/index.php/item/admin
 ---
+2014/02/21 11:13:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:13:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:15:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:15:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:15:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:16:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:16:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:17:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
+2014/02/21 11:17:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/admin
+---
