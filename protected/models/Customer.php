@@ -86,11 +86,11 @@ class Customer extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'customer_id' => 'Customer',
-            'customer_name' => 'Customer Name',
-            'customer_phone' => 'Customer Phone',
-            'customer_email' => 'Customer Email',
-            'customer_username' => 'Customer Username',
-            'customer_password' => 'Customer Password',
+            'customer_name' => 'Name',
+            'customer_phone' => 'Phone',
+            'customer_email' => 'Email',
+            'customer_civil_id' => 'Civil ID',
+            'customer_password' => 'Password',
         );
     }
 
@@ -115,7 +115,7 @@ class Customer extends CActiveRecord {
         $criteria->compare('customer_name', $this->customer_name, true);
         $criteria->compare('customer_phone', $this->customer_phone, true);
         $criteria->compare('customer_email', $this->customer_email, true);
-        $criteria->compare('customer_username', $this->customer_username, true);
+        $criteria->compare('customer_civil_id', $this->customer_civil_id, true);
         $criteria->compare('customer_password', $this->customer_password, true);
 
         return new CActiveDataProvider($this, array(
