@@ -32,14 +32,15 @@ class Customer extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('customer_id, customer_name, customer_phone, customer_email, customer_username, customer_password', 'required'),
-            array('customer_id', 'numerical', 'integerOnly' => true),
-            array('customer_name, customer_phone, customer_email, customer_username, customer_password', 'length', 'max' => 120),
+            array('customer_id, customer_name, customer_phone, customer_email, customer_civil_id, customer_password', 'required'),
+            array('customer_id, customer_civil_id', 'numerical', 'integerOnly' => true),
+            array('customer_name, customer_phone, customer_email, customer_password', 'length', 'max' => 120),
             array('customer_email', 'email'),
+            array('customer_civil_id', 'length', 'max'=>42),
             array('customer_password', 'rehashPassword', 'on' => 'changePw'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('customer_id, customer_name, customer_phone, customer_email, customer_username, customer_password', 'safe', 'on' => 'search'),
+            array('customer_id, customer_name, customer_phone, customer_email, customer_civil_id, customer_password', 'safe', 'on' => 'search'),
         );
     }
 
