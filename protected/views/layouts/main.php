@@ -57,7 +57,7 @@
                     <?php if(!Yii::app()->user->isGuest){ ?>
                     <li id="signin"><a href='<?php echo Yii::app()->createUrl('site/logout'); ?>'>Profile</a></li>
                     <?php }else{ ?>
-                    <li id="signin"><a href='<?php echo Yii::app()->createUrl('site/login'); ?>'>Sign in</a></li>
+                    <li id="signin"><a href='<?php echo Yii::app()->createUrl('site/signin'); ?>'>Sign in</a></li>
                     <?php } ?>
                 </ul>
                 <div class='clear'></div>

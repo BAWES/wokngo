@@ -9,6 +9,16 @@ input,select
     border: none;
 }
 
+/* Yii Framework Styling */
+.genericButton{
+    color:#fff;  cursor:pointer; text-align: center;  background:#11739d;
+    font-weight:400;  padding:0.7em 1.2em;
+}
+.genericButton:hover{background-color:#f79211;}
+
+
+
+/* END Yii Framework Styling */
 
 /*start css*/
 body{background:#15191f; font-family: 'Open Sans', sans-serif;}
@@ -414,33 +424,33 @@ header#box a.twitterShare{background-position: -40px 0; }
              padding-right:3%; padding-left:3%;
 }
 #description h1{background:url(../images/layout/titleicons.png) top left no-repeat;
-    margin-top:1em; margin-bottom:1em;
-    color:#333333; font-size:1.125em;/*18px/16*/ font-weight:600; padding-left:2em;}
+                margin-top:1em; margin-bottom:1em;
+                color:#333333; font-size:1.125em;/*18px/16*/ font-weight:600; padding-left:2em;}
 #description p{ padding-left:3em; margin-bottom:2em;
-    color:#999999; font-size:0.75em;/*12/16*/ text-align:justify;}
+                color:#999999; font-size:0.75em;/*12/16*/ text-align:justify;}
 
 
 #ingredients{border-bottom:1px solid #e6e6e6; width:94%;
              padding-right:3%; padding-left:3%; padding-bottom:2em;}
 #ingredients h1{background:url(../images/layout/titleicons.png) 0 -36px no-repeat;
-    margin-top:1em; margin-bottom:1em;
-    color:#333333; font-size:1.125em;/*18px/16*/ font-weight:600; padding-left:2em;}
+                margin-top:1em; margin-bottom:1em;
+                color:#333333; font-size:1.125em;/*18px/16*/ font-weight:600; padding-left:2em;}
 #ingredientList{text-align:center;}
 #ingredients p{font-size:0.9375em;/*15px/16*/}
 
 #sales{border-bottom:1px solid #e6e6e6; width:94%;
-             padding-right:3%; padding-left:3%; padding-bottom:2em;}
+       padding-right:3%; padding-left:3%; padding-bottom:2em;}
 #sales h1{background:url(../images/layout/titleicons.png) 0 -72px no-repeat;
-    margin-top:1em; margin-bottom:1em;
-    color:#333333; font-size:1.125em;/*18px/16*/ font-weight:600; padding-left:2em;}
+          margin-top:1em; margin-bottom:1em;
+          color:#333333; font-size:1.125em;/*18px/16*/ font-weight:600; padding-left:2em;}
 
 /*Box Page Responsive Header Fix*/
 
 @media screen and (min-width:26.5625em) { /*425px*/
     header#box .rank{width:6.866666666666667em;/*103px*/ height:6.133333333333333em;/*122px*/ 
-         padding:0; padding-top:2em; float:left; font-size:0.9375em;/*15px/16*/ text-align:center;}
+                     padding:0; padding-top:2em; float:left; font-size:0.9375em;/*15px/16*/ text-align:center;}
     header#box .rank span{display:block; font-weight:600; font-size:2.4em;/*36px/15*/ margin-top:-0.2em;}
-    
+
     header#box #shareBtn{top:5.2em;right:5em;}
     header#box a.twitterShare{top:4em; right:6em;}
     header#box a.fbShare{top:4em; right:9em;}
@@ -453,10 +463,10 @@ header#box a.twitterShare{background-position: -40px 0; }
 
 @media screen and (min-width:45.3125em) { /*725px*/
     header#box .boxesSold{font-size:0.9375em;/*15px/16*/ text-align:center; height:6.133333333333333em;/*122px/15*/
-        clear:none; float:right; padding:0; width:9.6875em;/*155px/16*/ background:#158cbf; color:#fff;
-    padding-top:2em;}
+                          clear:none; float:right; padding:0; width:9.6875em;/*155px/16*/ background:#158cbf; color:#fff;
+                          padding-top:2em;}
     header#box .boxesSold span{display:block; font-weight:600; font-size:2.4em;/*36px/15*/ margin-top:-0.15em;}
-    
+
     header#box #shareBtn{top:5.2em;right:15em;}
     header#box a.twitterShare{top:4em; right:13em;}
     header#box a.fbShare{top:4em; right:16em;}

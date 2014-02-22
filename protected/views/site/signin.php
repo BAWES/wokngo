@@ -10,8 +10,10 @@ $this->pageHeader = "Sign In";
 
 <p>Please fill out the following form with your login credentials:</p>
 
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
+<div class="form" style="margin-top:1em;">
+<?php 
+CHtml::$afterRequiredLabel = '';
+$form=$this->beginWidget('CActiveForm', array(
 	'id'=>'login-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
@@ -19,7 +21,6 @@ $this->pageHeader = "Sign In";
 	),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
@@ -39,8 +40,8 @@ $this->pageHeader = "Sign In";
 		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Login'); ?>
+	<div class="row buttons" style="margin-top:1em;">
+		<?php echo CHtml::submitButton('Sign in', array('class' => 'genericButton')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

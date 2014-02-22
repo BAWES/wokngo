@@ -71,7 +71,7 @@ If you have business inquiries or other questions, please fill out the following
 	<?php endif; ?>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton('Submit', array('class' => 'genericButton')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
