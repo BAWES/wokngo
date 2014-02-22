@@ -35,9 +35,14 @@ class SiteController extends Controller {
      * About Page
      */
     public function actionAbout() {
-        
-        
         $this->render('about');
+    }
+    
+    /**
+     * Franchise Page
+     */
+    public function actionFranchise() {
+        $this->render('franchise');
     }
 
     /**
