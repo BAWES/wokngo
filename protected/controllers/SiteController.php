@@ -12,11 +12,6 @@ class SiteController extends Controller {
                 'class' => 'CCaptchaAction',
                 'backColor' => 0xFFFFFF,
             ),
-            // page action renders "static" pages stored under 'protected/views/site/pages'
-            // They can be accessed via: index.php?r=site/page&view=FileName
-            'page' => array(
-                'class' => 'CViewAction',
-            ),
         );
     }
 
@@ -53,6 +48,8 @@ class SiteController extends Controller {
      * Displays the contact page
      */
     public function actionContact() {
+        $this->layout = "page";
+        
         $model = new ContactForm;
         if (isset($_POST['ContactForm'])) {
             $model->attributes = $_POST['ContactForm'];
