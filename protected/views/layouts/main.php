@@ -1,59 +1,119 @@
 <?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
+        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/km.main.css?ver=1' type='text/css' />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.carousel.css" type='text/css' />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.theme.css" type='text/css' />
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 8]>
+        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/ie7.css' type='text/css' />
+        <![endif]-->
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-</head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<body>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/owl.carousel.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.touchSwipe.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/unslider.min.js"></script>
 
-<div class="container" id="page">
+        <!--[if lt IE9]>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5shiv.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3mediaqueries.js"></script>
+        <![endif]-->
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+    </head>
+    <body>
+        <header id="mainheader">
+            <div id='logoArea'>
+                <a href="<?php Yii::app()->createUrl('site/index'); ?>" id='logo'><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logo.png" alt='Wok Logo'/></a>
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+                <ul id='socialLinks'>
+                    <li><a href="#" class='facebook'></a></li>
+                    <li><a href="#" class='twitter'></a></li>
+                    <li><a href="#" class='instagram'></a></li>
+                </ul>
 
-	<?php echo $content; ?>
+                <a href="#" id="navLink"></a>
+            </div>
 
-	<div class="clear"></div>
+            <nav>
+                <ul>
+                    <li><a href='<?php Yii::app()->createUrl('site/index'); ?>'>Home</a></li>
+                    <li><a href='#'>About Us</a></li>
+                    <li><a href='menu.pdf'>Menu</a></li>
+                    <li><a href='ranking.html'>Wokers</a></li>
+                    <li><a href='#'>Franchise</a></li>
+                    <li><a href='#'>Contact Us</a></li>
+                    <li id="orderOnline"><a href='http://www.6alabat.com' target="_blank">Order Online <span>From 6alabat.com</span></a></li>
+                    <li id="delivery"><a href='tel:22202225'>For Delivery <span>+965 2220 2225</span></a></li>
+                    <li id="signin"><a href='<?php Yii::app()->createUrl('site/login'); ?>'>Sign in</a></li>
+                </ul>
+                <div class='clear'></div>
+            </nav>
+        </header>
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by Wok&Go.<br/>
-		All Rights Reserved.<br/>
-		Developed by <a href="http://www.khalidm.net">Khalid Al-Mutawa.</a><br/>
-	</div><!-- footer -->
+        <!-- Content Area -->
+        <section id='contentArea'>
+            <section id="content">
+                
+                <?php echo $content; ?>
+                
+            </section>
+        </section>
 
-</div><!-- page -->
+        <!-- Footer Area -->
+        <footer>
+            <section id='feeds'>
+                <!-- Facebook Page Feed -->
+                <section class='socialFeed' id='facebook'>
+                    <a href='#'>WOK&amp;GO On <span>Facebook</span></a>
+                    <div>
+                        Feed goes here
+                    </div>
+                </section>
 
-</body>
+                <!-- Twitter Page Feed -->
+                <section class='socialFeed' id='twitter'>
+                    <a href='#'>WOK&amp;GO On <span>Twitter</span></a>
+                    <div>
+                        Feed goes here
+                    </div>
+                </section>
+
+                <!-- Instagram Page Feed -->
+                <section class='socialFeed' id='instagram'>
+                    <a href='#'>WOK&amp;GO On <span>Instagram</span></a>
+                    <div>
+                        Feed goes here
+                    </div>
+                </section>
+                <div class='clear'></div>
+            </section>
+            
+            <section id='about'>
+                <h1>About us</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                    ex ea commodo consequat incididunt ut labore et dolore magna
+                </p>
+                <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logosmall.png' alt='Wok Logo 2'/>
+                <div class='clear'></div>
+            </section>
+
+            <section id='copyright'>
+                <p>Copyright <?php echo date('Y'); ?> Wok & Go. All Rights Reserved</p>
+                <a href='http://www.khalidm.net' title='Developed by Khalidmnet'><img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/kmnet.png' alt='Khalidm.net Developer Logo'/></a>
+                <div class='clear'></div>
+            </section>
+        </footer>
+    </body>
 </html>
