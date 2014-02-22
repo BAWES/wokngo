@@ -51,7 +51,7 @@
                     <li><a href='menu.pdf'>Menu</a></li>
                     <li><a href='ranking.html'>Wokers</a></li>
                     <li><a href='#'>Franchise</a></li>
-                    <li><a href='#'>Contact Us</a></li>
+                    <li><a href='<?php echo Yii::app()->createUrl('site/contact'); ?>'>Contact Us</a></li>
                     <li id="orderOnline"><a href='http://www.6alabat.com' target="_blank">Order Online <span>From 6alabat.com</span></a></li>
                     <li id="delivery"><a href='tel:22202225'>For Delivery <span>+965 2220 2225</span></a></li>
                     <?php if(!Yii::app()->user->isGuest){ ?>
