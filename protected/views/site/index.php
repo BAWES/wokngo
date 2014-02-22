@@ -307,6 +307,6 @@ $this->pageTitle = Yii::app()->name;
 <section id='orders'>
     <h1>WE DELIVER</h1>
     <p>Please call us 22202225</p>
-    <a href='#'>Order Online</a>
+    <a href='http://www.6alabat.com'>Order Online</a>
 </section>
 <div class='clear'></div>
