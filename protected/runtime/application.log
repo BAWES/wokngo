@@ -1552,3 +1552,180 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/wokngo/index.php/site/favicon.ico
 ---
+2014/02/22 14:18:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/favicon.ico
+---
+2014/02/22 14:20:55 [error] [php] trim() expects parameter 1 to be string, array given (C:\wamp\yii\framework\web\CUrlManager.php:297)
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\views\layouts\main.php(58): CWebApplication->createUrl()
+#1 C:\wamp\yii\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\wamp\yii\framework\web\widgets\CContentDecorator.php(76): SiteController->renderFile()
+#4 C:\wamp\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#5 C:\wamp\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#6 C:\wamp\yii\framework\web\CBaseController.php(206): CContentDecorator->run()
+#7 C:\wamp\yii\framework\web\CBaseController.php(300): SiteController->endWidget()
+#8 C:\wamp\www\wokngo\protected\views\layouts\column1.php(6): SiteController->endContent()
+#9 C:\wamp\yii\framework\web\CBaseController.php(126): require()
+#10 C:\wamp\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#11 C:\wamp\yii\framework\web\CController.php(784): SiteController->renderFile()
+#12 C:\wamp\www\wokngo\protected\controllers\SiteController.php(35): SiteController->render()
+#13 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#14 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\yii\framework\web\CController.php(286): SiteController->runAction()
+#16 C:\wamp\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#17 C:\wamp\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#18 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/site/index
+2014/02/22 14:25:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:25:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ranking.html".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('ranking.html')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('ranking.html')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ranking.ht...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/ranking.html
+HTTP_REFERER=http://localhost/wokngo/index.php/site/menu.pdf
+---
+2014/02/22 14:25:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/ranking.html
+---
+2014/02/22 14:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:25:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:25:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/menu.pdf
+---
+2014/02/22 14:25:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:25:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ranking.html".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('ranking.html')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('ranking.html')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/ranking.ht...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/ranking.html
+HTTP_REFERER=http://localhost/wokngo/index.php/site/menu.pdf
+---
+2014/02/22 14:25:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:30:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:43:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:43:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/22 14:44:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "menu.pdf".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('menu.pdf')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('menu.pdf')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/menu.pdf')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/menu.pdf
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---

@@ -33,7 +33,7 @@
     <body>
         <header id="mainheader">
             <div id='logoArea'>
-                <a href="<?php Yii::app()->createUrl('site/index'); ?>" id='logo'><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logo.png" alt='Wok Logo'/></a>
+                <a href="<?php echo Yii::app()->createUrl('site/index'); ?>" id='logo'><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logo.png" alt='Wok Logo'/></a>
 
                 <ul id='socialLinks'>
                     <li><a href="#" class='facebook'></a></li>
@@ -46,7 +46,7 @@
 
             <nav>
                 <ul>
-                    <li><a href='<?php Yii::app()->createUrl('site/index'); ?>'>Home</a></li>
+                    <li><a href='<?php echo Yii::app()->createUrl('site/index'); ?>'>Home</a></li>
                     <li><a href='#'>About Us</a></li>
                     <li><a href='menu.pdf'>Menu</a></li>
                     <li><a href='ranking.html'>Wokers</a></li>
@@ -54,7 +54,11 @@
                     <li><a href='#'>Contact Us</a></li>
                     <li id="orderOnline"><a href='http://www.6alabat.com' target="_blank">Order Online <span>From 6alabat.com</span></a></li>
                     <li id="delivery"><a href='tel:22202225'>For Delivery <span>+965 2220 2225</span></a></li>
-                    <li id="signin"><a href='<?php Yii::app()->createUrl('site/login'); ?>'>Sign in</a></li>
+                    <?php if(!Yii::app()->user->isGuest){ ?>
+                    <li id="signin"><a href='<?php echo Yii::app()->createUrl('site/logout'); ?>'>Profile</a></li>
+                    <?php }else{ ?>
+                    <li id="signin"><a href='<?php echo Yii::app()->createUrl('site/login'); ?>'>Sign in</a></li>
+                    <?php } ?>
                 </ul>
                 <div class='clear'></div>
             </nav>
