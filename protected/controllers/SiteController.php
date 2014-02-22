@@ -1,6 +1,7 @@
 <?php
 
 class SiteController extends Controller {
+    public $layout = "page";
 
     /**
      * Declares class-based actions.
@@ -20,22 +21,29 @@ class SiteController extends Controller {
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
+        $this->layout = "main";
         /* SOAP TEST */
         /*
         $client = new SoapClient('http://localhost/wokngo/index.php/service/soap');
         echo $client->updateCustomer(1,"Khalid Al-Mutawa","99811042","khalid@khalidm.net","289100500862");
          */
         
-        
         $this->render('index');
+    }
+    
+    /**
+     * About Page
+     */
+    public function actionAbout() {
+        
+        
+        $this->render('about');
     }
 
     /**
      * This is the action to handle external exceptions.
      */
     public function actionError() {
-        $this->layout = "page";
-        
         if ($error = Yii::app()->errorHandler->error) {
             if (Yii::app()->request->isAjaxRequest)
                 echo $error['message'];
@@ -48,8 +56,6 @@ class SiteController extends Controller {
      * Displays the contact page
      */
     public function actionContact() {
-        $this->layout = "page";
-        
         $model = new ContactForm;
         if (isset($_POST['ContactForm'])) {
             $model->attributes = $_POST['ContactForm'];

@@ -15,8 +15,8 @@
         <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/ie7.css' type='text/css' />
         <![endif]-->
 
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon">
 
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/owl.carousel.min.js"></script>
@@ -48,7 +48,7 @@
                 <ul>
                     <li><a href='<?php echo Yii::app()->createUrl('site/index'); ?>'>Home</a></li>
                     <li><a href='#'>About Us</a></li>
-                    <li><a href='menu.pdf'>Menu</a></li>
+                    <li><a href='<?php echo Yii::app()->request->baseUrl; ?>/menu.pdf'>Menu</a></li>
                     <li><a href='ranking.html'>Wokers</a></li>
                     <li><a href='#'>Franchise</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('site/contact'); ?>'>Contact Us</a></li>
