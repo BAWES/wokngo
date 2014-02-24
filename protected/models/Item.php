@@ -60,6 +60,8 @@ class Item extends CActiveRecord {
             'approvals' => array(self::HAS_MANY, 'Approval', 'item_id'),
             'customer' => array(self::BELONGS_TO, 'Customer', 'customer_id'),
             'sales' => array(self::HAS_MANY, 'Sale', 'item_id'),
+            
+            'totalSold' => array(self::STAT, 'Sale', 'item_id','select' => 'SUM(sale_quantity)'),
         );
     }
 
