@@ -42,7 +42,9 @@ class Item extends CActiveRecord {
             array('item_id, customer_id, item_name, item_ingredients, item_image, item_description', 'safe', 'on' => 'search'),
         );
     }
-
+    
+    
+    //Named Scope for Latest Items
     public function latest($limit = 10) {
         $this->getDbCriteria()->mergeWith(array(
             'order' => 'item_id DESC',
