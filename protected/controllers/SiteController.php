@@ -1,6 +1,7 @@
 <?php
 
 class SiteController extends Controller {
+
     public $layout = "page";
 
     /**
@@ -21,35 +22,49 @@ class SiteController extends Controller {
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
-        $this->layout = "main";
         /* SOAP TEST */
         /*
-        $client = new SoapClient('http://localhost/wokngo/index.php/service/soap');
-        echo $client->updateCustomer(1,"Khalid Al-Mutawa","99811042","khalid@khalidm.net","289100500862");
+          $client = new SoapClient('http://localhost/wokngo/index.php/service/soap');
+          echo $client->updateCustomer(1,"Khalid Al-Mutawa","99811042","khalid@khalidm.net","289100500862");
          */
-        
+        $this->layout = "main";
+
         //New Wokers
         $newBoxes = Item::model()->latest()->findAll();
-        
+
         //Trending Wokers
-        //Wokers which are making most sales in the past few days
-        /*
-         * 1) get date of last sale
-         * 2) Group sales of last 5 days before that day, group by item id
-         */
+        //ADJUST TRENDING DAYS UNTIL YOU CAN GET THE AMOUNT YOU WANT WHICH IS 10
+        $trendingDays = 5;
+
+        $lastSale = Sale::model()->latest()->find();
+        $lastSaleDateTime = strtotime($lastSale->sale_datetime);
+
+        $lastSaleDate = date("Y-m-d", $lastSaleDateTime);
+        $DaysBefore = date('Y-m-d', $lastSaleDateTime - 60 * 60 * 24 * $trendingDays);
+
+        $items = Item::model()->with(array(
+                    'sales' => array(
+                        'select' => false,
+                        'joinType' => 'INNER JOIN',
+                        'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$DaysBefore'",
+                        'order' => 'sales.sale_quantity DESC'
+            )))->findAll();
         
-        $this->render('index',array(
-            'newBoxes'=>$newBoxes,
+        
+        //TOP 10 WOKERS
+
+        $this->render('index', array(
+            'newBoxes' => $newBoxes,
         ));
     }
-    
+
     /**
      * About Page
      */
     public function actionAbout() {
         $this->render('about');
     }
-    
+
     /**
      * Franchise Page
      */
