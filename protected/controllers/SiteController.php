@@ -29,10 +29,7 @@ class SiteController extends Controller {
          */
         
         //New Wokers
-        $criteria = new CDbCriteria();
-        $criteria->order = "item_id desc";
-        $criteria->limit = 10;
-        $newBoxes = Item::model()->findAll($criteria);
+        $newBoxes = Item::model()->latest()->findAll();
         
         //Trending Wokers
         //Wokers which are making most sales in the past few days
