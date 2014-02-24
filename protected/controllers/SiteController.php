@@ -33,29 +33,34 @@ class SiteController extends Controller {
         $newBoxes = Item::model()->latest()->findAll();
 
         //Trending Wokers
-        //ADJUST TRENDING DAYS UNTIL YOU CAN GET THE AMOUNT YOU WANT WHICH IS 10
-        $trendingDays = 5;
-
-        $lastSale = Sale::model()->latest()->find();
-        $lastSaleDateTime = strtotime($lastSale->sale_datetime);
-
-        $lastSaleDate = date("Y-m-d", $lastSaleDateTime);
-        $DaysBefore = date('Y-m-d', $lastSaleDateTime - 60 * 60 * 24 * $trendingDays);
-
-        $items = Item::model()->with(array(
-                    'sales' => array(
-                        'select' => false,
-                        'joinType' => 'INNER JOIN',
-                        'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$DaysBefore'",
-                        'order' => 'sales.sale_quantity DESC'
-            )))->findAll();
-        
+        $trendingBoxes = $this->getTrendingWokers(1,10);
         
         //TOP 10 WOKERS
 
         $this->render('index', array(
             'newBoxes' => $newBoxes,
+            'trendingBoxes' => $trendingBoxes,
+            
         ));
+    }
+
+    public function getTrendingWokers($trendingDays = 1, $numBoxes = 10) {
+        $lastSale = Sale::model()->latest()->find();
+        $lastSaleDateTime = strtotime($lastSale->sale_datetime);
+
+        $lastSaleDate = date("Y-m-d", $lastSaleDateTime);
+        $daysBefore = date('Y-m-d', $lastSaleDateTime - 60 * 60 * 24 * $trendingDays);
+
+        $items = Item::model()->with(array(
+                    'sales' => array(
+                        'select' => false,
+                        'joinType' => 'INNER JOIN',
+                        'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$daysBefore'",
+                        'order' => 'sales.sale_quantity DESC'
+            )))->findAll();
+        
+        if(count($items)<$numBoxes) return $this->getTrendingWokers($trendingDays+2,$numBoxes);
+        return $items;
     }
 
     /**

@@ -1850,3 +1850,229 @@ Stack trace:
 REQUEST_URI=/wokngo/index.php/site/ranking.html
 HTTP_REFERER=http://localhost/wokngo/index.php/site/index
 ---
+2014/02/24 14:06:14 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sale.sale_datetime' in 'where clause'. The SQL statement executed was: SELECT `t`.`item_id` AS `t0_c0`, `t`.`customer_id` AS `t0_c1`, `t`.`item_name` AS `t0_c2`, `t`.`item_ingredients` AS `t0_c3`, `t`.`item_image` AS `t0_c4`, `t`.`item_description` AS `t0_c5`, `sales`.`sale_id` AS `t1_c0`, `sales`.`item_id` AS `t1_c1`, `sales`.`sale_quantity` AS `t1_c2`, `sales`.`sale_datetime` AS `t1_c3` FROM `item` `t`  INNER JOIN `sale` `sales` ON (`sales`.`item_id`=`t`.`item_id`)  WHERE (date(sale.sale_datetime)<=2014-02-24 && date(sale.sale_datetime>=2014-02-19)) ORDER BY sale.sale_datetime DESC.
+2014/02/24 14:06:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sale.sale_datetime' in 'where clause'' in C:\wamp\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(803): CDbCommand->queryAll()
+#2 C:\wamp\yii\framework\db\ar\CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\wokngo\protected\views\site\about.php(37): CActiveRecord->findAll()
+#7 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#8 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#10 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#11 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#12 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#13 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#17 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/24 14:07:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sale.sale_datetime' in 'where clause'. The SQL statement executed was: SELECT `t`.`item_id` AS `t0_c0`, `t`.`customer_id` AS `t0_c1`, `t`.`item_name` AS `t0_c2`, `t`.`item_ingredients` AS `t0_c3`, `t`.`item_image` AS `t0_c4`, `t`.`item_description` AS `t0_c5`, `sales`.`sale_id` AS `t1_c0`, `sales`.`item_id` AS `t1_c1`, `sales`.`sale_quantity` AS `t1_c2`, `sales`.`sale_datetime` AS `t1_c3` FROM `item` `t`  INNER JOIN `sale` `sales` ON (`sales`.`item_id`=`t`.`item_id`)  WHERE (date(sale.sale_datetime)<=2014-02-24 && date(sale.sale_datetime>=2014-02-19)) ORDER BY sale.sale_datetime DESC.
+2014/02/24 14:07:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'sale.sale_datetime' in 'where clause'' in C:\wamp\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\yii\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(803): CDbCommand->queryAll()
+#2 C:\wamp\yii\framework\db\ar\CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\wokngo\protected\views\site\about.php(37): CActiveRecord->findAll()
+#7 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#8 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#10 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#11 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#12 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#13 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#17 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/24 14:11:31 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "sale" is not defined in active record class "Item".' in C:\wamp\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\wamp\yii\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'sale', Array)
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\wamp\yii\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(Item), Array)
+#3 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\wamp\www\wokngo\protected\views\site\about.php(36): CActiveRecord->findAll()
+#6 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#7 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#8 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#10 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#11 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#12 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#16 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#17 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#19 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/24 14:15:21 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "item" is not defined in active record class "Item".' in C:\wamp\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\wamp\yii\framework\db\ar\CActiveFinder.php(210): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item')
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item.sales', Array)
+#2 C:\wamp\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#3 C:\wamp\yii\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(Item), Array)
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#5 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\wokngo\protected\views\site\about.php(36): CActiveRecord->findAll()
+#7 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#8 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#10 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#11 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#12 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#13 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#17 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/24 14:15:24 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "item" is not defined in active record class "Item".' in C:\wamp\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\wamp\yii\framework\db\ar\CActiveFinder.php(210): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item')
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item.sales', Array)
+#2 C:\wamp\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#3 C:\wamp\yii\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(Item), Array)
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#5 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\wokngo\protected\views\site\about.php(36): CActiveRecord->findAll()
+#7 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#8 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#10 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#11 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#12 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#13 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#17 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/about
+---
+2014/02/24 14:15:40 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "item" is not defined in active record class "Item".' in C:\wamp\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\wamp\yii\framework\db\ar\CActiveFinder.php(210): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item')
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item.sales', Array)
+#2 C:\wamp\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#3 C:\wamp\yii\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(Item), Array)
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#5 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\wokngo\protected\views\site\about.php(36): CActiveRecord->findAll()
+#7 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#8 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#10 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#11 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#12 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#13 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#17 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/about
+---
+2014/02/24 14:15:43 [error] [exception.CDbException] exception 'CDbException' with message 'Relation "item" is not defined in active record class "Item".' in C:\wamp\yii\framework\db\ar\CActiveFinder.php:226
+Stack trace:
+#0 C:\wamp\yii\framework\db\ar\CActiveFinder.php(210): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item')
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(298): CActiveFinder->buildJoinTree(Object(CJoinElement), 'item.sales', Array)
+#2 C:\wamp\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#3 C:\wamp\yii\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct(Object(Item), Array)
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1355): CActiveRecord->getActiveFinder(Array)
+#5 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\wokngo\protected\views\site\about.php(36): CActiveRecord->findAll()
+#7 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#8 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#10 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#11 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#12 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#13 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#17 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/about
+---
+2014/02/24 14:38:16 [error] [exception.CDbException] exception 'CDbException' with message 'Active record "Sale" is trying to select an invalid column "sum(sales.sales_quantity)". Note, the column must exist in the table or be an expression with alias.' in C:\wamp\yii\framework\db\ar\CActiveFinder.php:960
+Stack trace:
+#0 C:\wamp\yii\framework\db\ar\CActiveFinder.php(1292): CJoinElement->getColumnSelect('sum(sales.sales...')
+#1 C:\wamp\yii\framework\db\ar\CActiveFinder.php(790): CJoinQuery->join(Object(CJoinElement))
+#2 C:\wamp\yii\framework\db\ar\CActiveFinder.php(435): CJoinElement->buildQuery(Object(CJoinQuery))
+#3 C:\wamp\yii\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 C:\wamp\yii\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 C:\wamp\www\wokngo\protected\views\site\about.php(33): CActiveRecord->findAll()
+#7 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#8 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#9 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#10 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('about', NULL, true)
+#11 C:\wamp\www\wokngo\protected\controllers\SiteController.php(50): CController->render('about')
+#12 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionAbout()
+#13 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('about')
+#17 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost/wokngo/index.php/site/about
+---
+2014/02/24 15:00:13 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "getTenTrendingWokers".' in C:\wamp\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\controllers\SiteController.php(60): CComponent->__call('getTenTrendingW...', Array)
+#1 C:\wamp\www\wokngo\protected\controllers\SiteController.php(60): SiteController->getTenTrendingWokers(3)
+#2 C:\wamp\www\wokngo\protected\controllers\SiteController.php(36): SiteController->getTrendingWokers(1, 10)
+#3 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#9 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#11 {main}
+REQUEST_URI=/wokngo/index.php/site/index
+HTTP_REFERER=http://localhost/wokngo/index.php/site/about
+---
