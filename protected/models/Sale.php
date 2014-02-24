@@ -35,6 +35,15 @@ class Sale extends CActiveRecord {
             array('sale_id, item_id, sale_quantity, sale_datetime', 'safe', 'on' => 'search'),
         );
     }
+    
+    //Named Scope for Latest Sales
+    public function latest($limit = 1) {
+        $this->getDbCriteria()->mergeWith(array(
+            'order' => 'sale_id DESC',
+            'limit' => $limit,
+        ));
+        return $this;
+    }
 
     /**
      * @return array relational rules.
