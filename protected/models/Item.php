@@ -55,10 +55,11 @@ class Item extends CActiveRecord {
 
     //return path of item image
     public function getImage() {
-        if ($this->item_image == null)
+        if ($this->item_image == null){
             return Yii::app()->request->baseUrl . "/images/box/default.jpg";
-        else
+        }else{
             return Yii::app()->request->baseUrl . "/images/box/" . $this->item_image;
+        }
     }
 
     /**
