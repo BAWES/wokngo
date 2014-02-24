@@ -42,6 +42,13 @@ class Item extends CActiveRecord {
             array('item_id, customer_id, item_name, item_ingredients, item_image, item_description', 'safe', 'on' => 'search'),
         );
     }
+    
+    
+    //return path of item image
+    public function getImage(){
+        if($this->item_image == null) return Yii::app()->request->baseUrl . "/images/box/default.jpg";
+        else return Yii::app()->request->baseUrl . "/images/box/" . $this->item_image;
+    }
 
     /**
      * @return array relational rules.

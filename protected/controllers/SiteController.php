@@ -28,7 +28,22 @@ class SiteController extends Controller {
         echo $client->updateCustomer(1,"Khalid Al-Mutawa","99811042","khalid@khalidm.net","289100500862");
          */
         
-        $this->render('index');
+        //New Wokers
+        $criteria = new CDbCriteria();
+        $criteria->order = "item_id desc";
+        $criteria->limit = 10;
+        $newBoxes = Item::model()->findAll($criteria);
+        
+        //Trending Wokers
+        //Wokers which are making most sales in the past few days
+        /*
+         * 1) get date of last sale
+         * 2) Group sales of last 5 days before that day, group by item id
+         */
+        
+        $this->render('index',array(
+            'newBoxes'=>$newBoxes,
+        ));
     }
     
     /**
