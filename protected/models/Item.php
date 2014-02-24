@@ -42,12 +42,21 @@ class Item extends CActiveRecord {
             array('item_id, customer_id, item_name, item_ingredients, item_image, item_description', 'safe', 'on' => 'search'),
         );
     }
-    
-    
+
+    public function latest($limit = 10) {
+        $this->getDbCriteria()->mergeWith(array(
+            'order' => 'item_id DESC',
+            'limit' => $limit,
+        ));
+        return $this;
+    }
+
     //return path of item image
-    public function getImage(){
-        if($this->item_image == null) return Yii::app()->request->baseUrl . "/images/box/default.jpg";
-        else return Yii::app()->request->baseUrl . "/images/box/" . $this->item_image;
+    public function getImage() {
+        if ($this->item_image == null)
+            return Yii::app()->request->baseUrl . "/images/box/default.jpg";
+        else
+            return Yii::app()->request->baseUrl . "/images/box/" . $this->item_image;
     }
 
     /**
@@ -60,8 +69,7 @@ class Item extends CActiveRecord {
             'approvals' => array(self::HAS_MANY, 'Approval', 'item_id'),
             'customer' => array(self::BELONGS_TO, 'Customer', 'customer_id'),
             'sales' => array(self::HAS_MANY, 'Sale', 'item_id'),
-            
-            'totalSold' => array(self::STAT, 'Sale', 'item_id','select' => 'SUM(sale_quantity)'),
+            'totalSold' => array(self::STAT, 'Sale', 'item_id', 'select' => 'SUM(sale_quantity)'),
         );
     }
 
