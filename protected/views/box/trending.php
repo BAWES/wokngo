@@ -2,7 +2,7 @@
 /* @var $this BoxController */
 /* @var $trendingBoxes Item */
 
-$this->pageTitle = Yii::app()->name . ' - New Wokers';
+$this->pageTitle = Yii::app()->name . ' - Trending Wokers';
 ?>
 
 
