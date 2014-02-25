@@ -105,9 +105,9 @@
             <section id='about'>
                 <h1>About us</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et 
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                    ex ea commodo consequat incididunt ut labore et dolore magna
+                    Wok&Go is about fresh, nutritious, tasty food that is cooked in front of your eyes and served to you in minutes.
+                    <br/><br/>Sounds simple? It is. Simple, affordable, irresistible food!
+
                 </p>
                 <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logosmall.png' alt='Wok Logo 2'/>
                 <div class='clear'></div>
