@@ -29,39 +29,23 @@ class SiteController extends Controller {
          */
         $this->layout = "main";
 
-        //New Wokers
+        //New Boxes
         $newBoxes = Item::model()->latest()->findAll();
 
-        //Trending Wokers
-        $trendingBoxes = $this->getTrendingWokers(1,10);
+        //Trending Boxes
+        $trendingBoxes = Item::trendingItems(1,10);
         
-        //TOP 10 WOKERS
+        //Top 10 Boxes
+        $top10Boxes = Item::rankedItems();
 
         $this->render('index', array(
             'newBoxes' => $newBoxes,
             'trendingBoxes' => $trendingBoxes,
-            
+            'top10Boxes' => $top10Boxes,
         ));
     }
 
-    public function getTrendingWokers($trendingDays = 1, $numBoxes = 10) {
-        $lastSale = Sale::model()->latest()->find();
-        $lastSaleDateTime = strtotime($lastSale->sale_datetime);
-
-        $lastSaleDate = date("Y-m-d", $lastSaleDateTime);
-        $daysBefore = date('Y-m-d', $lastSaleDateTime - 60 * 60 * 24 * $trendingDays);
-
-        $items = Item::model()->with(array(
-                    'sales' => array(
-                        'select' => false,
-                        'joinType' => 'INNER JOIN',
-                        'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$daysBefore'",
-                        'order' => 'sales.sale_quantity DESC'
-            )))->findAll();
-        
-        if(count($items)<$numBoxes) return $this->getTrendingWokers($trendingDays+2,$numBoxes);
-        return $items;
-    }
+    
 
     /**
      * About Page

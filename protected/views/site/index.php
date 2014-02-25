@@ -2,6 +2,7 @@
 /* @var $this SiteController */
 /* @var $newBoxes Item */
 /* @var $trendingBoxes Item */
+/* @var $top10Boxes array */
 
 $this->pageTitle = Yii::app()->name;
 ?>
@@ -39,7 +40,8 @@ $this->pageTitle = Yii::app()->name;
 
         <div class='boxList'>
             <div class='boxes'>
-                <?php $i = 0;
+                <?php
+                $i = 0;
                 foreach ($newBoxes as $box) {
                     $i++;
                     ?>
@@ -71,9 +73,8 @@ $this->pageTitle = Yii::app()->name;
                 $i = 0;
                 foreach ($trendingBoxes as $box) {
                     $i++;
-                    if ($i == 11) {
+                    if ($i == 11)
                         break;
-                    }
                     ?>
 
                     <a href='#box<?php echo $box->item_id; ?>'>
@@ -101,12 +102,11 @@ $this->pageTitle = Yii::app()->name;
             <div class='boxes'>
                 <?php
                 $i = 0;
-                foreach (Item::rankings() as $box) {
+                foreach ($top10Boxes as $box) {
                     $i++;
-                    if ($i == 11) {
+                    if ($i == 11)
                         break;
-                    }
-                    
+
                     //Add Image Link
                     if ($box['item_image'] == null) {
                         $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/default.jpg";

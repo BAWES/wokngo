@@ -119,7 +119,28 @@ class Item extends CActiveRecord {
         ));
     }
     
-    public static function rankings(){
+    
+    public static function trendingItems($trendingDays = 1, $numBoxes = 10) {
+        $lastSale = Sale::model()->latest()->find();
+        $lastSaleDateTime = strtotime($lastSale->sale_datetime);
+
+        $lastSaleDate = date("Y-m-d", $lastSaleDateTime);
+        $daysBefore = date('Y-m-d', $lastSaleDateTime - 60 * 60 * 24 * $trendingDays);
+
+        $items = Item::model()->with(array(
+                    'sales' => array(
+                        'select' => false,
+                        'joinType' => 'INNER JOIN',
+                        'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$daysBefore'",
+                        'order' => 'sales.sale_quantity DESC'
+            )))->findAll();
+        
+        if(count($items)<$numBoxes) return Item::trendingItems($trendingDays+2,$numBoxes);
+        return $items;
+    }
+    
+    //Get All Boxes Listed by Rank
+    public static function rankedItems(){
         $query = Yii::app()->db->createCommand();
         $query->select('item.item_id, item.item_name, item.item_description, item.item_image,'
                 . 'customer.customer_name, sum(sale.sale_quantity) as sales');
