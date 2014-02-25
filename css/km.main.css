@@ -479,6 +479,14 @@ header#page{background:url(../images/layout/headerbg.jpg) top left; height:4.5em
 header#page h1{color:#fff; font-size:1.625em;/*26px/16*/ padding-top:0.65em; width:94%; margin:0 auto;}
 #pageContent{width:94%; margin:0 auto; padding-top:1.5em; padding-bottom:1.5em;}
 
+#pageContent p{margin-bottom:1em;}
+#pageContent label{display:block;}
+#pageContent .rememberMe label{display:inline !important;}
+#pageContent input[type=text],#pageContent input[type=password],#pageContent textarea{
+    background:#eee; width:94%; border:0; padding:0.5em;}
+#pageContent a{color:#16a0da;}
+#pageContent .hint{font-size:0.8em; margin-bottom:1em;}
+
 /********/
 /*DESKTOP ( MOVE THIS TO SEPERATE STYLESHEET)*/
 /*This should load all the desktop graphics / styles / the heavy stuff blabla*/

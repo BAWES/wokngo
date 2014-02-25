@@ -37,6 +37,7 @@ class ContactForm extends CFormModel
 	{
 		return array(
 			'verifyCode'=>'Verification Code',
+			'body'=>'Message',
 		);
 	}
 }
