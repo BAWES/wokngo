@@ -1,6 +1,6 @@
 <?php
 /* @var $this BoxController */
-/* @var $topBoxes array */
+/* @var $newBoxes Item */
 
 $this->pageTitle = Yii::app()->name . ' - New Wokers';
 ?>

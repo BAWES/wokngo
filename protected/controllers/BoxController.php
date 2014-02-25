@@ -12,7 +12,7 @@ class BoxController extends Controller {
         //New Boxes
         $criteria = new CDbCriteria();
         $criteria->with = array('customer','totalSold');
-        $newBoxes = Item::model()->latest(20)->findAll($criteria);
+        $newBoxes = Item::model()->latest(10)->findAll($criteria);
         
         $this->render('new',array('newBoxes'=>$newBoxes));
     }
@@ -25,7 +25,8 @@ class BoxController extends Controller {
 
     //Ranking Page Sorted by Trending
     public function actionTrending() {
-        $this->render('trending');
+        $trendingBoxes = Item::trendingItems(1,10);
+        $this->render('trending',array('trendingBoxes'=>$trendingBoxes));
     }
 
     //Box Inner Page
