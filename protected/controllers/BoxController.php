@@ -9,7 +9,10 @@ class BoxController extends Controller {
 
     //Ranking Page Sorted by Latest
     public function actionNew() {
-        $this->render('new');
+        //New Boxes
+        $newBoxes = Item::model()->latest(20)->findAll();
+        
+        $this->render('new',array('newBoxes'=>$newBoxes));
     }
 
     //Ranking Page Sorted by Top Rank

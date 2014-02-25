@@ -19,9 +19,9 @@ $this->pageTitle = Yii::app()->name . ' - Top Wokers';
         <a href='#search'>Search</a>
     </form>
     <script>
-        $('#type').change(function(){
+        $('#type').change(function() {
             var selected = $(this).val();
-            switch(selected){
+            switch (selected) {
                 case 'top':
                     window.location = "<?php echo Yii::app()->createUrl("box/ranking"); ?>";
                     break;

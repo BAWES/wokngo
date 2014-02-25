@@ -11,6 +11,7 @@
  * @property string $item_ingredients
  * @property string $item_image
  * @property string $item_description
+ * @property string $item_created_at
  *
  * The followings are the available model relations:
  * @property Approval[] $approvals
@@ -40,7 +41,7 @@ class Item extends CActiveRecord {
             array('item_description', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('item_id, customer_id, item_name, item_seo_name, item_ingredients, item_image, item_description', 'safe', 'on' => 'search'),
+            array('item_id, customer_id, item_name, item_seo_name, item_ingredients, item_image, item_created_at, item_description', 'safe', 'on' => 'search'),
         );
     }
 
@@ -88,6 +89,7 @@ class Item extends CActiveRecord {
             'item_ingredients' => 'Item Ingredients',
             'item_image' => 'Item Image',
             'item_description' => 'Item Description',
+            'item_created_at' => 'Item Created at',
         );
     }
 
@@ -115,6 +117,7 @@ class Item extends CActiveRecord {
         $criteria->compare('item_ingredients', $this->item_ingredients, true);
         $criteria->compare('item_image', $this->item_image, true);
         $criteria->compare('item_description', $this->item_description, true);
+        $criteria->compare('item_created_at', $this->item_created_at, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
@@ -133,6 +136,7 @@ class Item extends CActiveRecord {
         $seoName = preg_replace("/[\s_]/", "-", $seoName);
 
         $this->item_seo_name = $seoName;
+        $this->item_created_at = new CDbExpression("NOW()");
         
         return parent::beforeSave();
     }

@@ -2546,3 +2546,17 @@ Stack trace:
 REQUEST_URI=/wokngo/index.php/box/images/layout/defaultbox.jpg
 HTTP_REFERER=http://localhost/wokngo/index.php/box/ranking
 ---
+2014/02/25 16:34:56 [error] [php] Undefined variable: topBoxes (C:\wamp\www\wokngo\protected\views\box\new.php:44)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(869): BoxController->renderFile()
+#1 C:\wamp\yii\framework\web\CController.php(782): BoxController->renderPartial()
+#2 C:\wamp\www\wokngo\protected\controllers\BoxController.php(12): BoxController->render()
+#3 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): BoxController->actionNew()
+#4 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\wamp\yii\framework\web\CController.php(286): BoxController->runAction()
+#6 C:\wamp\yii\framework\web\CController.php(265): BoxController->runActionWithFilters()
+#7 C:\wamp\yii\framework\web\CWebApplication.php(282): BoxController->run()
+#8 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/box/new
