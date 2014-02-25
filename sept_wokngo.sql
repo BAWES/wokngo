@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 24, 2014 at 05:13 PM
+-- Generation Time: Feb 25, 2014 at 03:23 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -73,38 +73,40 @@ CREATE TABLE IF NOT EXISTS `item` (
   `item_id` int(11) NOT NULL,
   `customer_id` int(11) NOT NULL,
   `item_name` varchar(120) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `item_seo_name` varchar(120) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `item_ingredients` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `item_image` varchar(80) DEFAULT NULL,
   `item_description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   PRIMARY KEY (`item_id`),
-  KEY `customer_id` (`customer_id`)
+  KEY `customer_id` (`customer_id`),
+  KEY `item_seo_name` (`item_seo_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `item`
 --
 
-INSERT INTO `item` (`item_id`, `customer_id`, `item_name`, `item_ingredients`, `item_image`, `item_description`) VALUES
-(1, 1, 'Ninja Box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(2, 1, 'Second Ninja Box', 'egg noodles', NULL, 'I LOVE THIS BOX! I ALWAYS ORDER IT! You must try it!'),
-(3, 2, 'Chicken Box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(4, 2, 'Second Chicken Box', 'egg noodles', NULL, NULL),
-(5, 2, 'Fat Box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(6, 2, 'Second Fat Box', 'egg noodles', NULL, NULL),
-(7, 2, 'The Hungry Box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(8, 2, 'The Feeder', 'egg noodles', NULL, NULL),
-(9, 1, 'Dancing Monkey', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(10, 1, 'Ascia Favorite', 'egg noodles', NULL, NULL),
-(11, 3, 'Plain Chicken', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(12, 3, 'Extra Beef', 'egg noodles', NULL, 'I LOVE THIS BOX! I ALWAYS ORDER IT! You must try it!'),
-(13, 3, 'Hunger Strikes', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(14, 3, 'Starving Again', 'egg noodles', NULL, NULL),
-(15, 3, 'Ghaliah Technology', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(16, 4, 'I like to wok', 'egg noodles', NULL, NULL),
-(17, 4, 'feedme', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(18, 4, 'Why not', 'egg noodles', NULL, NULL),
-(19, 4, 'Move it', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
-(20, 4, 'Terminator', 'egg noodles', NULL, NULL);
+INSERT INTO `item` (`item_id`, `customer_id`, `item_name`, `item_seo_name`, `item_ingredients`, `item_image`, `item_description`) VALUES
+(1, 1, 'Ninja Box', 'ninja-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(2, 1, 'Second Ninja Box', 'second-ninja-box', 'egg noodles', NULL, 'I LOVE THIS BOX! I ALWAYS ORDER IT! You must try it!'),
+(3, 2, 'Chicken Box', 'chicken-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(4, 2, 'Second Chicken Box', 'second-chicken-box', 'egg noodles', NULL, NULL),
+(5, 2, 'Fat Box', 'fat-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(6, 2, 'Second Fat Box', 'second-fat-box', 'egg noodles', NULL, NULL),
+(7, 2, 'The Hungry Box', 'the-hungry-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(8, 2, 'The Feeder', 'the-feeder', 'egg noodles', NULL, NULL),
+(9, 1, 'Dancing Monkey', 'dancing-monkey', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(10, 1, 'Ascia Favorite', 'ascia-favorite', 'egg noodles', NULL, NULL),
+(11, 3, 'Plain Chicken', 'plain-chicken', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(12, 3, 'Extra Beef', 'extra-beef', 'egg noodles', NULL, 'I LOVE THIS BOX! I ALWAYS ORDER IT! You must try it!'),
+(13, 3, 'Hunger Strikes', 'hunger-strikes', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(14, 3, 'Starving Again', 'starving-again', 'egg noodles', NULL, NULL),
+(15, 3, 'Ghaliah Technology', 'ghaliah-technology', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(16, 4, 'I like to wok', 'i-like-to-wok', 'egg noodles', NULL, NULL),
+(17, 4, 'feedme', 'feedme', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(18, 4, 'Why not', 'why-not', 'egg noodles', NULL, NULL),
+(19, 4, 'Move it', 'move-it', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL),
+(20, 4, 'Terminator', 'terminator', 'egg noodles', NULL, NULL);
 
 -- --------------------------------------------------------
 
