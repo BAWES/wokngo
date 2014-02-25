@@ -40,16 +40,18 @@ $this->pageTitle = Yii::app()->name;
         <div class='boxList'>
             <div class='boxes'>
                 <?php $i = 0;
-                foreach($newBoxes as $box){ $i++; ?>
-                
-                <a href='#box<?php echo $box->item_id; ?>'>
-                    <b><?php echo $i;?></b>
-                    <img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/>
-                    <p><?php echo $box->item_name; ?></p>
-                    <div class='clear'></div>
-                </a>
-                    
-                <?php }?>
+                foreach ($newBoxes as $box) {
+                    $i++;
+                    ?>
+
+                    <a href='#box<?php echo $box->item_id; ?>'>
+                        <b><?php echo $i; ?></b>
+                        <img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/>
+                        <p><?php echo $box->item_name; ?></p>
+                        <div class='clear'></div>
+                    </a>
+
+<?php } ?>
             </div>
         </div>
 
@@ -65,18 +67,23 @@ $this->pageTitle = Yii::app()->name;
 
         <div class='boxList'>
             <div class='boxes'>
-                <?php $i = 0;
-                foreach($trendingBoxes as $box){ $i++; 
-                    if($i==11) break; ?>
-                
-                <a href='#box<?php echo $box->item_id; ?>'>
-                    <b><?php echo $i;?></b>
-                    <img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/>
-                    <p><?php echo $box->item_name; ?></p>
-                    <div class='clear'></div>
-                </a>
-                    
-                <?php }?>
+                <?php
+                $i = 0;
+                foreach ($trendingBoxes as $box) {
+                    $i++;
+                    if ($i == 11) {
+                        break;
+                    }
+                    ?>
+
+                    <a href='#box<?php echo $box->item_id; ?>'>
+                        <b><?php echo $i; ?></b>
+                        <img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/>
+                        <p><?php echo $box->item_name; ?></p>
+                        <div class='clear'></div>
+                    </a>
+
+<?php } ?>
             </div>
         </div>
 
@@ -92,75 +99,30 @@ $this->pageTitle = Yii::app()->name;
 
         <div class='boxList'>
             <div class='boxes'>
-                <a href='box.html'>
-                    <b>1</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
+                <?php
+                $i = 0;
+                foreach (Item::rankings() as $box) {
+                    $i++;
+                    if ($i == 11) {
+                        break;
+                    }
+                    
+                    //Add Image Link
+                    if ($box['item_image'] == null) {
+                        $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/default.jpg";
+                    } else {
+                        $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/" . $box['item_image'];
+                    }
+                    ?>
 
-                <a href='box.html'>
-                    <b>2</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
+                    <a href='#box<?php echo $box['item_id']; ?>'>
+                        <b><?php echo $i; ?></b>
+                        <img src='<?php echo $box['item_image']; ?>' alt='<?php echo $box['item_name']; ?>'/>
+                        <p><?php echo $box['item_name']; ?></p>
+                        <div class='clear'></div>
+                    </a>
 
-                <a href='box.html'>
-                    <b>3</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
-
-                <a href='box.html'>
-                    <b>4</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
-
-                <a href='box.html'>
-                    <b>5</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
-
-                <a href='box.html'>
-                    <b>6</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
-
-                <a href='box.html'>
-                    <b>7</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
-
-                <a href='box.html'>
-                    <b>8</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
-
-                <a href='box.html'>
-                    <b>9</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
-
-                <a href='box.html'>
-                    <b>10</b>
-                    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-                    <p>Box Name Goes Here...</p>
-                    <div class='clear'></div>
-                </a>
+<?php } ?>
             </div>
         </div>
 
