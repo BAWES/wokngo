@@ -118,6 +118,19 @@ class Item extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
+    
+    public static function rankings($limit = null, $offset = null){
+        $query = Yii::app()->db->createCommand();
+        $query->select('item.item_id, sum(sale.sale_quantity) as sales');
+        $query->from('item');
+        $query->leftJoin('sale', 'item.item_id=sale.item_id');
+        $query->group('item.item_id');
+        $query->order('sales DESC');
+        
+        if($limit) $query->limit($limit, $offset);
+        
+        return $query->queryAll();
+    }
 
     /**
      * Returns the static model of the specified AR class.
