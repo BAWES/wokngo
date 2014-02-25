@@ -1,5 +1,6 @@
 <?php
 /* @var $this BoxController */
+/* @var $topBoxes array */
 
 $this->pageTitle = Yii::app()->name . ' - Top Wokers';
 ?>
@@ -8,7 +9,7 @@ $this->pageTitle = Yii::app()->name . ' - Top Wokers';
 <header id='ranking'>
     <h1>Top Wokers</h1>
     <h2>Search Boxes</h2>
-    <form method='get'>
+    <form method='get' id="rankNav">
         <select id='type' name='type'>
             <option value='top' selected='selected'>Top Wokers</option>
             <option value='trending'>Trending Wokers</option>
@@ -22,22 +23,36 @@ $this->pageTitle = Yii::app()->name . ' - Top Wokers';
 <section id='rankingList'>
     <!-- Start Listing Boxes -->
 
-    <a href='box.html'>
-        <b>1</b>
-        <div class='img'><img src='images/layout/defaultbox.jpg' alt='Box Image'/></div>
-        <div class='boxDetails'>
-            <h3>Box Name Goes Here...</h3>
-            <h4>Heather Soto</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua...
-            </p>
-        </div>
-        <div class='numSold'>
-            30 <span>Boxes Sold</span>
-        </div>
-        <div class='clear'></div>
-    </a>
+    <?php
+    $i = 0;
+    foreach ($topBoxes as $box) {
+        $i++;
+
+        //Add Image Link
+        if ($box['item_image'] == null) {
+            $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/default.jpg";
+        } else {
+            $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/" . $box['item_image'];
+        }
+        ?>
+
+        <a href='#box<?php echo $box['item_id']; ?>'>
+            <b><?php echo $i; ?></b>
+            <div class='img'><img src='<?php echo $box['item_image']; ?>' alt='<?php echo $box['item_name']; ?>'/></div>
+            <div class='boxDetails'>
+                <h3><?php echo $box['item_name']; ?></h3>
+                <h4><?php echo $box['customer_name']; ?></h4>
+                <p>
+                    <?php echo $box['item_description']; ?>
+                </p>
+            </div>
+            <div class='numSold'>
+                <?php echo (int) $box['sales']; ?> <span>Boxes Sold</span>
+            </div>
+            <div class='clear'></div>
+        </a>
+
+    <?php } ?>
 
     <br/>
 </section>

@@ -14,9 +14,8 @@ class BoxController extends Controller {
 
     //Ranking Page Sorted by Top Rank
     public function actionRanking() {
-        
-        
-        $this->render('ranking');
+        $topBoxes = Item::rankedItems();
+        $this->render('ranking',array('topBoxes'=>$topBoxes));
     }
 
     //Ranking Page Sorted by Trending
