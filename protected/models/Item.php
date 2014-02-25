@@ -119,17 +119,33 @@ class Item extends CActiveRecord {
         ));
     }
     
-    public static function rankings($limit = null, $offset = null){
+    public static function rankings(){
         $query = Yii::app()->db->createCommand();
-        $query->select('item.item_id, sum(sale.sale_quantity) as sales');
+        $query->select('item.item_id, item.item_name, item.item_description, item.item_image,'
+                . 'customer.customer_name, sum(sale.sale_quantity) as sales');
         $query->from('item');
         $query->leftJoin('sale', 'item.item_id=sale.item_id');
+        $query->leftJoin('customer', 'item.customer_id=customer.customer_id');
         $query->group('item.item_id');
         $query->order('sales DESC');
         
-        if($limit) $query->limit($limit, $offset);
-        
         return $query->queryAll();
+        
+        /*Example Usage:
+        
+        $rank=0;
+        foreach(Item::rankings() as $box){
+            $rank++;
+            $boxID = $box['item_id'];
+            $boxName = $box['item_name'];
+            $boxImage = $box['item_image'];
+            $boxDesc = $box['item_description'];
+            $boxSales = (int) $box['sales'];
+            $customer = $box['customer_name'];
+         
+            echo "$rank - $boxID - $boxSales - $boxName - $boxImage - $boxDesc - $customer<br/><br/>";
+        }
+         */
     }
 
     /**

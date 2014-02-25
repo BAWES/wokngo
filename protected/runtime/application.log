@@ -2076,3 +2076,191 @@ Stack trace:
 REQUEST_URI=/wokngo/index.php/site/index
 HTTP_REFERER=http://localhost/wokngo/index.php/site/about
 ---
+2014/02/24 18:38:36 [error] [php] array_diff(): Argument #1 is not an array (/Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php:2018)
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(263): CStatRelation->mergeWith()
+#1 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(298): CActiveFinder->buildJoinTree()
+#2 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#3 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(909): CActiveFinder->__construct()
+#4 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1355): Item->getActiveFinder()
+#5 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1470): Item->query()
+#6 /Users/khalidmnet/Sites/wokngo/protected/views/site/about.php(21): Item->findAll()
+#7 /Users/khalidmnet/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/khalidmnet/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/khalidmnet/yii/framework/web/CController.php(869): SiteController->renderFile()
+#10 /Users/khalidmnet/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#11 /Users/khalidmnet/Sites/wokngo/protected/controllers/SiteController.php(70): SiteController->render()
+#12 /Users/khalidmnet/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionAbout()
+#13 /Users/khalidmnet/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/khalidmnet/yii/framework/web/CController.php(286): SiteController->runAction()
+#15 /Users/khalidmnet/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Users/khalidmnet/Sites/wokngo/index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/site/about
+2014/02/24 18:38:41 [error] [php] array_diff(): Argument #1 is not an array (/Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php:2018)
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(263): CStatRelation->mergeWith()
+#1 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(298): CActiveFinder->buildJoinTree()
+#2 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#3 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(909): CActiveFinder->__construct()
+#4 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1355): Item->getActiveFinder()
+#5 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1470): Item->query()
+#6 /Users/khalidmnet/Sites/wokngo/protected/views/site/about.php(21): Item->findAll()
+#7 /Users/khalidmnet/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/khalidmnet/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/khalidmnet/yii/framework/web/CController.php(869): SiteController->renderFile()
+#10 /Users/khalidmnet/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#11 /Users/khalidmnet/Sites/wokngo/protected/controllers/SiteController.php(70): SiteController->render()
+#12 /Users/khalidmnet/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionAbout()
+#13 /Users/khalidmnet/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/khalidmnet/yii/framework/web/CController.php(286): SiteController->runAction()
+#15 /Users/khalidmnet/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Users/khalidmnet/Sites/wokngo/index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/site/about
+2014/02/24 18:38:44 [error] [php] array_diff(): Argument #1 is not an array (/Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php:2018)
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(263): CStatRelation->mergeWith()
+#1 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(298): CActiveFinder->buildJoinTree()
+#2 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#3 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(909): CActiveFinder->__construct()
+#4 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1355): Item->getActiveFinder()
+#5 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1470): Item->query()
+#6 /Users/khalidmnet/Sites/wokngo/protected/views/site/about.php(21): Item->findAll()
+#7 /Users/khalidmnet/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/khalidmnet/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/khalidmnet/yii/framework/web/CController.php(869): SiteController->renderFile()
+#10 /Users/khalidmnet/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#11 /Users/khalidmnet/Sites/wokngo/protected/controllers/SiteController.php(70): SiteController->render()
+#12 /Users/khalidmnet/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionAbout()
+#13 /Users/khalidmnet/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/khalidmnet/yii/framework/web/CController.php(286): SiteController->runAction()
+#15 /Users/khalidmnet/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Users/khalidmnet/Sites/wokngo/index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/site/about
+2014/02/24 18:38:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ranking.html".' in /Users/khalidmnet/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/web/CController.php(270): CController->missingAction('ranking.html')
+#1 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): CController->run('ranking.html')
+#2 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ranking.ht...')
+#3 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/khalidmnet/Sites/wokngo/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/ranking.html
+HTTP_REFERER=http://localhost:8888/wokngo/index.php/site/about
+---
+2014/02/24 18:38:55 [error] [php] array_diff(): Argument #1 is not an array (/Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php:2018)
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(263): CStatRelation->mergeWith()
+#1 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(298): CActiveFinder->buildJoinTree()
+#2 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#3 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(909): CActiveFinder->__construct()
+#4 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1355): Item->getActiveFinder()
+#5 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1470): Item->query()
+#6 /Users/khalidmnet/Sites/wokngo/protected/views/site/about.php(21): Item->findAll()
+#7 /Users/khalidmnet/yii/framework/web/CBaseController.php(126): require()
+#8 /Users/khalidmnet/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /Users/khalidmnet/yii/framework/web/CController.php(869): SiteController->renderFile()
+#10 /Users/khalidmnet/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#11 /Users/khalidmnet/Sites/wokngo/protected/controllers/SiteController.php(70): SiteController->render()
+#12 /Users/khalidmnet/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionAbout()
+#13 /Users/khalidmnet/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /Users/khalidmnet/yii/framework/web/CController.php(286): SiteController->runAction()
+#15 /Users/khalidmnet/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#16 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#17 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Users/khalidmnet/Sites/wokngo/index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/site/about
+2014/02/24 19:41:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'totalSold' in 'order clause'. The SQL statement executed was: SELECT `t`.`item_id` AS `t0_c0`, `t`.`customer_id` AS `t0_c1`, `t`.`item_name` AS `t0_c2`, `t`.`item_ingredients` AS `t0_c3`, `t`.`item_image` AS `t0_c4`, `t`.`item_description` AS `t0_c5` FROM `item` `t`  ORDER BY totalSold.
+2014/02/24 19:41:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'totalSold' in 'order clause'' in /Users/khalidmnet/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(803): CDbCommand->queryAll()
+#2 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /Users/khalidmnet/Sites/wokngo/protected/views/site/about.php(19): CActiveRecord->findAll(Object(CDbCriteria))
+#7 /Users/khalidmnet/yii/framework/web/CBaseController.php(126): require('/Users/khalidmn...')
+#8 /Users/khalidmnet/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/khalidmn...', NULL, true)
+#9 /Users/khalidmnet/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/khalidmn...', NULL, true)
+#10 /Users/khalidmnet/yii/framework/web/CController.php(782): CController->renderPartial('about', NULL, true)
+#11 /Users/khalidmnet/Sites/wokngo/protected/controllers/SiteController.php(70): CController->render('about')
+#12 /Users/khalidmnet/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionAbout()
+#13 /Users/khalidmnet/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /Users/khalidmnet/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#15 /Users/khalidmnet/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#17 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Users/khalidmnet/Sites/wokngo/index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+---
+2014/02/24 20:08:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'totalSold' in 'order clause'. The SQL statement executed was: SELECT `t`.`item_id` AS `t0_c0`, `t`.`customer_id` AS `t0_c1`, `t`.`item_name` AS `t0_c2`, `t`.`item_ingredients` AS `t0_c3`, `t`.`item_image` AS `t0_c4`, `t`.`item_description` AS `t0_c5` FROM `item` `t`  ORDER BY totalSold.
+2014/02/24 20:08:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'totalSold' in 'order clause'' in /Users/khalidmnet/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(803): CDbCommand->queryAll()
+#2 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 /Users/khalidmnet/yii/framework/db/ar/CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), true)
+#5 /Users/khalidmnet/yii/framework/db/ar/CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#6 /Users/khalidmnet/Sites/wokngo/protected/views/site/about.php(19): CActiveRecord->findAll(Object(CDbCriteria))
+#7 /Users/khalidmnet/yii/framework/web/CBaseController.php(126): require('/Users/khalidmn...')
+#8 /Users/khalidmnet/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/khalidmn...', NULL, true)
+#9 /Users/khalidmnet/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/khalidmn...', NULL, true)
+#10 /Users/khalidmnet/yii/framework/web/CController.php(782): CController->renderPartial('about', NULL, true)
+#11 /Users/khalidmnet/Sites/wokngo/protected/controllers/SiteController.php(70): CController->render('about')
+#12 /Users/khalidmnet/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionAbout()
+#13 /Users/khalidmnet/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#14 /Users/khalidmnet/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#15 /Users/khalidmnet/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#17 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#18 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#19 /Users/khalidmnet/Sites/wokngo/index.php(9): CApplication->run()
+#20 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+---
+2014/02/25 12:25:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ranking.html".' in /Users/khalidmnet/yii/framework/web/CController.php:483
+Stack trace:
+#0 /Users/khalidmnet/yii/framework/web/CController.php(270): CController->missingAction('ranking.html')
+#1 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): CController->run('ranking.html')
+#2 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ranking.ht...')
+#3 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /Users/khalidmnet/Sites/wokngo/index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/site/ranking.html
+HTTP_REFERER=http://localhost:8888/wokngo/index.php/site/about
+---
+2014/02/25 12:43:15 [error] [exception.CException] exception 'CException' with message 'CDbCommand and its behaviors do not have a method or closure named "text".' in /Users/khalidmnet/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /Users/khalidmnet/Sites/wokngo/protected/models/Item.php(131): CComponent->__call('text', Array)
+#1 /Users/khalidmnet/Sites/wokngo/protected/models/Item.php(131): CDbCommand->text()
+#2 /Users/khalidmnet/Sites/wokngo/protected/views/site/about.php(15): Item::rankings()
+#3 /Users/khalidmnet/yii/framework/web/CBaseController.php(126): require('/Users/khalidmn...')
+#4 /Users/khalidmnet/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/khalidmn...', NULL, true)
+#5 /Users/khalidmnet/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/khalidmn...', NULL, true)
+#6 /Users/khalidmnet/yii/framework/web/CController.php(782): CController->renderPartial('about', NULL, true)
+#7 /Users/khalidmnet/Sites/wokngo/protected/controllers/SiteController.php(70): CController->render('about')
+#8 /Users/khalidmnet/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionAbout()
+#9 /Users/khalidmnet/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/khalidmnet/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/khalidmnet/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/khalidmnet/yii/framework/web/CWebApplication.php(282): CController->run('about')
+#13 /Users/khalidmnet/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/about')
+#14 /Users/khalidmnet/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/khalidmnet/Sites/wokngo/index.php(9): CApplication->run()
+#16 {main}
+REQUEST_URI=/wokngo/index.php/site/about
+HTTP_REFERER=http://localhost:8888/wokngo/index.php/site/about
+---
