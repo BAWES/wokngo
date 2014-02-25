@@ -7,6 +7,7 @@
  * @property integer $item_id
  * @property integer $customer_id
  * @property string $item_name
+ * @property string $item_seo_name
  * @property string $item_ingredients
  * @property string $item_image
  * @property string $item_description
@@ -39,11 +40,10 @@ class Item extends CActiveRecord {
             array('item_description', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('item_id, customer_id, item_name, item_ingredients, item_image, item_description', 'safe', 'on' => 'search'),
+            array('item_id, customer_id, item_name, item_seo_name, item_ingredients, item_image, item_description', 'safe', 'on' => 'search'),
         );
     }
-    
-    
+
     //Named Scope for Latest Items
     public function latest($limit = 10) {
         $this->getDbCriteria()->mergeWith(array(
@@ -55,9 +55,9 @@ class Item extends CActiveRecord {
 
     //return path of item image
     public function getImage() {
-        if ($this->item_image == null){
+        if ($this->item_image == null) {
             return Yii::app()->request->baseUrl . "/images/box/default.jpg";
-        }else{
+        } else {
             return Yii::app()->request->baseUrl . "/images/box/" . $this->item_image;
         }
     }
@@ -84,6 +84,7 @@ class Item extends CActiveRecord {
             'item_id' => 'Item',
             'customer_id' => 'Customer',
             'item_name' => 'Item Name',
+            'item_seo_name' => 'Item SEO',
             'item_ingredients' => 'Item Ingredients',
             'item_image' => 'Item Image',
             'item_description' => 'Item Description',
@@ -110,6 +111,7 @@ class Item extends CActiveRecord {
         $criteria->compare('item_id', $this->item_id);
         $criteria->compare('customer_id', $this->customer_id);
         $criteria->compare('item_name', $this->item_name, true);
+        $criteria->compare('item_seo_name', $this->item_seo_name, true);
         $criteria->compare('item_ingredients', $this->item_ingredients, true);
         $criteria->compare('item_image', $this->item_image, true);
         $criteria->compare('item_description', $this->item_description, true);
@@ -118,8 +120,23 @@ class Item extends CActiveRecord {
             'criteria' => $criteria,
         ));
     }
-    
-    
+
+    public function beforeSave() {
+        $seoName = $this->item_name;
+
+        $seoName = strtolower($seoName);
+        //Make alphanumeric (removes all other characters)
+        $seoName = preg_replace("/[^a-z0-9_\s-]/", "", $seoName);
+        //Clean up multiple dashes or whitespaces
+        $seoName = preg_replace("/[\s-]+/", " ", $seoName);
+        //Convert whitespaces and underscore to dash
+        $seoName = preg_replace("/[\s_]/", "-", $seoName);
+
+        $this->item_seo_name = $seoName;
+        
+        return parent::beforeSave();
+    }
+
     public static function trendingItems($trendingDays = 1, $numBoxes = 10) {
         $lastSale = Sale::model()->latest()->find();
         $lastSaleDateTime = strtotime($lastSale->sale_datetime);
@@ -134,13 +151,14 @@ class Item extends CActiveRecord {
                         'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$daysBefore'",
                         'order' => 'sales.sale_quantity DESC'
             )))->findAll();
-        
-        if(count($items)<$numBoxes) return Item::trendingItems($trendingDays+2,$numBoxes);
+
+        if (count($items) < $numBoxes)
+            return Item::trendingItems($trendingDays + 2, $numBoxes);
         return $items;
     }
-    
+
     //Get All Boxes Listed by Rank
-    public static function rankedItems(){
+    public static function rankedItems() {
         $query = Yii::app()->db->createCommand();
         $query->select('item.item_id, item.item_name, item.item_description, item.item_image,'
                 . 'customer.customer_name, sum(sale.sale_quantity) as sales');
@@ -149,23 +167,23 @@ class Item extends CActiveRecord {
         $query->leftJoin('customer', 'item.customer_id=customer.customer_id');
         $query->group('item.item_id');
         $query->order('sales DESC');
-        
+
         return $query->queryAll();
-        
-        /*Example Usage:
-        
-        $rank=0;
-        foreach(Item::rankings() as $box){
-            $rank++;
-            $boxID = $box['item_id'];
-            $boxName = $box['item_name'];
-            $boxImage = $box['item_image'];
-            $boxDesc = $box['item_description'];
-            $boxSales = (int) $box['sales'];
-            $customer = $box['customer_name'];
-         
-            echo "$rank - $boxID - $boxSales - $boxName - $boxImage - $boxDesc - $customer<br/><br/>";
-        }
+
+        /* Example Usage:
+
+          $rank=0;
+          foreach(Item::rankings() as $box){
+          $rank++;
+          $boxID = $box['item_id'];
+          $boxName = $box['item_name'];
+          $boxImage = $box['item_image'];
+          $boxDesc = $box['item_description'];
+          $boxSales = (int) $box['sales'];
+          $customer = $box['customer_name'];
+
+          echo "$rank - $boxID - $boxSales - $boxName - $boxImage - $boxDesc - $customer<br/><br/>";
+          }
          */
     }
 
