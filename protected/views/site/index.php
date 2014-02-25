@@ -33,7 +33,7 @@ $this->pageTitle = Yii::app()->name;
     <!-- New Wokers -->
     <section id='newWok' class="wokersList">
         <header>
-            <a href="ranking.html"><h2>New Wokers</h2></a>
+            <a href="<?php echo Yii::app()->createUrl("box/new"); ?>"><h2>New Wokers</h2></a>
             <a href="#up" class="scroll up"></a>
             <a href="#down" class="scroll down active"></a>
         </header>
@@ -62,7 +62,7 @@ $this->pageTitle = Yii::app()->name;
     <!-- Trending Wokers -->
     <section id='trendingWok' class="wokersList">
         <header>
-            <a href="ranking.html"><h2>Trending Wokers</h2></a>
+            <a href="<?php echo Yii::app()->createUrl("box/trending"); ?>"><h2>Trending Wokers</h2></a>
             <a href="#up" class="scroll up"></a>
             <a href="#down" class="scroll down active"></a>
         </header>
@@ -93,7 +93,7 @@ $this->pageTitle = Yii::app()->name;
     <!-- Trending Wokers -->
     <section id='top10Wok' class="wokersList">
         <header>
-            <a href="ranking.html"><h2>Top 10 Wokers</h2></a>
+            <a href="<?php echo Yii::app()->createUrl("box/ranking"); ?>"><h2>Top 10 Wokers</h2></a>
             <a href="#up" class="scroll up"></a>
             <a href="#down" class="scroll down active"></a>
         </header>
