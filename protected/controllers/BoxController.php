@@ -10,7 +10,9 @@ class BoxController extends Controller {
     //Ranking Page Sorted by Latest
     public function actionNew() {
         //New Boxes
-        $newBoxes = Item::model()->latest(20)->findAll();
+        $criteria = new CDbCriteria();
+        $criteria->with = array('customer','totalSold');
+        $newBoxes = Item::model()->latest(20)->findAll($criteria);
         
         $this->render('new',array('newBoxes'=>$newBoxes));
     }

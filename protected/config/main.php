@@ -45,6 +45,9 @@ return array(
             'username' => 'sept_user',
             'password' => 'y$HpT-DT)A.Q',
             'charset' => 'utf8',
+            /*enable profiling and param logging if you want to test*/
+            //'enableProfiling' => true,
+            //'enableParamLogging' => true
         ),
         'errorHandler' => array(
             // use 'site/error' action to display errors
@@ -57,6 +60,12 @@ return array(
                     'class' => 'CFileLogRoute',
                     'levels' => 'error, warning',
                 ),
+                /*
+                array(
+                    'class' => 'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
+                ),
+                 
+                 */
             // uncomment the following to show log messages on web pages
             /*
               array(
