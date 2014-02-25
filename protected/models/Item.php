@@ -48,7 +48,7 @@ class Item extends CActiveRecord {
     //Named Scope for Latest Items
     public function latest($limit = 10) {
         $this->getDbCriteria()->mergeWith(array(
-            'order' => 'item_id DESC',
+            'order' => 'item_created_at DESC',
             'limit' => $limit,
         ));
         return $this;
