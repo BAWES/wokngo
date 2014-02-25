@@ -19,22 +19,17 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'item_id'); ?>
-		<?php echo $form->textField($model,'item_id'); ?>
-		<?php echo $form->error($model,'item_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'customer_id'); ?>
-		<?php echo $form->textField($model,'customer_id'); ?>
-		<?php echo $form->error($model,'customer_id'); ?>
-	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'item_name'); ?>
 		<?php echo $form->textField($model,'item_name',array('size'=>60,'maxlength'=>120)); ?>
 		<?php echo $form->error($model,'item_name'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'item_seo_name'); ?>
+		<?php echo $form->textField($model,'item_seo_name',array('size'=>60,'maxlength'=>120)); ?>
+		<?php echo $form->error($model,'item_seo_name'); ?>
 	</div>
 
 	<div class="row">

@@ -22,8 +22,10 @@ $this->menu=array(
 		'item_id',
 		'customer_id',
 		'item_name',
+		'item_seo_name',
 		'item_ingredients',
 		'item_image',
 		'item_description',
+                'item_created_at',
 	),
 )); ?>
