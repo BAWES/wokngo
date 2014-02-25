@@ -1,21 +1,22 @@
 <?php
 /* @var $this BoxController */
-/* @var $topBoxes array */
+/* @var $keyword string */
+/* @var $boxResults Item */
 
-$this->pageTitle = Yii::app()->name . ' - Top Wokers';
+$this->pageTitle = Yii::app()->name . ' - Search Results';
 ?>
 
 
 <header id='ranking'>
-    <h1>Top Wokers</h1>
+    <h1>Search Results</h1>
     <h2>Search Boxes</h2>
     <form method='get' action="<?php echo Yii::app()->createUrl("box/search"); ?>">
         <select id='type' name='type'>
-            <option value='top' selected='selected'>Top Wokers</option>
+            <option value='top'>Top Wokers</option>
             <option value='trending'>Trending Wokers</option>
             <option value='new'>New Wokers</option>
         </select>
-        <input type='text' id='keyword' name='keyword' placeholder='Enter keyword...'/>
+        <input type='text' id='keyword' name='keyword' placeholder='Enter keyword...' value="<?php echo $keyword; ?>"/>
         <a href='#search'>Search</a>
     </form>
     <script>
@@ -41,33 +42,32 @@ $this->pageTitle = Yii::app()->name . ' - Top Wokers';
 
     <?php
     $i = 0;
-    foreach ($topBoxes as $box) {
+    foreach ($boxResults as $box) {
         $i++;
-
-        //Add Image Link
-        if ($box['item_image'] == null) {
-            $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/default.jpg";
-        } else {
-            $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/" . $box['item_image'];
-        }
+        //be sure query for newBoxes has "with" for both customer details and numSold from sales
         ?>
 
-        <a href='#box<?php echo $box['item_id']; ?>'>
+        <a href='#box<?php echo $box->item_id; ?>'>
             <b><?php echo $i; ?></b>
-            <div class='img'><img src='<?php echo $box['item_image']; ?>' alt='<?php echo $box['item_name']; ?>'/></div>
+            <div class='img'><img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/></div>
             <div class='boxDetails'>
-                <h3><?php echo $box['item_name']; ?></h3>
-                <h4><?php echo $box['customer_name']; ?></h4>
+                <h3><?php echo $box->item_name; ?></h3>
+                <h4><?php echo $box->customer->customer_name; ?></h4>
                 <p>
-                    <?php echo $box['item_description']; ?>
+                    <?php echo $box->item_description; ?>
                 </p>
             </div>
             <div class='numSold'>
-                <?php echo (int) $box['sales']; ?> <span>Boxes Sold</span>
+                <?php echo (int) $box->totalSold; ?> <span>Boxes Sold</span>
             </div>
             <div class='clear'></div>
         </a>
 
+    <?php } 
+    if($i == 0){
+        //no search results
+    ?>
+    <p>No results found for <span style="font-weight:bold;"> <?php echo $keyword;?> </span></p>
     <?php } ?>
 
     <br/>

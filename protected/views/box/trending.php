@@ -9,7 +9,7 @@ $this->pageTitle = Yii::app()->name . ' - Trending Wokers';
 <header id='ranking'>
     <h1>Trending Wokers</h1>
     <h2>Search Boxes</h2>
-    <form method='get'>
+    <form method='get' action="<?php echo Yii::app()->createUrl("box/search"); ?>">
         <select id='type' name='type'>
             <option value='top'>Top Wokers</option>
             <option value='trending' selected='selected'>Trending Wokers</option>

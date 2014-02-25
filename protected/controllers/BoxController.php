@@ -28,6 +28,18 @@ class BoxController extends Controller {
         $trendingBoxes = Item::trendingItems(1,10);
         $this->render('trending',array('trendingBoxes'=>$trendingBoxes));
     }
+    
+    //Search functionality
+    public function actionSearch($keyword = '') {
+        $criteria = new CDbCriteria();
+        $criteria->condition = "item_name LIKE :boxName";
+        $criteria->params = array(':boxName' => '%'. trim($keyword) . '%');
+        $criteria->limit = 10;
+        
+        $boxResults = Item::model()->findAll($criteria);
+        
+        $this->render('search',array('boxResults'=>$boxResults,'keyword'=>$keyword));
+    }
 
     //Box Inner Page
     public function actionView() {
