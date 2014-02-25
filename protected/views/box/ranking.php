@@ -9,7 +9,7 @@ $this->pageTitle = Yii::app()->name . ' - Top Wokers';
 <header id='ranking'>
     <h1>Top Wokers</h1>
     <h2>Search Boxes</h2>
-    <form method='get' id="rankNav">
+    <form method='get'>
         <select id='type' name='type'>
             <option value='top' selected='selected'>Top Wokers</option>
             <option value='trending'>Trending Wokers</option>
@@ -18,6 +18,22 @@ $this->pageTitle = Yii::app()->name . ' - Top Wokers';
         <input type='text' id='keyword' name='keyword' placeholder='Enter keyword...'/>
         <a href='#search'>Search</a>
     </form>
+    <script>
+        $('#type').change(function(){
+            var selected = $(this).val();
+            switch(selected){
+                case 'top':
+                    window.location = "<?php echo Yii::app()->createUrl("box/ranking"); ?>";
+                    break;
+                case 'trending':
+                    window.location = "<?php echo Yii::app()->createUrl("box/trending"); ?>";
+                    break;
+                case 'new':
+                    window.location = "<?php echo Yii::app()->createUrl("box/new"); ?>";
+                    break;
+            }
+        });
+    </script>
 </header>
 
 <section id='rankingList'>
