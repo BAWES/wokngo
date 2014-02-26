@@ -46,7 +46,7 @@ $this->pageTitle = Yii::app()->name;
                     $i++;
                     ?>
 
-                    <a href='#box<?php echo $box->item_id; ?>'>
+                    <a href='<?php echo Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name)); ?>'>
                         <b><?php echo $i; ?></b>
                         <img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/>
                         <p><?php echo $box->item_name; ?></p>
@@ -77,7 +77,7 @@ $this->pageTitle = Yii::app()->name;
                         break;
                     ?>
 
-                    <a href='#box<?php echo $box->item_id; ?>'>
+                    <a href='<?php echo Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name)); ?>'>
                         <b><?php echo $i; ?></b>
                         <img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/>
                         <p><?php echo $box->item_name; ?></p>
@@ -115,7 +115,7 @@ $this->pageTitle = Yii::app()->name;
                     }
                     ?>
 
-                    <a href='#box<?php echo $box['item_id']; ?>'>
+                    <a href='<?php echo Yii::app()->createUrl('box/view',array('seo'=>$box['item_seo_name'])); ?>'>
                         <b><?php echo $i; ?></b>
                         <img src='<?php echo $box['item_image']; ?>' alt='<?php echo $box['item_name']; ?>'/>
                         <p><?php echo $box['item_name']; ?></p>
