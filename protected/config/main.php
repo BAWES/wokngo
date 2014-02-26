@@ -44,9 +44,9 @@ return array(
             ),
         ),
         'db' => array(
-            'connectionString' => 'mysql:host=localhost;dbname=sept_wokngo',
+            'connectionString' => 'mysql:host=localhost;dbname=wokandgo_wok',
             'emulatePrepare' => true,
-            'username' => 'sept_user',
+            'username' => 'wokandgo_wokngo',
             'password' => 'y$HpT-DT)A.Q',
             'charset' => 'utf8',
             /*enable profiling and param logging if you want to test*/
