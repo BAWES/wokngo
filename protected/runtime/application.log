@@ -2893,3 +2893,62 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/wokngo/index.php/box/view?seo=a
 ---
+2014/02/26 21:31:11 [error] [php] Undefined offset: 0 (C:\wamp\www\wokngo\protected\controllers\BoxController.php:65)
+Stack trace:
+#0 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\wamp\yii\framework\web\CController.php(286): BoxController->runAction()
+#3 C:\wamp\yii\framework\web\CController.php(265): BoxController->runActionWithFilters()
+#4 C:\wamp\yii\framework\web\CWebApplication.php(282): BoxController->run()
+#5 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/box/view?seo=dancing-monkey
+2014/02/26 22:16:05 [error] [php] Array to string conversion (C:\wamp\www\wokngo\protected\views\box\view.php:122)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(869): BoxController->renderFile()
+#1 C:\wamp\yii\framework\web\CController.php(782): BoxController->renderPartial()
+#2 C:\wamp\www\wokngo\protected\controllers\BoxController.php(73): BoxController->render()
+#3 unknown(0): BoxController->actionView()
+#4 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\yii\framework\web\CController.php(286): BoxController->runAction()
+#8 C:\wamp\yii\framework\web\CController.php(265): BoxController->runActionWithFilters()
+#9 C:\wamp\yii\framework\web\CWebApplication.php(282): BoxController->run()
+#10 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/box/view?seo=chicken-box
+2014/02/26 22:18:17 [error] [php] Array to string conversion (C:\wamp\www\wokngo\protected\views\box\view.php:22)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(869): BoxController->renderFile()
+#1 C:\wamp\yii\framework\web\CController.php(782): BoxController->renderPartial()
+#2 C:\wamp\www\wokngo\protected\controllers\BoxController.php(73): BoxController->render()
+#3 unknown(0): BoxController->actionView()
+#4 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\yii\framework\web\CController.php(286): BoxController->runAction()
+#8 C:\wamp\yii\framework\web\CController.php(265): BoxController->runActionWithFilters()
+#9 C:\wamp\yii\framework\web\CWebApplication.php(282): BoxController->run()
+#10 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/box/view?seo=chicken-box
+2014/02/26 22:20:11 [error] [php] Array to string conversion (C:\wamp\www\wokngo\protected\views\box\view.php:22)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(869): BoxController->renderFile()
+#1 C:\wamp\yii\framework\web\CController.php(782): BoxController->renderPartial()
+#2 C:\wamp\www\wokngo\protected\controllers\BoxController.php(73): BoxController->render()
+#3 unknown(0): BoxController->actionView()
+#4 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\yii\framework\web\CController.php(286): BoxController->runAction()
+#8 C:\wamp\yii\framework\web\CController.php(265): BoxController->runActionWithFilters()
+#9 C:\wamp\yii\framework\web\CWebApplication.php(282): BoxController->run()
+#10 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/index.php/box/view?seo=chicken-box

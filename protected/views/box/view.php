@@ -2,14 +2,13 @@
 /* @var $this BoxController */
 /* @var $box Item */
 /* @var $ingredients Ingredient */
+/* @var $sales array */
 
 $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 
 //Share link
 $shareLink = Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name));
 ?>
-
-
 
 <header id='box'>
     <div class='rank'>Rank <span><?php echo $box->rank; ?></span></div>
@@ -108,10 +107,28 @@ $shareLink = Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name))
                 series: [{
                         type: 'area',
                         name: 'Boxes',
-                        pointInterval: 24 * 3600 * 1000,
-                        pointStart: Date.UTC(2014, 0, 01),
                         data: [
-                            3, 0, 1, 5, 8, 4, 1, 10, 0, 0, 0, 5, 15, 20, 2, 5, 0, 0, 0, 1
+                            <?php 
+                            $output = "";
+                            $firstRow = "";
+                            
+                            foreach($sales as $sale){
+                                $date = $sale['date'];
+                                $quantity = (int) $sale['quantity'];
+                                
+                                //seperate into year/month/day
+                                $date = explode('-',$date);
+                                $year = (int)$date[0];
+                                $month = (int)$date[1]-1;
+                                $day = (int)$date[2];
+                                $output .= "[Date.UTC($year, $month, $day), $quantity ],";
+                                if(!$firstRow){
+                                    $newDay = $day-1;
+                                    $firstRow = "[Date.UTC($year, $month, $newDay), 0 ],";
+                                }
+                            }
+                            echo $firstRow.$output;
+                            ?>
                         ]
                     }]
             });

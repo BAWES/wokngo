@@ -60,8 +60,17 @@ class BoxController extends Controller {
             $dbCriteria->compare('ingredient_match_name', trim($ingredient), true, 'OR');
         }
         $ingredients = Ingredient::model()->findAll($dbCriteria);
+        
+        /*Get Sales Grouped by Date*/
+        $query = Yii::app()->db->createCommand();
+        $query->select('date(sale_datetime) as date, sum(sale_quantity) as quantity');
+        $query->from('sale');
+        $query->where('item_id=:id', array(':id'=>$box->item_id));
+        $query->group('date');
+        $query->order('date');
+        $sales = $query->queryAll();
 
-        $this->render('view', array('box' => $box, 'ingredients'=>$ingredients));
+        $this->render('view', array('box' => $box, 'ingredients'=>$ingredients, 'sales'=>$sales));
     }
 
 }
