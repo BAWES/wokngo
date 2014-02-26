@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 26, 2014 at 10:51 PM
+-- Generation Time: Feb 26, 2014 at 10:59 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `sept_wokngo`
+-- Database: `wokandgo_wok`
 --
-CREATE DATABASE IF NOT EXISTS `sept_wokngo` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `sept_wokngo`;
+CREATE DATABASE IF NOT EXISTS `wokandgo_wok` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `wokandgo_wok`;
 
 -- --------------------------------------------------------
 
