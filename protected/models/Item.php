@@ -174,7 +174,7 @@ class Item extends CActiveRecord {
     //Get All Boxes Listed by Rank
     public static function rankedItems() {
         $query = Yii::app()->db->createCommand();
-        $query->select('item.item_id, item.item_name, item.item_description, item.item_image,'
+        $query->select('item.item_id, item.item_name, item.item_seo_name, item.item_description, item.item_image,'
                 . 'customer.customer_name, sum(sale.sale_quantity) as sales');
         $query->from('item');
         $query->leftJoin('sale', 'item.item_id=sale.item_id');
@@ -191,6 +191,7 @@ class Item extends CActiveRecord {
           $rank++;
           $boxID = $box['item_id'];
           $boxName = $box['item_name'];
+          $boxSEO = $box['item_seo_name'];
           $boxImage = $box['item_image'];
           $boxDesc = $box['item_description'];
           $boxSales = (int) $box['sales'];

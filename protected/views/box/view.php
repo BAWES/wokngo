@@ -9,7 +9,7 @@ $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 
 <header id='box'>
     <div class='rank'>Rank <span><?php echo $box->rank; ?></span></div>
-    <img src='<?php echo $box->image; ?>' alt='Box Image'/>
+    <img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/>
     <h1><?php echo $box->item_name; ?> <span><?php echo $box->customer->customer_name; ?></span></h1>
     <a href='#share' id='shareBtn'>Share This</a>
 
