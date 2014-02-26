@@ -3,6 +3,9 @@
 /* @var $box Box */
 
 $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
+
+//Share link
+$shareLink = Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name));
 ?>
 
 
@@ -13,8 +16,8 @@ $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
     <h1><?php echo $box->item_name; ?> <span><?php echo $box->customer->customer_name; ?></span></h1>
     <a href='#share' id='shareBtn'>Share This</a>
 
-    <a href='https://www.facebook.com/sharer/sharer.php?u=http://wokandgo.me' class='fbShare' target='_blank'></a>
-    <a href='http://www.twitter.com/share?text=messagehere&amp;url=http://wokandgo.me' class='twitterShare' target='_blank'></a>
+    <a href='https://www.facebook.com/sharer/sharer.php?u=<?php echo $shareLink;?>' class='fbShare' target='_blank'></a>
+    <a href='http://www.twitter.com/share?text=Check+out+this+box+<?php echo $box->item_name;?>&amp;url=<?php echo $shareLink;?>' class='twitterShare' target='_blank'></a>
 
     <div class='boxesSold'>Total Boxes Sold <span><?php echo $box->totalSold; ?></span></div>
     <div class='clear'></div>
