@@ -42,7 +42,17 @@ class BoxController extends Controller {
     }
 
     //Box Inner Page
-    public function actionView() {
-        $this->render('view');
+    public function actionView($seo) {
+        $seo = strtolower($seo);
+        $seo = preg_replace("/[^a-z0-9_\s-]/", "", $seo);
+        $seo = preg_replace("/[\s-]+/", " ", $seo);
+        $seo = preg_replace("/[\s_]/", "-", $seo);
+        
+        $criteria = new CDbCriteria();
+        $criteria->with = array('customer','sales','totalSold');
+        $box = Item::model()->findByAttributes(array('item_seo_name'=>$seo),$criteria);
+        if($box == null) throw new CHttpException(404,"Box '$seo' could not be found.");
+        
+        $this->render('view',array('box'=>$box));
     }
 }

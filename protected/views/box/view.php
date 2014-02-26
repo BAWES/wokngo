@@ -2,21 +2,21 @@
 /* @var $this BoxController */
 /* @var $box Box */
 
-$this->pageTitle = Yii::app()->name . ' - Box Name Here';
+$this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 ?>
 
 
 
 <header id='box'>
-    <div class='rank'>Rank <span>22</span></div>
-    <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/defaultbox.jpg' alt='Box Image'/>
-    <h1>Box Name Goes Here <span>Lawrence Fernandez</span></h1>
+    <div class='rank'>Rank <span><?php echo $box->rank; ?></span></div>
+    <img src='<?php echo $box->image; ?>' alt='Box Image'/>
+    <h1><?php echo $box->item_name; ?> <span><?php echo $box->customer->customer_name; ?></span></h1>
     <a href='#share' id='shareBtn'>Share This</a>
 
     <a href='https://www.facebook.com/sharer/sharer.php?u=http://wokandgo.me' class='fbShare' target='_blank'></a>
     <a href='http://www.twitter.com/share?text=messagehere&amp;url=http://wokandgo.me' class='twitterShare' target='_blank'></a>
 
-    <div class='boxesSold'>Total Boxes Sold <span>50</span></div>
+    <div class='boxesSold'>Total Boxes Sold <span><?php echo $box->totalSold; ?></span></div>
     <div class='clear'></div>
 </header>
 

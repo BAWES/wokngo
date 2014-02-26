@@ -160,6 +160,16 @@ class Item extends CActiveRecord {
             return Item::trendingItems($trendingDays + 2, $numBoxes);
         return $items;
     }
+    
+    //Get the Rank of this box
+    public function getRank(){
+        $allRanked = Item::rankedItems();
+        $rank = 0;
+        foreach($allRanked as $box){
+            $rank++;
+            if($box['item_id'] == $this->item_id) return $rank;
+        }
+    }
 
     //Get All Boxes Listed by Rank
     public static function rankedItems() {
