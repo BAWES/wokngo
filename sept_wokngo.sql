@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 25, 2014 at 05:40 PM
+-- Generation Time: Feb 26, 2014 at 01:55 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -62,6 +62,31 @@ INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_phone`, `custo
 (2, 'Altaf Al-Mutawa', '99774011', 'm6awa3@gmail.com', 'bb752c04cc05bc3ac00dcb09f2eba17a', '289100500863'),
 (3, 'Dalia Al-Mutawa', '96758392', 'kalmutawa@ghaliah.com', 'bb752c04cc05bc3ac00dcb09f2eba17a', '289100500880'),
 (4, 'Jasim Al-Mutawa', '99837283', 'tech@ghaliah.com', 'bb752c04cc05bc3ac00dcb09f2eba17a', '289100500868');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ingredient`
+--
+
+CREATE TABLE IF NOT EXISTS `ingredient` (
+  `ingredient_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ingredient_name` varchar(120) NOT NULL,
+  `ingredient_match_name` varchar(120) NOT NULL,
+  `ingredient_image` varchar(120) NOT NULL,
+  PRIMARY KEY (`ingredient_id`),
+  KEY `ingredient_match_name` (`ingredient_match_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `ingredient`
+--
+
+INSERT INTO `ingredient` (`ingredient_id`, `ingredient_name`, `ingredient_match_name`, `ingredient_image`) VALUES
+(1, 'Egg Noodles', 'egg noodles', 'eggnoodles.jpg'),
+(2, 'Carrots', 'carrots', 'carrots.jpg'),
+(3, 'Hot Chili Sauce', 'chili sauce', 'hotchilisauce.jpg'),
+(4, 'Shrimp', 'shrimp', 'shrimp.jpg');
 
 -- --------------------------------------------------------
 
