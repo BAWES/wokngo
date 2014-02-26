@@ -52,7 +52,7 @@ $this->pageTitle = Yii::app()->name . ' - Top Wokers';
         }
         ?>
 
-        <a href='#box<?php echo $box['item_id']; ?>'>
+        <a href='<?php echo Yii::app()->createUrl('box/view',array('seo'=>$box['item_seo_name'])); ?>'>
             <b><?php echo $i; ?></b>
             <div class='img'><img src='<?php echo $box['item_image']; ?>' alt='<?php echo $box['item_name']; ?>'/></div>
             <div class='boxDetails'>

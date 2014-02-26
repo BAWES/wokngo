@@ -46,7 +46,7 @@ $this->pageTitle = Yii::app()->name . ' - Trending Wokers';
         //be sure query for newBoxes has "with" for both customer details and numSold from sales
         ?>
 
-        <a href='#box<?php echo $box->item_id; ?>'>
+        <a href='<?php echo Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name)); ?>'>
             <b><?php echo $i; ?></b>
             <div class='img'><img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/></div>
             <div class='boxDetails'>
