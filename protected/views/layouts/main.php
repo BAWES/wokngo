@@ -48,7 +48,7 @@
                 <ul>
                     <li><a href='<?php echo Yii::app()->createUrl('site/index'); ?>'>Home</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('site/about'); ?>'>About Us</a></li>
-                    <li><a href='<?php echo Yii::app()->request->baseUrl; ?>/menu.pdf'>Menu</a></li>
+                    <li><a href='<?php echo Yii::app()->request->baseUrl; ?>/menu.pdf' target="_blank">Menu</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('box/index'); ?>'>Wokers</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('site/franchise'); ?>'>Franchise</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('site/contact'); ?>'>Contact Us</a></li>
