@@ -1,6 +1,7 @@
 <?php
 /* @var $this BoxController */
 /* @var $box Item */
+/* @var $ingredients Ingredient */
 
 $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 
@@ -35,22 +36,12 @@ $shareLink = Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name))
 <section id='ingredients'>
     <h1>Ingredients</h1>
     <div id='ingredientList' class='owl-carousel'>
+        <?php foreach($ingredients as $ingredient){ ?>
         <div>
-            <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/ingredients/eggnoodles.jpg' alt="Egg Noodles"/>
-            <p>Egg Noodles</p>
+            <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/ingredients/<?php echo $ingredient->ingredient_image; ?>' alt="Egg Noodles"/>
+            <p><?php echo $ingredient->ingredient_name; ?></p>
         </div>
-        <div>
-            <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/ingredients/shrimp.jpg'alt="Shrimp"/>
-            <p>Shrimp</p>
-        </div>
-        <div>
-            <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/ingredients/hotchilisauce.jpg' alt="Hot Chili Sauce"/>
-            <p>Hot Chili Sauce</p>
-        </div>
-        <div>
-            <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/ingredients/carrots.jpg' alt="Carrots"/>
-            <p>Carrots</p>
-        </div>
+        <?php } ?>
     </div>
 </section>
 
