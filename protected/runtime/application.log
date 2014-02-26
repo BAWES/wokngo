@@ -2952,3 +2952,296 @@ Stack trace:
 #11 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
 #12 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
 REQUEST_URI=/wokngo/index.php/box/view?seo=chicken-box
+2014/02/26 22:30:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dancing-monkey".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('dancing-monkey')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('dancing-monkey')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/dancing-mon...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/dancing-monkey
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:30:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chicken-box".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('chicken-box')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('chicken-box')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/chicken-box')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/chicken-box
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:30:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chicken-box".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('chicken-box')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('chicken-box')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/chicken-box')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/chicken-box
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:30:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "second-fat-box".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('second-fat-box')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('second-fat-box')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/second-fat-...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/second-fat-box
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:30:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dancing-monkey".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('dancing-monkey')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('dancing-monkey')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/dancing-mon...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/dancing-monkey
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:31:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "chicken-box".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('chicken-box')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('chicken-box')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/chicken-box')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/chicken-box
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:31:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dancing-monkey".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('dancing-monkey')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('dancing-monkey')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/dancing-mon...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/dancing-monkey
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:33:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Box 'view' could not be found.' in C:\wamp\www\wokngo\protected\controllers\BoxController.php:55
+Stack trace:
+#0 [internal function]: BoxController->actionView('view')
+#1 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BoxController), Array)
+#2 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BoxController), Object(ReflectionMethod), Array)
+#3 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#7 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/view')
+#8 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#10 {main}
+REQUEST_URI=/wokngo/index.php/box/view?seo=dancing-monkey
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:33:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dancing-monkey".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('dancing-monkey')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('dancing-monkey')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/dancing-mon...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/dancing-monkey
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:33:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dancing-monkey".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('dancing-monkey')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('dancing-monkey')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/dancing-mon...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/dancing-monkey
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:33:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dancing-monkey".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('dancing-monkey')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('dancing-monkey')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/dancing-mon...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/dancing-monkey
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:33:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "second-fat-box".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('second-fat-box')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/index.php/second-fat-box
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:35:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "extra-beef".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('extra-beef')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('extra-beef')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/extra-beef')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/extra-beef
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:35:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "move-it".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('move-it')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('move-it')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/move-it')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/move-it
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:35:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "move-it".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('move-it')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('move-it')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/move-it')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/move-it
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:36:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "move-it".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('move-it')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('move-it')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/move-it')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/move-it
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:37:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "move-it".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('move-it')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('move-it')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/move-it')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/move-it
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:40:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "move-it".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('move-it')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('move-it')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/move-it')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/move-it
+HTTP_REFERER=http://localhost/wokngo/index.php/site/index
+---
+2014/02/26 22:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Box 'mtest' could not be found.' in C:\wamp\www\wokngo\protected\controllers\BoxController.php:55
+Stack trace:
+#0 [internal function]: BoxController->actionView('mtest')
+#1 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BoxController), Array)
+#2 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BoxController), Object(ReflectionMethod), Array)
+#3 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#7 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/view')
+#8 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#10 {main}
+REQUEST_URI=/wokngo/index.php/box/mtest
+---
+2014/02/26 22:40:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Box 'fesf' could not be found.' in C:\wamp\www\wokngo\protected\controllers\BoxController.php:55
+Stack trace:
+#0 [internal function]: BoxController->actionView('fesf')
+#1 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BoxController), Array)
+#2 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BoxController), Object(ReflectionMethod), Array)
+#3 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#7 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/view')
+#8 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#10 {main}
+REQUEST_URI=/wokngo/index.php/box/fesf
+---
+2014/02/26 22:41:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ninja-box".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('ninja-box')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('ninja-box')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/ninja-box')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/ninja-box
+---
+2014/02/26 22:42:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ninja-box".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('ninja-box')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('ninja-box')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/ninja-box')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/ninja-box
+---
+2014/02/26 22:42:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ninja-box".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('ninja-box')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('ninja-box')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/ninja-box')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/index.php/box/ninja-box
+---
+2014/02/26 22:48:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Box 'index' could not be found.' in C:\wamp\www\wokngo\protected\controllers\BoxController.php:55
+Stack trace:
+#0 [internal function]: BoxController->actionView('index')
+#1 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BoxController), Array)
+#2 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BoxController), Object(ReflectionMethod), Array)
+#3 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#7 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/view')
+#8 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#10 {main}
+REQUEST_URI=/wokngo/box/index
+HTTP_REFERER=http://localhost/wokngo/box/second-fat-box
+---
+2014/02/26 22:48:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Box 'index' could not be found.' in C:\wamp\www\wokngo\protected\controllers\BoxController.php:55
+Stack trace:
+#0 [internal function]: BoxController->actionView('index')
+#1 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BoxController), Array)
+#2 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BoxController), Object(ReflectionMethod), Array)
+#3 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#7 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/view')
+#8 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#10 {main}
+REQUEST_URI=/wokngo/box/index
+HTTP_REFERER=http://localhost/wokngo/box/index
+---
