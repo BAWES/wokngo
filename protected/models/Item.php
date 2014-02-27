@@ -19,7 +19,9 @@
  * @property Sale[] $sales
  */
 class Item extends CActiveRecord {
-
+    
+    public $customer_search;
+    
     /**
      * @return string the associated database table name
      */
@@ -41,7 +43,7 @@ class Item extends CActiveRecord {
             array('item_description', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('item_id, customer_id, item_name, item_seo_name, item_ingredients, item_image, item_created_at, item_description', 'safe', 'on' => 'search'),
+            array('item_id, customer_search, customer_id, item_name, item_seo_name, item_ingredients, item_image, item_created_at, item_description', 'safe', 'on' => 'search'),
         );
     }
 
@@ -90,6 +92,7 @@ class Item extends CActiveRecord {
             'item_image' => 'Item Image',
             'item_description' => 'Item Description',
             'item_created_at' => 'Item Created at',
+            'customer_search' => 'Customer',
         );
     }
 
@@ -109,6 +112,8 @@ class Item extends CActiveRecord {
         // @todo Please modify the following code to remove attributes that should not be searched.
 
         $criteria = new CDbCriteria;
+        
+        $criteria->with = "customer";
 
         $criteria->compare('item_id', $this->item_id);
         $criteria->compare('customer_id', $this->customer_id);
@@ -118,9 +123,21 @@ class Item extends CActiveRecord {
         $criteria->compare('item_image', $this->item_image, true);
         $criteria->compare('item_description', $this->item_description, true);
         $criteria->compare('item_created_at', $this->item_created_at, true);
+        
+        //Add search function to related
+        $criteria->compare('customer.customer_name', $this->customer_search, true);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
+            'sort' => array(//add sorting to related model
+                'attributes' => array(
+                    'customer_search' => array(
+                        'asc' => 'customer.customer_name',
+                        'desc' => 'customer.customer_name DESC',
+                    ),
+                    '*', //* means treat other fields normally
+                ),
+            ),
         ));
     }
 

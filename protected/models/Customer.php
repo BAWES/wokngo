@@ -17,6 +17,7 @@
 class Customer extends CActiveRecord {
 
     private $salt = "28b206548469ce62182048fd9cf91760";
+    
 
     /**
      * @return string the associated database table name
@@ -82,6 +83,7 @@ class Customer extends CActiveRecord {
         // class name for the relations automatically generated below.
         return array(
             'items' => array(self::HAS_MANY, 'Item', 'customer_id'),
+            'sales' => array(self::HAS_MANY, 'Sale', 'item_id', 'through'=>'items', 'order'=>'sale_datetime ASC'),
         );
     }
 

@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Customers'=>array('index'),
-	$model->customer_id,
+	$model->customer_name,
 );
 
 $this->menu=array(
@@ -14,7 +14,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Customer #<?php echo $model->customer_id; ?></h1>
+<h1><?php echo $model->customer_name; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -27,3 +27,14 @@ $this->menu=array(
 		'customer_civil_id',
 	),
 )); ?>
+
+
+<?php
+if($model->items){
+    echo "<br/><h1>Boxes</h1><ul>";
+    foreach($model->items as $box){
+        echo "<li><a href='".Yii::app()->createUrl('admin/item/view',array('id'=>$box->item_id))."'>".$box->item_name." (".$box->totalSold." sold)</a></li>";
+    }
+    echo "</ul>";
+}
+?>
