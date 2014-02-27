@@ -42,8 +42,8 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         'item_name',
         'item_ingredients',
-        'item_image',
-        'item_description',
+        //'item_image',
+        //'item_description',
         array(
             'class' => 'CButtonColumn',
         ),
