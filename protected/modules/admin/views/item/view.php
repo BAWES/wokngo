@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Boxes'=>array('index'),
-	$model->item_id,
+	$model->item_name,
 );
 
 $this->menu=array(
@@ -14,18 +14,19 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Box #<?php echo $model->item_id; ?></h1>
+<h1>View Box [<?php echo $model->item_name; ?>]</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'item_id',
-		'customer_id',
+		'customer.customer_name',
 		'item_name',
 		'item_seo_name',
 		'item_ingredients',
 		'item_image',
 		'item_description',
                 'item_created_at',
+                'totalSold',
 	),
 )); ?>
