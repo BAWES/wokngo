@@ -2,6 +2,8 @@
 
 class ProfileController extends Controller {
 
+    public $layout = "page";
+    
     /**
      * @return array action filters
      */

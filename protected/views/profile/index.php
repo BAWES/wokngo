@@ -1,9 +1,8 @@
 <?php
 /* @var $this ProfileController */
 
-$this->breadcrumbs=array(
-	'Profile',
-);
+$this->pageTitle=Yii::app()->name . ' - Profile';
+$this->pageHeader = "Profile";
 ?>
 <h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
 
