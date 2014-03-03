@@ -25,9 +25,12 @@ class ProfileController extends Controller {
             ),
         );
     }
-
+    
+    //default profile page
     public function actionIndex() {
-        $this->render('index');
+        $user = Customer::model()->findByPk(Yii::app()->user->id);
+        
+        $this->render('index',array('user'=>$user));
     }
     
 }
