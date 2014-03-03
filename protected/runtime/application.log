@@ -4107,3 +4107,129 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/wokngo/service
 ---
+2014/03/03 13:30:52 [error] [exception.SoapFault] SoapFault exception: [VersionMismatch] Wrong Version in C:\wamp\www\wokngo\protected\views\site\franchise.php:13
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\views\site\franchise.php(13): SoapClient->__call('updateCustomer', Array)
+#1 C:\wamp\www\wokngo\protected\views\site\franchise.php(13): SoapClient->updateCustomer(1, 'Khalid Al-Mutaw...', '99811042', 'khalid@khalidm....', '289100500862')
+#2 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#3 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#4 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#5 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('franchise', NULL, true)
+#6 C:\wamp\www\wokngo\protected\controllers\SiteController.php(61): CController->render('franchise')
+#7 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionFranchise()
+#8 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('franchise')
+#12 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/franchise')
+#13 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#15 {main}
+REQUEST_URI=/wokngo/franchise
+HTTP_REFERER=http://localhost/wokngo/profile/index
+---
+2014/03/03 13:31:20 [error] [exception.SoapFault] SoapFault exception: [Client] looks like we got no XML document in C:\wamp\www\wokngo\protected\views\site\franchise.php:14
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->__call('updateCustomer', Array)
+#1 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->updateCustomer(1, 'Khalid Al-Mutaw...', '99811042', 'khalid@khalidm....', '289100500862')
+#2 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#3 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#4 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#5 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('franchise', NULL, true)
+#6 C:\wamp\www\wokngo\protected\controllers\SiteController.php(61): CController->render('franchise')
+#7 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionFranchise()
+#8 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('franchise')
+#12 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/franchise')
+#13 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#15 {main}
+REQUEST_URI=/wokngo/franchise
+HTTP_REFERER=http://localhost/wokngo/profile/index
+---
+2014/03/03 13:31:33 [error] [exception.SoapFault] SoapFault exception: [Client] looks like we got no XML document in C:\wamp\www\wokngo\protected\views\site\franchise.php:14
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->__call('updateCustomer', Array)
+#1 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->updateCustomer(1, 'Khalid Al-Mutaw...', '99811042', 'khalid@khalidm....', '289100500862')
+#2 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#3 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#4 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#5 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('franchise', NULL, true)
+#6 C:\wamp\www\wokngo\protected\controllers\SiteController.php(61): CController->render('franchise')
+#7 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionFranchise()
+#8 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('franchise')
+#12 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/franchise')
+#13 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#15 {main}
+REQUEST_URI=/wokngo/franchise
+HTTP_REFERER=http://localhost/wokngo/profile/index
+---
+2014/03/03 13:40:24 [error] [exception.SoapFault] SoapFault exception: [Client] looks like we got no XML document in C:\wamp\www\wokngo\protected\views\site\franchise.php:14
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->__call('updateCustomer', Array)
+#1 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->updateCustomer(1, 'Khalid Al-Mutaw...', '99811042', 'khalid@khalidm....', '289100500862')
+#2 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#3 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#4 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#5 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('franchise', NULL, true)
+#6 C:\wamp\www\wokngo\protected\controllers\SiteController.php(61): CController->render('franchise')
+#7 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionFranchise()
+#8 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('franchise')
+#12 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/franchise')
+#13 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#15 {main}
+REQUEST_URI=/wokngo/franchise
+HTTP_REFERER=http://localhost/wokngo/profile/index
+---
+2014/03/03 13:40:38 [error] [exception.SoapFault] SoapFault exception: [Client] looks like we got no XML document in C:\wamp\www\wokngo\protected\views\site\franchise.php:14
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->__call('createCustomer', Array)
+#1 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->createCustomer(1, 'Khalid Al-Mutaw...', '99811042', 'khalid@khalidm....', '289100500862')
+#2 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#3 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#4 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#5 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('franchise', NULL, true)
+#6 C:\wamp\www\wokngo\protected\controllers\SiteController.php(61): CController->render('franchise')
+#7 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionFranchise()
+#8 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('franchise')
+#12 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/franchise')
+#13 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#15 {main}
+REQUEST_URI=/wokngo/franchise
+HTTP_REFERER=http://localhost/wokngo/profile/index
+---
+2014/03/03 13:40:58 [error] [exception.SoapFault] SoapFault exception: [Client] looks like we got no XML document in C:\wamp\www\wokngo\protected\views\site\franchise.php:14
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->__call('createCustomer', Array)
+#1 C:\wamp\www\wokngo\protected\views\site\franchise.php(14): SoapClient->createCustomer(1, 'Khalid Al-Mutaw...', '99811042', 'khalid@khalidm....', '289100500862')
+#2 C:\wamp\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\wok...')
+#3 C:\wamp\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\wok...', NULL, true)
+#4 C:\wamp\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\wok...', NULL, true)
+#5 C:\wamp\yii\framework\web\CController.php(782): CController->renderPartial('franchise', NULL, true)
+#6 C:\wamp\www\wokngo\protected\controllers\SiteController.php(61): CController->render('franchise')
+#7 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionFranchise()
+#8 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('franchise')
+#12 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/franchise')
+#13 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#15 {main}
+REQUEST_URI=/wokngo/franchise
+HTTP_REFERER=http://localhost/wokngo/profile/index
+---
