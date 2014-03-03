@@ -17,7 +17,6 @@
 class Customer extends CActiveRecord {
 
     private $salt = "28b206548469ce62182048fd9cf91760";
-    
 
     /**
      * @return string the associated database table name
@@ -37,7 +36,8 @@ class Customer extends CActiveRecord {
             array('customer_id, customer_civil_id', 'numerical', 'integerOnly' => true),
             array('customer_name, customer_phone, customer_email, customer_password', 'length', 'max' => 120),
             array('customer_email', 'email'),
-            array('customer_civil_id', 'length', 'max'=>42),
+            array('customer_email', 'unique'),
+            array('customer_civil_id', 'length', 'max' => 42),
             array('customer_password', 'rehashPassword', 'on' => 'changePw'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -51,11 +51,40 @@ class Customer extends CActiveRecord {
 
     protected function beforeSave() {
         if (parent::beforeSave()) {
-            if ($this->isNewRecord){
+            if ($this->isNewRecord) {
                 //Generate password
-                $uniquePassword = rand(10000,99999);
-                    //email/sms this password to customer
+                $uniquePassword = rand(10000, 99999);
+                //email/sms this password to customer
+                require_once('class.phpmailer.php');
+
+                $mail = new PHPMailer();
+                $mail->CharSet = "UTF-8";
+                $mail->IsSMTP(); // set mailer to use SMTP
+                $mail->Mailer = "smtp";
+                $mail->Host = "ssl://wok.wokandgo.me";
+                $mail->Port = 465;
+                $mail->SMTPAuth = true; // turn on SMTP authentication
+                //$mail->SMTPSecure = "tls";
+                $mail->Username = 'notification@wokandgo.me'; // SMTP username
+                $mail->Password = 'k99811042'; // SMTP password
+                $mail->From = 'notification@wokandgo.me'; //do NOT fake header.
+                $mail->FromName = 'Wok&Go';
+
+                $mail->AddAddress($this->customer_email); 
                 
+                $mail->IsHTML(true);
+                $mail->Subject = "[Wok&Go] Account Details";
+                $mail->Body = "<p>Dear ".$this->customer_name.",</p>".
+                               "<p>Your account login details:</p>".
+                                "<p>Email: ".$this->customer_email."<br/>".
+                                "Password: ".$uniquePassword."</p>";
+
+                if (!$mail->Send()) {
+                    //echo $mail->ErrorInfo;
+                } else {
+                    //mail has been sent
+                }
+
                 $this->customer_password = $this->hashPassword($uniquePassword, $this->salt);
             }
 
@@ -83,7 +112,7 @@ class Customer extends CActiveRecord {
         // class name for the relations automatically generated below.
         return array(
             'items' => array(self::HAS_MANY, 'Item', 'customer_id'),
-            'sales' => array(self::HAS_MANY, 'Sale', 'item_id', 'through'=>'items', 'order'=>'sale_datetime ASC'),
+            'sales' => array(self::HAS_MANY, 'Sale', 'item_id', 'through' => 'items', 'order' => 'sale_datetime ASC'),
         );
     }
 
