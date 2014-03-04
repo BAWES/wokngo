@@ -46,7 +46,7 @@ class ServiceController extends Controller {
      * @param string customer Name
      * @param string customer Phone Number
      * @param string customer Email
-     * @param int customer Civil Id
+     * @param string customer Civil Id
      * @return string confirmation message "updated"
      * @soap
      */
