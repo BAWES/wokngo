@@ -16,6 +16,15 @@ input,select
 }
 .genericButton:hover{background-color:#f79211;}
 
+#fb-root {
+    display: none;
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 98% !important;
+}
+
+#twitter-widget-0{width:98% !important; height:200px !important;}
 
 
 /* END Yii Framework Styling */
@@ -229,12 +238,12 @@ footer{width:100%; background:url(../images/layout/seamless2.jpg)}
 .socialFeed a{
     color:#16a0da; font-weight:400; font-size:0.8125em;/*13px/16*/}
 .socialFeed a span{color:#fff; font-size:1.230769230769231em;/*16px/13*/}
-.socialFeed div{color:#fff; font-size:0.8em; margin-top:2em;}
+.socialFeed div{color:#fff; font-size:0.8em; }
 
 
 
 #about{width:94%; margin:0 auto;  margin-bottom:1.5em; border-top:1px solid #8c8c8c;
-       margin-top:1.5em; padding-top:1.5em; color:#fff;
+       padding-top:1.5em; color:#fff;
 }
 #about h1{font-size:1.125em;/*18px/16*/ 
           font-weight:600;}
@@ -255,7 +264,7 @@ footer{width:100%; background:url(../images/layout/seamless2.jpg)}
 }
 @media screen and (min-width:45.375em) { /*726px*/
     #about{width:94%; margin:0 auto; margin-bottom:1.5em;
-           border-top:1px solid #8c8c8c; margin-top:1.5em; padding-top:1.5em; color:#fff;
+           border-top:1px solid #8c8c8c;  padding-top:1.5em; color:#fff;
     }
     #about h1{float:left; font-size:1.125em;/*18px/16*/ font-weight:600; width:13.82978723404255%;}
     #about p{float:left; color:#ccc; font-size:0.8125em;/*13px/16*/ width:53.19148936170213%;}
@@ -573,7 +582,7 @@ header#page h1{color:#fff; font-size:1.625em;/*26px/16*/ padding-top:0.65em; wid
     }
 
     #about{width:94%; margin:0 auto; margin-bottom:1.5em;
-           border-top:1px solid #8c8c8c; margin-top:1.5em; padding-top:1.5em; color:#fff;
+           border-top:1px solid #8c8c8c; padding-top:1.5em; color:#fff;
     }
     #about h1{float:left; font-size:1.125em;/*18px/16*/ font-weight:600; width:13.82978723404255%;}
     #about p{float:left; color:#ccc; font-size:0.8125em;/*13px/16*/ width:53.19148936170213%;}

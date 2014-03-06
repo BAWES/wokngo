@@ -31,6 +31,16 @@
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=315414895191259";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
         <header id="mainheader">
             <div id='logoArea'>
                 <a href="<?php echo Yii::app()->createUrl('site/index'); ?>" id='logo'><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logo.png" alt='Wok Logo'/></a>
@@ -79,24 +89,27 @@
                 <!-- Facebook Page Feed -->
                 <section class='socialFeed' id='facebook'>
                     <a href='#'>WOK&amp;GO On <span>Facebook</span></a>
-                    <div>
-                        Feed goes here
+                    <div style="margin-top:0.5em;">
+                        <div class="fb-like-box" data-href="https://www.facebook.com/wokandgonoodles" data-height="200" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                     </div>
                 </section>
 
                 <!-- Twitter Page Feed -->
                 <section class='socialFeed' id='twitter'>
                     <a href='#'>WOK&amp;GO On <span>Twitter</span></a>
-                    <div>
-                        Feed goes here
+                    <div style="margin-top:0.5em;">
+                        <a class="twitter-timeline" href="https://twitter.com/WokNGo_KW" data-widget-id="441693557569511424">Tweets by @WokNGo_KW</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
                     </div>
                 </section>
 
                 <!-- Instagram Page Feed -->
                 <section class='socialFeed' id='instagram'>
                     <a href='#'>WOK&amp;GO On <span>Instagram</span></a>
-                    <div>
-                        Feed goes here
+                    <div style="margin-top:0.5em; margin-left:0.5em;">
+                        <iframe src="http://www.intagme.com/in/?u=d29rbmdvX2t3fHNsfDMwMHwyfDN8fHllc3w1fHVuZGVmaW5lZA==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height: 200px" ></iframe>
                     </div>
                 </section>
                 <div class='clear'></div>
