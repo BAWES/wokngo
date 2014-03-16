@@ -8,7 +8,7 @@ $this->pageHeader = "Profile";
 
 <h1>Welcome <?php echo $user->customer_name; ?></h1>
 <ul>
-    <li><a href='#changePw'>Change Password</a></li>
+    <li><a href='<?php echo Yii::app()->createUrl('profile/changePassword'); ?>'>Change Password</a></li>
     <li><a href='<?php echo Yii::app()->createUrl('site/logout'); ?>'>Logout</a></li>
 </ul>
 <h2>My Boxes</h2><br/>

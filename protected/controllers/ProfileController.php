@@ -33,4 +33,29 @@ class ProfileController extends Controller {
         $this->render('index',array('user'=>$user));
     }
     
+    //change password page
+    public function actionChangePassword() {
+        $user = Customer::model()->findByPk(Yii::app()->user->id);
+        
+        $model = new PasswordForm;
+
+        // if it is ajax validation request
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'password-form') {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+
+        // collect user input data
+        if (isset($_POST['PasswordForm'])) {
+            $model->attributes = $_POST['PasswordForm'];
+            // validate user input and redirect to the previous page if valid
+            if ($model->validate()){
+                //change PASSWORD HERE
+                $this->redirect(array('profile/index'));
+            }
+        }
+        
+        $this->render('changePassword',array('user'=>$user,'model'=>$model));
+    }
+    
 }
