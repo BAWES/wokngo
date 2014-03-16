@@ -12,7 +12,7 @@ $this->pageHeader = "Change Description";
 <?php 
 CHtml::$afterRequiredLabel = '';
 $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'password-form',
+	'id'=>'description-form',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
