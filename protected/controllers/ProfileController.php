@@ -86,7 +86,13 @@ class ProfileController extends Controller {
             $model->attributes = $_POST['DescriptionForm'];
             
             if ($model->validate()){
-                //change BOX DESCRIPTION here
+                //purify description
+                $purifier = new CHtmlPurifier();
+                $purifier->options = array(
+                    'HTML.Allowed' => 'p,a[href],b,i',
+                );
+                $model->description = $purifier->purify($model->description);
+                
                 $approval = new Approval();
                 $approval->item_id = $id;
                 $approval->approval_type = 'desc';
