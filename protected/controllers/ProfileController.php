@@ -35,8 +35,6 @@ class ProfileController extends Controller {
     
     //change password page
     public function actionChangePassword() {
-        $user = Customer::model()->findByPk(Yii::app()->user->id);
-        
         $model = new PasswordForm;
 
         // if it is ajax validation request
@@ -51,11 +49,18 @@ class ProfileController extends Controller {
             // validate user input and redirect to the previous page if valid
             if ($model->validate()){
                 //change PASSWORD HERE
-                $this->redirect(array('profile/index'));
+                $user = Customer::model()->findByPk(Yii::app()->user->id);
+                $user->scenario = "changePw";
+                $user->customer_password = $model->password;
+                $user->save();
+                
+                $title = "Password Changed";
+                $content = "Your password has been changed.";
+                $this->render('page',array('title'=>$title,'content'=>$content));
             }
         }
         
-        $this->render('changePassword',array('user'=>$user,'model'=>$model));
+        $this->render('changePassword',array('model'=>$model));
     }
     
 }

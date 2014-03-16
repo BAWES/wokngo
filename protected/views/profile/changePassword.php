@@ -1,6 +1,5 @@
 <?php
 /* @var $this ProfileController */
-/* @var $user Customer */
 /* @var $model PasswordForm */
 
 $this->pageTitle = Yii::app()->name . ' - Change Password';
