@@ -5,7 +5,7 @@
 
 //This is a generic re-usable page
 
-$this->pageTitle = Yii::app()->name . ' - $title';
+$this->pageTitle = Yii::app()->name . ' - '.$title;
 $this->pageHeader = "$title";
 
 echo "<p>$content</p>";

@@ -84,7 +84,7 @@ class ProfileController extends Controller {
         // collect user input data
         if (isset($_POST['DescriptionForm'])) {
             $model->attributes = $_POST['DescriptionForm'];
-            // validate user input and redirect to the previous page if valid
+            
             if ($model->validate()){
                 //change BOX DESCRIPTION here
                 $approval = new Approval();
@@ -100,6 +100,51 @@ class ProfileController extends Controller {
         }
         
         $this->render('changeDescription',array('model'=>$model, 'box'=>$box));
+    }
+    
+    //change box logo page
+    public function actionChangeLogo($id) {
+        $model = new LogoForm;
+        
+        $id = (int) $id;
+        $box = Item::model()->findByPk($id);
+        
+        if($model===null) throw new CHttpException(404,'The requested box does not exist.');
+        
+        //Check if box belongs to user
+        if($box->customer_id != Yii::app()->user->id) throw new CHttpException(403,'You do not own this box.');
+
+        // collect user input data
+        if (isset($_POST['LogoForm'])) {
+            $model->attributes = $_POST['LogoForm'];
+            $pic = CUploadedFile::getInstance($model,'logo');
+            
+            
+            if ($model->validate()){
+                if($pic!==null){
+                    $image = WideImage::load($pic->getTempName());
+                    $resized = $image->resize(112, 112,'fill');
+				
+                    $fileName = time().rand(0,200).".".$pic->getExtensionName();
+                    $model->logo=$fileName;
+                    
+                    $filePath = Yii::app()->basePath.'/../images/box/'.$fileName;
+                    $resized->saveToFile($filePath);
+		}
+                
+                $approval = new Approval();
+                $approval->item_id = $id;
+                $approval->approval_type = 'image';
+                $approval->approval_text = $model->logo;
+                $approval->save();
+                
+                $title = "Logo Change Requested";
+                $content = "Your box logo will be changed as soon as it is approved by our staff.";
+                $this->render('page',array('title'=>$title,'content'=>$content));
+            }
+        }
+        
+        $this->render('changeLogo',array('model'=>$model, 'box'=>$box));
     }
     
 }
