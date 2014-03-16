@@ -63,4 +63,43 @@ class ProfileController extends Controller {
         $this->render('changePassword',array('model'=>$model));
     }
     
+    //change box description page
+    public function actionChangeDescription($id) {
+        $model = new DescriptionForm;
+        
+        $id = (int) $id;
+        $box = Item::model()->findByPk($id);
+        
+        if($model===null) throw new CHttpException(404,'The requested box does not exist.');
+        
+        //Check if box belongs to user
+        if($box->customer_id != Yii::app()->user->id) throw new CHttpException(403,'You do not own this box.');
+
+        // if it is ajax validation request
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'description-form') {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+
+        // collect user input data
+        if (isset($_POST['DescriptionForm'])) {
+            $model->attributes = $_POST['DescriptionForm'];
+            // validate user input and redirect to the previous page if valid
+            if ($model->validate()){
+                //change BOX DESCRIPTION here
+                $approval = new Approval();
+                $approval->item_id = $id;
+                $approval->approval_type = 'desc';
+                $approval->approval_text = $model->description;
+                $approval->save();
+                
+                $title = "Description Change Requested";
+                $content = "Your box description will be changed as soon as it is approved by our staff.";
+                $this->render('page',array('title'=>$title,'content'=>$content));
+            }
+        }
+        
+        $this->render('changeDescription',array('model'=>$model, 'box'=>$box));
+    }
+    
 }

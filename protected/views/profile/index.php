@@ -27,7 +27,7 @@ $this->pageHeader = "Profile";
                 </a>
             </td>
             <td><a href="#">Change Logo</a></td>
-            <td><a href="#">Change Description</a></td>
+            <td><a href="<?php echo Yii::app()->createUrl('profile/changeDescription', array('id' => $box->item_id)); ?>">Change Description</a></td>
         </tr>
     <?php } ?>
 </table>
