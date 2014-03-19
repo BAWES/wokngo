@@ -5,11 +5,7 @@
 
 <div class="view">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('approval_id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->approval_id), array('view', 'id'=>$data->approval_id)); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('item_id')); ?>:</b>
+	<b>Box:</b>
 	<?php echo CHtml::encode($data->item->item_name); ?>
 	<br />
 
@@ -29,6 +25,7 @@
         <?php } ?>
 
             <br/>
-            <a href='#'>Approve</a> - <a href='#'>Reject</a>
+            <a href='<?php echo Yii::app()->createUrl("admin/approval/approve",array('id'=>$data->approval_id)) ?>'>Approve</a> - 
+            <a href='<?php echo Yii::app()->createUrl("admin/approval/reject",array('id'=>$data->approval_id)) ?>'>Reject</a>
 
 </div>
