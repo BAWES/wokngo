@@ -10,16 +10,25 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('item_id')); ?>:</b>
-	<?php echo CHtml::encode($data->item_id); ?>
+	<?php echo CHtml::encode($data->item->item_name); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('approval_type')); ?>:</b>
-	<?php echo CHtml::encode($data->approval_type); ?>
-	<br />
+        
+        <?php  if($data->approval_type == "image"){ ?>
+        
+            <b>Logo:</b><br/>
+            <?php echo CHtml::image(Yii::app()->request->baseUrl . "/images/box/".$data->approval_text); ?>
+            <br />
+        
+        <?php }else{ ?>
+        
+            <b>Description:</b><br/>
+            <?php echo CHtml::encode($data->approval_text); ?>
+            <br />
+            
+        <?php } ?>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('approval_text')); ?>:</b>
-	<?php echo CHtml::encode($data->approval_text); ?>
-	<br />
-
+            <br/>
+            <a href='#'>Approve</a> - <a href='#'>Reject</a>
 
 </div>
