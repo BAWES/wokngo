@@ -88,7 +88,7 @@
             <section id='feeds'>
                 <!-- Facebook Page Feed -->
                 <section class='socialFeed' id='facebook'>
-                    <a href='#'>WOK&amp;GO On <span>Facebook</span></a>
+                    <a href='https://www.facebook.com/wokngokw' target="_blank">WOK&amp;GO On <span>Facebook</span></a>
                     <div style="margin-top:0.5em;">
                         <div class="fb-like-box" data-href="https://www.facebook.com/wokngokw" data-height="200" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                     </div>
@@ -96,7 +96,7 @@
 
                 <!-- Twitter Page Feed -->
                 <section class='socialFeed' id='twitter'>
-                    <a href='#'>WOK&amp;GO On <span>Twitter</span></a>
+                    <a href='https://twitter.com/WokNGo_KW' target="_blank">WOK&amp;GO On <span>Twitter</span></a>
                     <div style="margin-top:0.5em;">
                         <a class="twitter-timeline" href="https://twitter.com/WokNGo_KW" data-widget-id="441693557569511424">Tweets by @WokNGo_KW</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -107,7 +107,7 @@
 
                 <!-- Instagram Page Feed -->
                 <section class='socialFeed' id='instagram'>
-                    <a href='#'>WOK&amp;GO On <span>Instagram</span></a>
+                    <a href='http://instagram.com/wokngo_kw' target="_blank">WOK&amp;GO On <span>Instagram</span></a>
                     <div style="margin-top:0.5em; margin-left:0.5em;">
                         <iframe src="http://www.intagme.com/in/?u=d29rbmdvX2t3fHNsfDMwMHwyfDN8fHllc3w1fHVuZGVmaW5lZA==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height: 200px" ></iframe>
                     </div>
