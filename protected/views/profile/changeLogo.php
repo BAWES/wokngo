@@ -3,8 +3,8 @@
 /* @var $model LogoForm */
 /* @var $box Item */
 
-$this->pageTitle = Yii::app()->name . ' - Change Box Logo';
-$this->pageHeader = "Change Logo";
+$this->pageTitle = Yii::app()->name . ' - Change Box Photo';
+$this->pageHeader = "Change Photo";
 ?>
 
 
@@ -21,7 +21,7 @@ $form=$this->beginWidget('CActiveForm', array(
 )); ?>
 
     <b>Box: </b><?php echo $box->item_name; ?> <br/>
-    <b>Logo: </b><br/> <img src='<?php echo $box->image; ?>'/> <br/><br/>
+    <b>Photo: </b><br/> <img src='<?php echo $box->image; ?>'/> <br/><br/>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'logo'); ?>
@@ -31,7 +31,7 @@ $form=$this->beginWidget('CActiveForm', array(
         <p style='color:green; font-size:0.8em;'>Square images recommended</p>
 
 	<div class="row buttons" style="margin-top:1em;">
-		<?php echo CHtml::submitButton('Change Logo', array('class' => 'genericButton')); ?>
+		<?php echo CHtml::submitButton('Change Photo', array('class' => 'genericButton')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
