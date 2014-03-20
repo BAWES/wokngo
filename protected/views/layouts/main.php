@@ -90,7 +90,7 @@
                 <section class='socialFeed' id='facebook'>
                     <a href='#'>WOK&amp;GO On <span>Facebook</span></a>
                     <div style="margin-top:0.5em;">
-                        <div class="fb-like-box" data-href="https://www.facebook.com/wokandgonoodles" data-height="200" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
+                        <div class="fb-like-box" data-href="https://www.facebook.com/wokngokw" data-height="200" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
                     </div>
                 </section>
 
