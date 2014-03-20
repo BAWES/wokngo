@@ -23,7 +23,7 @@ class LogoForm extends CFormModel {
      */
     public function attributeLabels() {
         return array(
-            'logo' => 'New Logo',
+            'logo' => 'New Photo',
         );
     }
 

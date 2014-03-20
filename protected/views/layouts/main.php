@@ -46,7 +46,7 @@
                 <a href="<?php echo Yii::app()->createUrl('site/index'); ?>" id='logo'><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logo.png" alt='Wok Logo'/></a>
 
                 <ul id='socialLinks'>
-                    <li><a href="https://www.facebook.com/wokandgonoodles" target="_blank" class='facebook'></a></li>
+                    <li><a href="https://www.facebook.com/wokngokw" target="_blank" class='facebook'></a></li>
                     <li><a href="https://twitter.com/wokngo_kw" target="_blank" class='twitter'></a></li>
                     <li><a href="http://instagram.com/wokngo_kw" target="_blank" class='instagram'></a></li>
                 </ul>

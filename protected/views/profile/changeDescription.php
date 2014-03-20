@@ -3,8 +3,8 @@
 /* @var $model DescriptionForm */
 /* @var $box Item */
 
-$this->pageTitle = Yii::app()->name . ' - Change Box Description';
-$this->pageHeader = "Change Description";
+$this->pageTitle = Yii::app()->name . ' - Add Box Description';
+$this->pageHeader = "Add Description";
 ?>
 
 
@@ -29,7 +29,7 @@ $form=$this->beginWidget('CActiveForm', array(
 	</div>
 
 	<div class="row buttons" style="margin-top:1em;">
-		<?php echo CHtml::submitButton('Change Description', array('class' => 'genericButton')); ?>
+		<?php echo CHtml::submitButton('Add Description', array('class' => 'genericButton')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

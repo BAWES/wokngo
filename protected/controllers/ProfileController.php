@@ -145,7 +145,7 @@ class ProfileController extends Controller {
                 $approval->save();
                 
                 $title = "Logo Change Requested";
-                $content = "Your box logo will be changed as soon as it is approved by our staff.";
+                $content = "Your box photo will be changed as soon as it is approved by our staff.";
                 $this->render('page',array('title'=>$title,'content'=>$content));
             }
         }
