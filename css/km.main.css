@@ -506,6 +506,7 @@ header#page h1{color:#fff; font-size:1.625em;/*26px/16*/ padding-top:0.65em; wid
 
 @media screen and (min-width:62.5em) { 
     /*RESET STYLING*/
+    #delivery a{cursor:default !important;}
     #signin a,#delivery a, #orderOnline a{position:static;width:auto; text-align: center;
                                           background:#11739d url(../images/layout/usericon.png) no-repeat 42% 50%; 
                                           border-top:1px solid #1794cc; border-right:0; font-weight:400; background:0;
