@@ -16,7 +16,7 @@ $this->pageHeader = "Contact Us";
 <?php else: ?>
 
 <p>
-If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
+If you have business inquiries or a question, please fill out the following form. Thank you.
 </p>
 
 <div class="form">
