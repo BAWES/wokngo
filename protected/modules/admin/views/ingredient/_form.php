@@ -8,6 +8,7 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'ingredient-form',
+        'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -33,9 +34,10 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'ingredient_image'); ?>
-		<?php echo $form->textField($model,'ingredient_image',array('size'=>60,'maxlength'=>120)); ?>
+		<?php echo $form->fileField($model,'ingredient_image'); ?>
 		<?php echo $form->error($model,'ingredient_image'); ?>
 	</div>
+        <p>Square Image (226x226) pref</p>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
