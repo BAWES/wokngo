@@ -35,6 +35,7 @@
 				array('label'=>'Boxes', 'url'=>array('/admin/item/index')),
 				array('label'=>'Ingredients', 'url'=>array('/admin/ingredient/index')),
 				array('label'=>'Sales', 'url'=>array('/admin/sale/index')),
+				array('label'=>'Subscriptions', 'url'=>array('/admin/subscribe/index')),
 				array('label'=>'Approval', 'url'=>array('/admin/approval/index')),
 				array('label'=>'Login', 'url'=>array('/admin/default/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/admin/default/logout'), 'visible'=>!Yii::app()->user->isGuest)

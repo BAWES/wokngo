@@ -4786,3 +4786,120 @@ Stack trace:
 #4 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
 #5 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
 REQUEST_URI=/wokngo/site/subscribe
+2014/03/21 10:28:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/default/login
+---
+2014/03/21 10:28:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin
+---
+2014/03/21 10:28:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/approval/index
+---
+2014/03/21 10:28:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/default/index
+---
+2014/03/21 10:32:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/subscribe
+---
+2014/03/21 10:32:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/sale/index
+---
+2014/03/21 10:32:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/subscribe
+---
+2014/03/21 10:32:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/sale/index
+---
+2014/03/21 10:32:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/subscribe/index
+---
+2014/03/21 10:32:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/ingredient/index
+---
+2014/03/21 10:32:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/subscribe/index
+---
+2014/03/21 10:33:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/sale/index
+---
+2014/03/21 10:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/mainAdmin.css".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/mainAdmin.c...')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/css/mainAdmin.css
+HTTP_REFERER=http://localhost/wokngo/admin/subscribe/index
+---
