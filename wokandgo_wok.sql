@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 26, 2014 at 10:59 PM
+-- Generation Time: Mar 21, 2014 at 12:24 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `approval` (
   `approval_text` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`approval_id`),
   KEY `item_id` (`item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `ingredient` (
   `ingredient_image` varchar(120) NOT NULL,
   PRIMARY KEY (`ingredient_id`),
   KEY `ingredient_match_name` (`ingredient_match_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `ingredient`
@@ -86,7 +86,8 @@ INSERT INTO `ingredient` (`ingredient_id`, `ingredient_name`, `ingredient_match_
 (1, 'Egg Noodles', 'egg noodles', 'eggnoodles.jpg'),
 (2, 'Carrots', 'carrots', 'carrots.jpg'),
 (3, 'Hot Chili Sauce', 'chili sauce', 'hotchilisauce.jpg'),
-(4, 'Shrimp', 'shrimp', 'shrimp.jpg');
+(4, 'Shrimp', 'shrimp', 'shrimp.jpg'),
+(8, 'test', 'test2', '1395403856192.jpg');
 
 -- --------------------------------------------------------
 
@@ -113,8 +114,8 @@ CREATE TABLE IF NOT EXISTS `item` (
 --
 
 INSERT INTO `item` (`item_id`, `customer_id`, `item_name`, `item_seo_name`, `item_ingredients`, `item_image`, `item_description`, `item_created_at`) VALUES
-(1, 1, 'Ninja Box', 'ninja-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, 'With this ninja box, your food will disappear before you know it', '2014-02-24 11:41:54'),
-(2, 1, 'Second Ninja Box', 'second-ninja-box', 'egg noodles', NULL, 'I LOVE THIS BOX! I ALWAYS ORDER IT! You must try it!', '2014-02-23 08:41:54'),
+(1, 1, 'Ninja Box', 'ninja-box', 'egg noodles, shrimp, chili sauce, carrots', '139498226177.jpg', 'With this ninja box, your food will disappear before you know it', '2014-03-19 23:28:21'),
+(2, 1, 'Second Ninja Box', 'second-ninja-box', 'egg noodles', NULL, 'Changing second ninja box description', '2014-03-19 23:26:03'),
 (3, 2, 'Chicken Box', 'chicken-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, 'Chicken box, pun intended!', '2014-02-24 08:41:54'),
 (4, 2, 'Second Chicken Box', 'second-chicken-box', 'egg noodles', NULL, 'One chicken box wasn''t enough, so we made a second!', '2014-02-24 09:41:54'),
 (5, 2, 'Fat Box', 'fat-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, 'If you''re fat, or want to be fat, then this box is for you!', '2014-02-23 19:41:54'),
@@ -122,7 +123,7 @@ INSERT INTO `item` (`item_id`, `customer_id`, `item_name`, `item_seo_name`, `ite
 (7, 2, 'The Hungry Box', 'the-hungry-box', 'egg noodles, shrimp, chili sauce, carrots', NULL, 'This box is for you if you''re starving!', '2014-02-25 19:15:54'),
 (8, 2, 'The Feeder', 'the-feeder', 'egg noodles', NULL, 'Feed your family and friends with this feeder box! ', '2014-02-25 06:41:54'),
 (9, 1, 'Dancing Monkey', 'dancing-monkey', 'egg noodles, shrimp, chili sauce, carrots', NULL, 'Enjoy the laughter of the dancing monkey!', '2014-02-25 19:41:54'),
-(10, 1, 'Ascia Favorite', 'ascia-favorite', 'egg noodles', NULL, NULL, '2014-02-25 19:41:54'),
+(10, 1, 'Ascia Favorite', 'ascia-favorite', 'egg noodles', '139529613196.jpg', 'Xobb we are enjoying our time here together.', '2014-03-20 09:17:05'),
 (11, 3, 'Plain Chicken', 'plain-chicken', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL, '2014-02-25 19:41:54'),
 (12, 3, 'Extra Beef', 'extra-beef', 'egg noodles', NULL, 'I LOVE THIS BOX! I ALWAYS ORDER IT! You must try it!', '2014-02-25 19:41:54'),
 (13, 3, 'Hunger Strikes', 'hunger-strikes', 'egg noodles, shrimp, chili sauce, carrots', NULL, NULL, '2014-02-25 19:41:54'),
@@ -174,6 +175,26 @@ INSERT INTO `sale` (`sale_id`, `item_id`, `sale_quantity`, `sale_datetime`) VALU
 (18, 17, 1, '2014-02-14 15:24:27'),
 (19, 18, 3, '2014-02-15 15:24:27'),
 (20, 19, 5, '2014-02-16 15:27:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscribe`
+--
+
+CREATE TABLE IF NOT EXISTS `subscribe` (
+  `subscribe_id` int(11) NOT NULL AUTO_INCREMENT,
+  `subscribe_email` varchar(200) NOT NULL,
+  PRIMARY KEY (`subscribe_id`),
+  UNIQUE KEY `subscribe_email` (`subscribe_email`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `subscribe`
+--
+
+INSERT INTO `subscribe` (`subscribe_id`, `subscribe_email`) VALUES
+(1, 'khalid@khalidm.net');
 
 --
 -- Constraints for dumped tables
