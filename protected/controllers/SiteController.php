@@ -51,6 +51,7 @@ class SiteController extends Controller {
      * About Page
      */
     public function actionAbout() {
+        $this->layout = "main";
         $this->render('about');
     }
 
@@ -58,6 +59,7 @@ class SiteController extends Controller {
      * Franchise Page
      */
     public function actionFranchise() {
+        $this->layout = "main";
         $this->render('franchise');
     }
 
