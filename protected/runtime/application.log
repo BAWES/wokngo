@@ -4754,3 +4754,35 @@ Stack trace:
 REQUEST_URI=/wokngo/css/mainAdmin.css
 HTTP_REFERER=http://localhost/wokngo/admin/approval/index
 ---
+2014/03/21 10:16:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "subscribe".' in C:\wamp\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('subscribe')
+#1 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#3 {main}
+REQUEST_URI=/wokngo/subscribe
+---
+2014/03/21 10:16:25 [error] [exception.CException] exception 'CException' with message 'SiteController and its behaviors do not have a method or closure named "performAjaxValidation".' in C:\wamp\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\wokngo\protected\controllers\SiteController.php(54): CComponent->__call('performAjaxVali...', Array)
+#1 C:\wamp\www\wokngo\protected\controllers\SiteController.php(54): SiteController->performAjaxValidation(Object(Subscribe))
+#2 C:\wamp\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionSubscribe()
+#3 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\wamp\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('subscribe')
+#7 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/subscribe')
+#8 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#10 {main}
+REQUEST_URI=/wokngo/site/subscribe
+---
+2014/03/21 10:18:55 [error] [php] Undefined index: Customer (C:\wamp\www\wokngo\protected\controllers\SiteController.php:57)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/site/subscribe

@@ -145,7 +145,7 @@ $this->pageTitle = Yii::app()->name;
 <section id='subscribe'>
     <h1>TASTY NEWS!</h1>
     <p>Subscribe Now</p>
-    <form method='post'>
+    <form method='post' action="<?php echo Yii::app()->createUrl('site/subscribe') ?>">
         <input type='email' name='email' class='email' placeholder='Your Email' required/>
         <div class='submit'></div>
     </form>

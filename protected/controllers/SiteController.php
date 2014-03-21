@@ -33,8 +33,8 @@ class SiteController extends Controller {
         $newBoxes = Item::model()->latest()->findAll();
 
         //Trending Boxes
-        $trendingBoxes = Item::trendingItems(1,10);
-        
+        $trendingBoxes = Item::trendingItems(1, 10);
+
         //Top 10 Boxes
         $top10Boxes = Item::rankedItems();
 
@@ -45,7 +45,36 @@ class SiteController extends Controller {
         ));
     }
 
-    
+    /**
+     * Email subscription
+     */
+    public function actionSubscribe() {
+        $model = new Subscribe();
+
+        $this->performAjaxValidation($model);
+
+        if (isset($_POST['Subscribe'])) {
+            $model->attributes = $_POST['Subscribe'];
+            if ($model->save()) {
+                //render confirmation of subscription page
+            }
+        }
+
+        $this->render('subscribe', array(
+            'model' => $model
+        ));
+    }
+
+    /**
+     * Performs the AJAX validation.
+     * @param Customer $model the model to be validated
+     */
+    protected function performAjaxValidation($model) {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'subscribe-form') {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+    }
 
     /**
      * About Page
