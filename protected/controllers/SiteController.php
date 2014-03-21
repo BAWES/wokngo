@@ -56,7 +56,8 @@ class SiteController extends Controller {
         if (isset($_POST['Subscribe'])) {
             $model->attributes = $_POST['Subscribe'];
             if ($model->save()) {
-                //render confirmation of subscription page
+                Yii::app()->user->setFlash('subscribe', 'Thank you for signing up for our newsletter.');
+                $this->refresh();
             }
         }
 

@@ -7,6 +7,13 @@ $this->pageTitle=Yii::app()->name . ' - Subscribe';
 $this->pageHeader = "Subscribe";
 ?>
 
+<?php if(Yii::app()->user->hasFlash('subscribe')): ?>
+
+<div class="flash-success">
+	<?php echo Yii::app()->user->getFlash('subscribe'); ?>
+</div>
+
+<?php else: ?>
 
 <div class="form">
 
@@ -32,3 +39,5 @@ $form=$this->beginWidget('CActiveForm', array(
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+
+<?php endif; ?>
