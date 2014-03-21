@@ -32,10 +32,10 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'ingredient_id',
+		//'ingredient_id',
 		'ingredient_name',
 		'ingredient_match_name',
-		'ingredient_image',
+		//'ingredient_image',
 		array(
 			'class'=>'CButtonColumn',
 		),
