@@ -87,7 +87,7 @@
         <footer>
             <section id='feeds'>
                 <!-- Facebook Page Feed -->
-                <section class='socialFeed' id='facebook'>
+                <section class='socialFeed' id='facebook' style="text-align:center;">
                     <a href='https://www.facebook.com/wokngokw' target="_blank">WOK&amp;GO On <span>Facebook</span></a>
                     <div style="margin-top:0.5em;">
                         <div class="fb-like-box" data-href="https://www.facebook.com/wokngokw" data-height="200" data-colorscheme="dark" data-show-faces="false" data-header="false" data-stream="true" data-show-border="false"></div>
@@ -95,7 +95,7 @@
                 </section>
 
                 <!-- Twitter Page Feed -->
-                <section class='socialFeed' id='twitter'>
+                <section class='socialFeed' id='twitter' style="text-align:center;">
                     <a href='https://twitter.com/WokNGo_KW' target="_blank">WOK&amp;GO On <span>Twitter</span></a>
                     <div style="margin-top:0.5em;">
                         <a class="twitter-timeline" href="https://twitter.com/WokNGo_KW" data-widget-id="441693557569511424">Tweets by @WokNGo_KW</a>
@@ -106,7 +106,7 @@
                 </section>
 
                 <!-- Instagram Page Feed -->
-                <section class='socialFeed' id='instagram'>
+                <section class='socialFeed' id='instagram' style="text-align:center;">
                     <a href='http://instagram.com/wokngo_kw' target="_blank">WOK&amp;GO On <span>Instagram</span></a>
                     <div style="margin-top:0.5em; margin-left:0.5em;">
                         <iframe src="http://www.intagme.com/in/?u=d29rbmdvX2t3fHNsfDMwMHwyfDN8fHllc3w1fHVuZGVmaW5lZA==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:200px; height: 200px" ></iframe>
@@ -116,14 +116,6 @@
             </section>
             
             <section id='about'>
-                <h1>About us</h1>
-                <p>
-                    Wok&Go is about fresh, nutritious, tasty food that is cooked in front of your eyes and served to you in minutes.
-                    <br/><br/>Sounds simple? It is. Simple, affordable, irresistible food!
-
-                </p>
-                <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/layout/logosmall.png' alt='Wok Logo 2'/>
-                <div class='clear'></div>
             </section>
 
             <section id='copyright'>

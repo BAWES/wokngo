@@ -136,7 +136,7 @@ $this->pageTitle = Yii::app()->name;
         <h1><span>WOK</span>&amp;GO</h1>
         <h2>THE TASTE OF ASIA</h2>
         <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+           Wok&Go is about Fresh, Nutritious, Tasty food that is cooked in front of your eyes and served to you in minutes.
         </p>
     </div>
 </section>
@@ -155,6 +155,6 @@ $this->pageTitle = Yii::app()->name;
 <section id='orders'>
     <h1>WE DELIVER</h1>
     <p>Please call us 22202225</p>
-    <a href='http://www.6alabat.com'>Order Online</a>
+    <a href='http://www.talabat.com/kw/en/restaurant/953/wok--go-kuwait' target="_blank">Order Online</a>
 </section>
 <div class='clear'></div>

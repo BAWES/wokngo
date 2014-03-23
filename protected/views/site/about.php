@@ -27,30 +27,19 @@ $this->pageHeader = "About Us";
     </ul>
 </div>
 
-<header id='page'>
-    <h1>About Us</h1>
+<header id='page' style="background:none; height:auto;">
+    <h1 style="color:black; margin-top:0.7em;">About Us</h1>
 </header>
 
-<section id="pageContent">
-    <p>
-        The concept of Wok&Go was formed in 2007 by founder Des Pheby's travels to New York and through his love for the 
-        aromas and tastes of the east. "I wanted to recreate the taste of Asia in a casual and relaxed atmosphere". 
-        Wok&Go provides people with tasty and healthy eating at a reasonable price. Our busy lifestyles don't always 
-        afford us the time to wait in a traditional restaurant. Wok&Go gives us the delicious taste of Asia cooked to 
-        order in only a few minutes. You can then choose to eat at the benches and tables inside or take it home in the box.
+<section id="pageContent" style="">
+    <p style="text-align:justify;">
+        What inspires a young English man to launch an innovative, authentic Asian fast food concept in the UK? 
     </p>
-
-    <p>
-        Our menu is fusion of the various tastes of Asia. It includes Thai Malaysian 
-        Indonesian Chinese and Japanese in the form of wok tossed noodles, Stir fries, curries, soups, vegetarian, rice meals 
-        and our even healthier skinny noodles. The healthy and fresh ingredients used in most Asian cuisine means that Wok&Go 
-        is a great choice for the health conscious. 
-        Most of our menu items are a minimum of 95% fat free, and many of these contain less than 3g of fat per hundred g.
+    <p style="text-align:justify;">
+        A love of the taste and aromas of the East and time spent in the Asian dining districts of the Big Apple. “I got home from a trip to New York in 2007 reeling with a sense of opportunity and excitement about the myriad of quick, casual, convenient dining experiences on offer. I wanted to recreate authentic, Asian cuisine in a casual and relaxed atmosphere. For me, the answer was Wok&Go, a tasty, healthy, fresh and nutritious Asian food cooked to order in minutes before the customers’ eyes, that they could eat on the hop at simple tables and benches or take away in a box.” 
     </p>
-
-    <p>
-        Wok&Go is spreading its tastes of Asia across the UK with stores in Chester, Liverpool, Nottingham, 
-        Leeds, Birmingham and Hull and internationally in Kuwait.
+    <p style="text-align:justify;">
+        Wok&Go first opened its doors in Chester in 2008 and has grown into a unique brand led fusion food chain blending the best of Thai, Malaysian, Indonesian, Chinese and Japanese cuisine. Now with franchises across the North West, North East, Southern England and the Middle East, with Mainland Europe and the USA coming soon...Wok&Go has become the UK's number one Noodle Bar Chain.
     </p>
 </section>
 

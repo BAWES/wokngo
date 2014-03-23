@@ -87,5 +87,7 @@ return array(
     'params' => array(
         // this is used in contact page
         'adminEmail' => 'khalid@khalidm.net',
+        'firas' => 'malhomsi@ali-alghanim.net',
+        'hassan' => 'ahassan@ali-alghanim.net',
     ),
 );
