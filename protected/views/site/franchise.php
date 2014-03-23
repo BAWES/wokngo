@@ -42,7 +42,7 @@ $this->pageHeader = "Franchise";
         The secret ingredient…<span style="color:#16a0da;">you! </span>
     </p>
     <p  style="text-align:justify;">
-        Our franchises tend to have some traits in common: 
+        Our franchisees tend to have some traits in common: 
     </p>
     <p  style="text-align:justify;">
         <span style="color:#16a0da;">Self-motivated:</span> 
