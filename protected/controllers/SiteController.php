@@ -29,15 +29,22 @@ class SiteController extends Controller {
          */
         $this->layout = "main";
 
-        //New Boxes
-        $newBoxes = Item::model()->latest()->findAll();
+        $numBoxes = Item::model()->findAll();
+        if(count($numBoxes)){
+            //New Boxes
+            $newBoxes = Item::model()->latest()->findAll();
 
-        //Trending Boxes
-        $trendingBoxes = Item::trendingItems(1, 10);
+            //Trending Boxes
+            $trendingBoxes = Item::trendingItems(1, 10);
 
-        //Top 10 Boxes
-        $top10Boxes = Item::rankedItems();
-
+            //Top 10 Boxes
+            $top10Boxes = Item::rankedItems();
+        }
+        else{
+            $newBoxes = "";
+            $trendingBoxes = "";
+            $top10Boxes = "";
+        }
         $this->render('index', array(
             'newBoxes' => $newBoxes,
             'trendingBoxes' => $trendingBoxes,

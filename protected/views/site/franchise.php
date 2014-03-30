@@ -38,5 +38,5 @@ $this->pageHeader = "Franchise";
     You don’t need previous retail or catering experience, but some management experience is an advantage in running your own demanding and exciting retail business. 
 </p>
 <p>
-    Thank you for considering a Wok&Go franchise as your future business venture.<br/><br/> For more information, please contact us at <a href="mailto:franchise@wokandgo.me" style="color:white; font-weight:bold; display:inline;">franchise@wokandgo.me</a>
+    Thank you for considering a Wok&Go franchise as your future business venture.<br/><br/> For more information, please contact us at <a href="mailto:franchise@wokandgo.me" style=" font-weight:bold; display:inline;">franchise@wokandgo.me</a>
 </p>

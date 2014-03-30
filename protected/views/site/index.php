@@ -11,19 +11,19 @@ $this->pageTitle = Yii::app()->name;
 <div class="slider">
     <ul>
         <li>
-            <h1>Sweet Chili</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#">Our Menu</a>
+            <h1>Our Menu</h1>
+            <p>Fresh, nutritious, and tasty food</p>
+            <a href="menu.pdf" target="_blank">Download</a>
         </li>
         <li style="background-color:#fa9312;">
             <h1>Order Online!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#">Order Now</a>
+            <p>Wok&Go is about Fresh, Nutritious, Tasty food that is cooked in front of your eyes and served to you in minutes</p>
+            <a href="http://www.talabat.com/kw/en/restaurant/953/wok--go-kuwait" target="_blank">Order Now</a>
         </li>
         <li style="background-color:#10b58c;">
             <h1>Franchise</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="#">More Info</a>
+            <p>Now with franchises across the North West, North East, Southern England and the Middle East, with Mainland Europe and the USA coming soon...<br/>Wok&Go has become the UK's number one Noodle Bar Chain</p>
+            <a href="<?php echo Yii::app()->createUrl('site/franchise'); ?>" target="_blank">More Info</a>
         </li>
     </ul>
 </div>
@@ -42,6 +42,7 @@ $this->pageTitle = Yii::app()->name;
             <div class='boxes'>
                 <?php
                 $i = 0;
+                if($newBoxes){
                 foreach ($newBoxes as $box) {
                     $i++;
                     ?>
@@ -53,7 +54,7 @@ $this->pageTitle = Yii::app()->name;
                         <div class='clear'></div>
                     </a>
 
-<?php } ?>
+                <?php }} ?>
             </div>
         </div>
 
@@ -71,6 +72,7 @@ $this->pageTitle = Yii::app()->name;
             <div class='boxes'>
                 <?php
                 $i = 0;
+                if($trendingBoxes){
                 foreach ($trendingBoxes as $box) {
                     $i++;
                     if ($i == 11)
@@ -84,7 +86,7 @@ $this->pageTitle = Yii::app()->name;
                         <div class='clear'></div>
                     </a>
 
-<?php } ?>
+                <?php }} ?>
             </div>
         </div>
 
@@ -102,6 +104,7 @@ $this->pageTitle = Yii::app()->name;
             <div class='boxes'>
                 <?php
                 $i = 0;
+                if($top10Boxes){
                 foreach ($top10Boxes as $box) {
                     $i++;
                     if ($i == 11)
@@ -122,7 +125,7 @@ $this->pageTitle = Yii::app()->name;
                         <div class='clear'></div>
                     </a>
 
-<?php } ?>
+                <?php }} ?>
             </div>
         </div>
 
