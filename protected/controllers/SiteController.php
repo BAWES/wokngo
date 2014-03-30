@@ -35,7 +35,9 @@ class SiteController extends Controller {
             $newBoxes = Item::model()->latest()->findAll();
 
             //Trending Boxes
+            if(count($numBoxes)>5){
             $trendingBoxes = Item::trendingItems(1, 10);
+            }else $trendingBoxes = "";
 
             //Top 10 Boxes
             $top10Boxes = Item::rankedItems();

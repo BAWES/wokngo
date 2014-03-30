@@ -7,6 +7,16 @@ class BoxController extends Controller {
         $this->redirect(array('ranking'));
     }
 
+    //MONITOR:: Ranking Page Sorted by Latest
+    public function actionMonitorNew() {
+        //New Boxes
+        $criteria = new CDbCriteria();
+        $criteria->with = array('customer', 'totalSold');
+        $newBoxes = Item::model()->latest(10)->findAll($criteria);
+
+        $this->renderPartial('new', array('newBoxes' => $newBoxes));
+    }
+    
     //Ranking Page Sorted by Latest
     public function actionNew() {
         //New Boxes
