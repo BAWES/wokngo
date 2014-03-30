@@ -89,5 +89,6 @@ return array(
         'adminEmail' => 'khalid@khalidm.net',
         'firas' => 'malhomsi@ali-alghanim.net',
         'hassan' => 'ahassan@ali-alghanim.net',
+        'sami' => 'alnafisis@hotmail.com',
     ),
 );

@@ -122,6 +122,7 @@ class SiteController extends Controller {
 
                 mail(Yii::app()->params['firas'], $subject, $model->body, $headers);
                 mail(Yii::app()->params['hassan'], $subject, $model->body, $headers);
+                mail(Yii::app()->params['sami'], $subject, $model->body, $headers);
                 Yii::app()->user->setFlash('contact', 'Thank you for contacting us. We will respond to you as soon as possible.');
                 $this->refresh();
             }
