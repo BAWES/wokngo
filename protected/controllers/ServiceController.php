@@ -162,6 +162,7 @@ class ServiceController extends Controller {
             $sale = new Sale();
             $sale->sale_id = $saleId;
             $sale->item_id = (int) $itemId;
+            //error_log("ITEM ID: $itemId");
             $sale->sale_quantity = (int) $saleQuantity;
             $sale->sale_datetime = new CDbExpression("NOW()");
             if ($sale->save())
