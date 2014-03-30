@@ -14,7 +14,7 @@ class BoxController extends Controller {
         $criteria->with = array('customer', 'totalSold');
         $newBoxes = Item::model()->latest(10)->findAll($criteria);
 
-        $this->renderPartial('new', array('newBoxes' => $newBoxes));
+        $this->renderPartial('monitorNew', array('newBoxes' => $newBoxes));
     }
     
     //Ranking Page Sorted by Latest

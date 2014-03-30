@@ -172,7 +172,9 @@ class Item extends CActiveRecord {
                         'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$daysBefore'",
                         'order' => 'sales.sale_quantity DESC'
             )))->findAll();
-
+        if(count($items) <4){
+            return $items;
+        }
         if (count($items) < $numBoxes)
             return Item::trendingItems($trendingDays + 2, $numBoxes);
         return $items;
