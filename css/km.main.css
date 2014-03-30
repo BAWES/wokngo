@@ -9,17 +9,6 @@ input,select
     border: none;
 }
 
-/*Sami ADditional Changes*/
-
-.sami1{background: #48b4e2  url(../images/layout/sliderimage.png) 100% 50% no-repeat;}
-.sami1 #page{background:none; height:auto;}
-.sami2 {color:white; width:42%; float:left; margin-left:10px;}
-.sami3 {color:white; width:50%; float:left; margin-left:10px;}
-
-@media screen and (max-width:48.75em) { /*780px*/
-    .sami1{padding-bottom:500px; background-position:50% 100%;}
-    .sami2,.sami3{width:100%; float:none; margin-left:0;}
-}
 
 /* Yii Framework Styling */
 .errorMessage{color:red; font-size:0.9em;}
