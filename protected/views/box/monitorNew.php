@@ -26,6 +26,17 @@
         <![endif]-->
 
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+        <script>
+            var speed = 10000;
+            setTimeout(refresh, speed);
+            function refresh() {
+
+                $('#rankingList').load("<?php echo Yii::app()->createUrl("box/monitorNew",array('refresh'=>'true')) ?>", function() {
+                    setTimeout(refresh, speed);
+                });
+
+            }
+        </script>
     </head>
     <body>
 
@@ -39,32 +50,6 @@
 
                 <section id='rankingList'>
                     <!-- Start Listing Boxes -->
-                    <?php
-                    $i = 0;
-                    foreach ($newBoxes as $box) {
-                        $i++;
-                        //be sure query for newBoxes has "with" for both customer details and numSold from sales
-                        ?>
-
-
-                        <a href='#'>
-                            <b><?php echo $i; ?></b>
-                            <div class='img'><img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/></div>
-                            <div class='boxDetails'>
-                                <h3><?php echo $box->item_name; ?></h3>
-                                <h4><?php echo $box->customer->customer_name; ?></h4>
-                            </div>
-                            <div class='numSold'>
-                                <?php echo (int) $box->totalSold; ?> <span>Boxes Sold</span>
-                            </div>
-                            <div class='clear'></div>
-                        </a>
-
-                    <?php } ?>
-
-
-
-                    <br style='clear:both;'/>
 
                 </section>
 

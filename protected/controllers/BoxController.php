@@ -8,15 +8,38 @@ class BoxController extends Controller {
     }
 
     //MONITOR:: Ranking Page Sorted by Latest
-    public function actionMonitorNew() {
+    public function actionMonitorNew($refresh = false) {
         //New Boxes
         $criteria = new CDbCriteria();
         $criteria->with = array('customer', 'totalSold');
         $newBoxes = Item::model()->latest(10)->findAll($criteria);
 
-        $this->renderPartial('monitorNew', array('newBoxes' => $newBoxes));
+        if ($refresh) {
+            $i = 0;
+            $output = "";
+            foreach ($newBoxes as $box) {
+                $i++;
+
+                $output .= "
+
+                        <a href='#'>
+                            <b>$i</b>
+                            <div class='img'><img src='" . $box->image . "' alt='" . $box->item_name . "'/></div>
+                            <div class='boxDetails'>
+                                <h3>" . $box->item_name . "</h3>
+                                <h4>" . $box->customer->customer_name . "</h4>
+                            </div>
+                            <div class='numSold'>
+                                " . (int) $box->totalSold . " <span>Boxes Sold</span>
+                            </div>
+                            <div class='clear'></div>
+                        </a>
+                        ";
+            }
+            echo $output." <br style='clear:both;'/>";
+        }else $this->renderPartial('monitorNew', array('newBoxes' => $newBoxes));
     }
-    
+
     //Ranking Page Sorted by Latest
     public function actionNew() {
         //New Boxes
@@ -66,21 +89,21 @@ class BoxController extends Controller {
 
         //Find ingredients that match this box
         $dbCriteria = new CDbCriteria();
-        foreach (explode(",",$box->item_ingredients) as $ingredient) {
+        foreach (explode(",", $box->item_ingredients) as $ingredient) {
             $dbCriteria->compare('ingredient_match_name', trim($ingredient), true, 'OR');
         }
         $ingredients = Ingredient::model()->findAll($dbCriteria);
-        
-        /*Get Sales Grouped by Date*/
+
+        /* Get Sales Grouped by Date */
         $query = Yii::app()->db->createCommand();
         $query->select('date(sale_datetime) as date, sum(sale_quantity) as quantity');
         $query->from('sale');
-        $query->where('item_id=:id', array(':id'=>$box->item_id));
+        $query->where('item_id=:id', array(':id' => $box->item_id));
         $query->group('date');
         $query->order('date');
         $sales = $query->queryAll();
 
-        $this->render('view', array('box' => $box, 'ingredients'=>$ingredients, 'sales'=>$sales));
+        $this->render('view', array('box' => $box, 'ingredients' => $ingredients, 'sales' => $sales));
     }
 
 }
