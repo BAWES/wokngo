@@ -1,68 +1,75 @@
-<?php
-/* @var $this BoxController */
-/* @var $newBoxes Item */
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wok&amp;Go</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-$this->pageTitle = Yii::app()->name . ' - New Wokers';
-?>
+        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/monitor.css?ver=1' type='text/css' />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <!--[if lt IE 8]>
+        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/ie7.css' type='text/css' />
+        <![endif]-->
+
+        <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/favicon.ico" type="image/x-icon">
+
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-1.11.0.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/owl.carousel.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.touchSwipe.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/unslider.min.js"></script>
+
+        <!--[if lt IE9]>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/html5shiv.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/css3mediaqueries.js"></script>
+        <![endif]-->
+
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/main.js"></script>
+    </head>
+    <body>
 
 
-<header id='ranking'>
-    <h1>New Wokers</h1>
-    <h2>Search Boxes</h2>
-    <form method='get' action="<?php echo Yii::app()->createUrl("box/search"); ?>">
-        <select id='type' name='type'>
-            <option value='top'>Top Wokers</option>
-            <option value='trending'>Trending Wokers</option>
-            <option value='new' selected='selected'>New Wokers</option>
-        </select>
-        <input type='text' id='keyword' name='keyword' placeholder='Enter keyword...'/>
-        <a href='#search'>Search</a>
-    </form>
-    <script>
-        $('#type').change(function() {
-            var selected = $(this).val();
-            switch (selected) {
-                case 'top':
-                    window.location = "<?php echo Yii::app()->createUrl("box/ranking"); ?>";
-                    break;
-                case 'trending':
-                    window.location = "<?php echo Yii::app()->createUrl("box/trending"); ?>";
-                    break;
-                case 'new':
-                    window.location = "<?php echo Yii::app()->createUrl("box/new"); ?>";
-                    break;
-            }
-        });
-    </script>
-</header>
+        <!-- Content Area -->
+        <section id='contentArea'>
+            <section id="content">
+                <header id='ranking'>
+                    <h1>New Wokers</h1>
+                </header>
 
-<section id='rankingList'>
-    <!-- Start Listing Boxes -->
+                <section id='rankingList'>
+                    <!-- Start Listing Boxes -->
+                    <?php
+                    $i = 0;
+                    foreach ($newBoxes as $box) {
+                        $i++;
+                        //be sure query for newBoxes has "with" for both customer details and numSold from sales
+                        ?>
 
-    <?php
-    $i = 0;
-    foreach ($newBoxes as $box) {
-        $i++;
-        //be sure query for newBoxes has "with" for both customer details and numSold from sales
-        ?>
 
-        <a href='<?php echo Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name)); ?>'>
-            <b><?php echo $i; ?></b>
-            <div class='img'><img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/></div>
-            <div class='boxDetails'>
-                <h3><?php echo $box->item_name; ?></h3>
-                <h4><?php echo $box->customer->customer_name; ?></h4>
-                <p>
-                    <?php echo $box->item_description; ?>
-                </p>
-            </div>
-            <div class='numSold'>
-                <?php echo (int) $box->totalSold; ?> <span>Boxes Sold</span>
-            </div>
-            <div class='clear'></div>
-        </a>
+                        <a href='#'>
+                            <b><?php echo $i; ?></b>
+                            <div class='img'><img src='<?php echo $box->image; ?>' alt='<?php echo $box->item_name; ?>'/></div>
+                            <div class='boxDetails'>
+                                <h3><?php echo $box->item_name; ?></h3>
+                                <h4><?php echo $box->customer->customer_name; ?></h4>
+                            </div>
+                            <div class='numSold'>
+                                <?php echo (int) $box->totalSold; ?> <span>Boxes Sold</span>
+                            </div>
+                            <div class='clear'></div>
+                        </a>
 
-    <?php } ?>
+                    <?php } ?>
 
-    <br/>
-</section>
+
+
+                    <br style='clear:both;'/>
+
+                </section>
+
+            </section>
+        </section>
+
+    </body>
+</html>

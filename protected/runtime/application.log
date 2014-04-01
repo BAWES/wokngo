@@ -5426,3 +5426,166 @@ Stack trace:
 REQUEST_URI=/wokngo/css/images/layout/sliderimage.png
 HTTP_REFERER=http://localhost/wokngo/about
 ---
+2014/04/01 20:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/owl.caro...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/owl.carousel.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/unslider...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/unslider.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/main.js')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/main.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/jquery-1...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/jquery.t...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/jquery.touchSwipe.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/css/monitor...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/css/monitor.css?ver=1
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/favicon.ico')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/favicon.ico
+---
+2014/04/01 20:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/jquery.t...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/jquery.touchSwipe.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('css')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('css')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/css/monitor...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/css/monitor.css?ver=1
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/main.js')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/main.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/owl.caro...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/owl.carousel.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/jquery-1...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/unslider...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/unslider.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
+2014/04/01 20:22:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('favicon.ico')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('favicon.ico')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/favicon.ico')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/favicon.ico
+---
+2014/04/01 20:22:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "js".' in C:\wamp\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(270): CController->missingAction('js')
+#1 C:\wamp\yii\framework\web\CWebApplication.php(282): CController->run('js')
+#2 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('box/js/jquery-1...')
+#3 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\wokngo\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/wokngo/box/js/jquery-1.11.0.min.js
+HTTP_REFERER=http://localhost/wokngo/box/monitorNew
+---
