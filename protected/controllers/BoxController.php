@@ -90,6 +90,7 @@ class BoxController extends Controller {
             $i = 0;
             $output = "";
             foreach ($trendingBoxes as $box) {
+                if($i==10) break;
                 $i++;
 
                 $output .= "
