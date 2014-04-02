@@ -36,8 +36,80 @@ class BoxController extends Controller {
                         </a>
                         ";
             }
-            echo $output." <br style='clear:both;'/>";
-        }else $this->renderPartial('monitorNew', array('newBoxes' => $newBoxes));
+            echo $output . " <br style='clear:both;'/>";
+        }
+        else
+            $this->renderPartial('monitorNew', array('newBoxes' => $newBoxes));
+    }
+
+    //MONITOR::Ranking Page Sorted by Top Rank
+    public function actionMonitorRanking($refresh = false) {
+        $topBoxes = Item::rankedItems();
+
+        if ($refresh) {
+            $i = 0;
+            $output = "";
+            foreach ($topBoxes as $box) {
+                if($i == 10) break;
+                
+                $i++;
+
+                if ($box['item_image'] == null) {
+                    $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/default.jpg";
+                } else {
+                    $box['item_image'] = Yii::app()->request->baseUrl . "/images/box/" . $box['item_image'];
+                }
+
+                $output .= "
+
+                        <a href='#'>
+                            <b>$i</b>
+                            <div class='img'><img src='" . $box['item_image'] . "' alt='" . $box['item_name'] . "'/></div>
+                            <div class='boxDetails'>
+                                <h3>" . $box['item_name'] . "</h3>
+                                <h4>" . $box['customer_name'] . "</h4>
+                            </div>
+                            <div class='numSold'>
+                                " . (int) $box['sales'] . " <span>Boxes Sold</span>
+                            </div>
+                            <div class='clear'></div>
+                        </a>
+                        ";
+            }
+            echo $output . " <br style='clear:both;'/>";
+        }
+        else
+            $this->renderPartial('monitorRanking', array('topBoxes' => $topBoxes));
+    }
+    
+    //Ranking Page Sorted by Trending
+    public function actionMonitorTrending($refresh = false) {
+        $trendingBoxes = Item::trendingItems(1, 10);
+        
+        if ($refresh) {
+            $i = 0;
+            $output = "";
+            foreach ($trendingBoxes as $box) {
+                $i++;
+
+                $output .= "
+
+                        <a href='#'>
+                            <b>$i</b>
+                            <div class='img'><img src='" . $box->image . "' alt='" . $box->item_name . "'/></div>
+                            <div class='boxDetails'>
+                                <h3>" . $box->item_name . "</h3>
+                                <h4>" . $box->customer->customer_name . "</h4>
+                            </div>
+                            <div class='numSold'>
+                                " . (int) $box->totalSold . " <span>Boxes Sold</span>
+                            </div>
+                            <div class='clear'></div>
+                        </a>
+                        ";
+            }
+            echo $output . " <br style='clear:both;'/>";
+        }else $this->renderPartial('monitorTrending', array('trendingBoxes' => $trendingBoxes));
     }
 
     //Ranking Page Sorted by Latest
