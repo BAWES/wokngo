@@ -158,7 +158,7 @@ class Item extends CActiveRecord {
         return parent::beforeSave();
     }
 
-    public static function trendingItems($trendingDays = 1, $numBoxes = 10) {
+    public static function trendingItems($trendingDays = 1, $numBoxes = 10, $recursed=0) {
         $lastSale = Sale::model()->latest()->find();
         $lastSaleDateTime = strtotime($lastSale->sale_datetime);
 
@@ -175,8 +175,12 @@ class Item extends CActiveRecord {
         if(count($items) <4){
             return $items;
         }
+        if($recursed>2){ //if recursed more than twice - stop recursion
+            return $items;
+        }
         if (count($items) < $numBoxes)
-            return Item::trendingItems($trendingDays + 2, $numBoxes);
+            $recursed++;
+            return Item::trendingItems($trendingDays + 2, $numBoxes, $recursed);
         return $items;
     }
     

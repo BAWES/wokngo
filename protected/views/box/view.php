@@ -3,6 +3,7 @@
 /* @var $box Item */
 /* @var $ingredients Ingredient */
 /* @var $sales array */
+/* @var $ingredientsArr array */
 
 $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 
@@ -35,9 +36,11 @@ $shareLink = Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name))
 <section id='ingredients'>
     <h1>Ingredients</h1>
     <div id='ingredientList' class='owl-carousel'>
-        <?php foreach($ingredients as $ingredient){ ?>
+        <?php 
+        foreach(explode(",", $box->item_ingredients) as $ingredientName){
+        $ingredient = $ingredientsArr[$ingredientName] ?>
         <div>
-            <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/ingredients/<?php echo $ingredient->ingredient_image; ?>' alt="Egg Noodles"/>
+            <img src='<?php echo Yii::app()->request->baseUrl; ?>/images/ingredients/<?php echo $ingredient->ingredient_image; ?>' alt="<?php echo $ingredient->ingredient_name; ?>"/>
             <p><?php echo $ingredient->ingredient_name; ?></p>
         </div>
         <?php } ?>

@@ -5589,3 +5589,19 @@ Stack trace:
 REQUEST_URI=/wokngo/box/js/jquery-1.11.0.min.js
 HTTP_REFERER=http://localhost/wokngo/box/monitorNew
 ---
+2014/04/06 10:44:59 [error] [php] Undefined index:  shrimp (C:\wamp\www\wokngo\protected\views\box\view.php:40)
+Stack trace:
+#0 C:\wamp\yii\framework\web\CController.php(869): BoxController->renderFile()
+#1 C:\wamp\yii\framework\web\CController.php(782): BoxController->renderPartial()
+#2 C:\wamp\www\wokngo\protected\controllers\BoxController.php(186): BoxController->render()
+#3 unknown(0): BoxController->actionView()
+#4 C:\wamp\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 C:\wamp\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\wamp\yii\framework\web\CController.php(286): BoxController->runAction()
+#8 C:\wamp\yii\framework\web\CController.php(265): BoxController->runActionWithFilters()
+#9 C:\wamp\yii\framework\web\CWebApplication.php(282): BoxController->run()
+#10 C:\wamp\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\wamp\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\wamp\www\wokngo\index.php(9): CWebApplication->run()
+REQUEST_URI=/wokngo/box/view/ninja-box
