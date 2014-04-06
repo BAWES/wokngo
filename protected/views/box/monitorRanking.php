@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/monitor.css?ver=1' type='text/css' />
+        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/monitor.css?ver=4' type='text/css' />
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <!--[if lt IE 8]>

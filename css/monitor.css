@@ -297,8 +297,8 @@ header#ranking a{
 
 
 /*Ranking Boxes*/
-#rankingList{padding-top:2em; width:100%;/*940px*/ margin:0 auto;}
-#rankingList a{display:block; margin-bottom:1.25em;/*20px*/ color:#000;}
+#rankingList{padding-top:0.2em; width:100%;/*940px*/ margin:0 auto;}
+#rankingList a{display:block; margin-bottom:0.2em; color:#000;}
 
 #rankingList b{text-align:center; font-size:1.125em;/*18px/16*/
                color:#fff; float:left;
@@ -561,7 +561,7 @@ header#page h1{color:#fff; font-size:1.625em;/*26px/16*/ padding-top:0.65em; wid
 
     /*RANKING PAGE*/
     header#ranking{}
-    header#ranking h1{padding-top:1.1em; padding-left:1em; padding-bottom:1.05em;}
+    header#ranking h1{padding-top:0.5em; padding-left:1em; padding-bottom:0.5em;}
     header#ranking h2{padding-left:1.7em;}
     header#ranking select{margin-left:1.9em;margin-bottom:1.5em;}
     header#ranking a{margin-left:1.9em; }
@@ -570,7 +570,7 @@ header#page h1{color:#fff; font-size:1.625em;/*26px/16*/ padding-top:0.65em; wid
 
     /*Ranking Boxes*/
 
-    #rankingList .boxDetails{ width:50%;}
+    #rankingList .boxDetails{ width:45%;}
     #rankingList .boxDetails p{display:block;}
 	
 	#rankingList a{ margin-left:1%; width:48%; float:left;}
