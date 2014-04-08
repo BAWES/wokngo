@@ -153,9 +153,11 @@ class Item extends CActiveRecord {
         $seoName = preg_replace("/[\s_]/", "-", $seoName);
 
         $this->item_seo_name = $seoName;
-        $this->item_created_at = new CDbExpression("NOW()");
+        
 
         if ($this->isNewRecord) {
+            $this->item_created_at = new CDbExpression("NOW()");
+            
             //do not send email if this is the customer's first box
             $customerItems = $this->customer->items;
             if (count($customerItems) > 1) {
