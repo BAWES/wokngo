@@ -1,6 +1,8 @@
 <?php
 
 class ServiceController extends Controller {
+    
+    private $integPassword = "sami-khalid-adil-bijith"; //Integration Password to add security
 
     public function actions() {
         return array(
@@ -17,11 +19,14 @@ class ServiceController extends Controller {
      * @param string customer Phone Number
      * @param string customer Email
      * @param string customer Civil Id
+     * @param string Integration Password
      * @return string confirmation message "created"
      * @soap
      */
-    public function createCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId) {
+    public function createCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId, $integrationPassword = "sami-khalid-adil-bijith") {
         $customerId = (int) $customerId;
+        
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
 
         $customer = Customer::model()->findByPk($customerId);
         if (!$customer) {
@@ -47,10 +52,13 @@ class ServiceController extends Controller {
      * @param string customer Phone Number
      * @param string customer Email
      * @param string customer Civil Id
+     * @param string Integration Password
      * @return string confirmation message "updated"
      * @soap
      */
-    public function updateCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId) {
+    public function updateCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId, $integrationPassword = "sami-khalid-adil-bijith") {
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
+        
         $customerId = (int) $customerId;
 
         $customer = Customer::model()->findByPk($customerId);
@@ -72,10 +80,13 @@ class ServiceController extends Controller {
     
     /**
      * @param int customer Id
+     * @param string Integration Password
      * @return string confirmation message "deleted"
      * @soap
      */
-    public function deleteCustomer($customerId) {
+    public function deleteCustomer($customerId, $integrationPassword = "sami-khalid-adil-bijith") {
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
+        
         $customerId = (int) $customerId;
         Customer::model()->deleteByPk($customerId);
         return "deleted";
@@ -86,10 +97,13 @@ class ServiceController extends Controller {
      * @param int customer ID
      * @param string item name
      * @param string items ingredients
+     * @param string Integration Password
      * @return string confirmation message "created"
      * @soap
      */
-    public function createItem($itemId, $customerId, $itemName, $itemIngredients) {
+    public function createItem($itemId, $customerId, $itemName, $itemIngredients, $integrationPassword = "sami-khalid-adil-bijith") {
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
+        
         $itemId = (int) $itemId;
 
         $item = Item::model()->findByPk($itemId);
@@ -114,10 +128,13 @@ class ServiceController extends Controller {
      * @param int customer ID
      * @param string item name
      * @param string items ingredients
+     * @param string Integration Password
      * @return string confirmation message "updated"
      * @soap
      */
-    public function updateItem($itemId, $customerId, $itemName, $itemIngredients) {
+    public function updateItem($itemId, $customerId, $itemName, $itemIngredients, $integrationPassword = "sami-khalid-adil-bijith") {
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
+        
         $itemId = (int) $itemId;
 
         $item = Item::model()->findByPk($itemId);
@@ -139,10 +156,13 @@ class ServiceController extends Controller {
 
     /**
      * @param int The Item/Box ID
+     * @param string Integration Password
      * @return string confirmation message "deleted"
      * @soap
      */
-    public function deleteItem($itemId) {
+    public function deleteItem($itemId, $integrationPassword = "sami-khalid-adil-bijith") {
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
+        
         $itemId = (int) $itemId;
         Item::model()->deleteByPk($itemId);
         return "deleted";
@@ -152,10 +172,13 @@ class ServiceController extends Controller {
      * @param int The sale id
      * @param int The Item/Box Id
      * @param int quantity of item sold
+     * @param string Integration Password
      * @return string confirmation message "created"
      * @soap
      */
-    public function createSale($saleId, $itemId, $saleQuantity) {
+    public function createSale($saleId, $itemId, $saleQuantity, $integrationPassword = "sami-khalid-adil-bijith") {
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
+        
         $saleId = (int) $saleId;
         $sale = Sale::model()->findByPk($saleId);
         if (!$sale) {
@@ -176,10 +199,13 @@ class ServiceController extends Controller {
     
     /**
      * @param int The Item/Box ID
+     * @param string Integration Password
      * @return string confirmation message "deleted"
      * @soap
      */
-    public function deleteSale($saleId) {
+    public function deleteSale($saleId, $integrationPassword = "sami-khalid-adil-bijith") {
+        if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
+        
         $saleId = (int) $saleId;
         Sale::model()->deleteByPk($saleId);
         return "deleted";
