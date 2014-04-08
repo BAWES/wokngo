@@ -118,7 +118,7 @@ class BoxController extends Controller {
         //New Boxes
         $criteria = new CDbCriteria();
         $criteria->with = array('customer', 'totalSold');
-        $newBoxes = Item::model()->latest(10)->findAll($criteria);
+        $newBoxes = Item::model()->findAll($criteria);
 
         $this->render('new', array('newBoxes' => $newBoxes));
     }
