@@ -16,17 +16,25 @@ class SiteController extends Controller {
             ),
         );
     }
+    
+    /**
+     * This is the default 'index' action that is invoked
+     * when an action is not explicitly requested by users.
+     */
+    public function actionTestIntegration() {
+        /* SOAP TEST */
+        /*
+          $client = new SoapClient('http://localhost/wokngo/index.php/service/soap');
+          echo $client->updateCustomer(1,"Khalid Al-Mutawa","99811042","khalid@khalidm.net","289100500862");
+         */
+    }
 
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
-        /* SOAP TEST */
-        /*
-          $client = new SoapClient('http://localhost/wokngo/index.php/service/soap');
-          echo $client->updateCustomer(1,"Khalid Al-Mutawa","99811042","khalid@khalidm.net","289100500862");
-         */
+        
         $this->layout = "main";
 
         $numBoxes = Item::model()->findAll();
