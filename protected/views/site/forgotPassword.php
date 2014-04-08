@@ -19,7 +19,7 @@ $form=$this->beginWidget('CActiveForm', array(
 )); ?>
 
     <p>
-        Please fill out the form below to reset your password
+        Please fill out the form to reset your password
     </p>
 
 	<div class="row">

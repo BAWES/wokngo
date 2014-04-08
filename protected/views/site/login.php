@@ -39,6 +39,10 @@ $form=$this->beginWidget('CActiveForm', array(
 		<?php echo $form->label($model,'rememberMe'); ?>
 		<?php echo $form->error($model,'rememberMe'); ?>
 	</div>
+    
+        <div class="row"><br/>
+            <a href="<?php echo Yii::app()->createUrl("site/forgotPassword"); ?>">Forgot Password</a>
+        </div>
 
 	<div class="row buttons" style="margin-top:1em;">
 		<?php echo CHtml::submitButton('Sign in', array('class' => 'genericButton')); ?>
