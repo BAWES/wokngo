@@ -161,7 +161,6 @@ class Item extends CActiveRecord {
             //do not send email if this is the customer's first box
             $customerItems = $this->customer->items;
             if (count($customerItems) > 1) {
-                //email/sms this password to customer
                 require_once('class.phpmailer.php');
 
                 $mail = new PHPMailer();
