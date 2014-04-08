@@ -209,15 +209,14 @@ class Item extends CActiveRecord {
                         'condition' => "date(sales.sale_datetime)<='$lastSaleDate' && date(sales.sale_datetime)>='$daysBefore'",
                         'order' => 'sales.sale_quantity DESC'
             )))->findAll();
-        if (count($items) < 4) {
-            return $items;
-        }
+        
         if ($recursed > 2) { //if recursed more than twice - stop recursion
             return $items;
         }
-        if (count($items) < $numBoxes)
+        if (count($items) < $numBoxes){
             $recursed++;
-        return Item::trendingItems($trendingDays + 2, $numBoxes, $recursed);
+            return Item::trendingItems($trendingDays + 2, $numBoxes, $recursed);
+        }
         return $items;
     }
 
