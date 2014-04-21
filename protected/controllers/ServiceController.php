@@ -23,7 +23,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "created"
      * @soap
      */
-    public function createCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function createCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId, $integrationPassword) {
         $customerId = (int) $customerId;
         
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
@@ -56,7 +56,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "updated"
      * @soap
      */
-    public function updateCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function updateCustomer($customerId, $customerName, $customerPhone, $customerEmail, $customerCivilId, $integrationPassword) {
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
         
         $customerId = (int) $customerId;
@@ -84,7 +84,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "deleted"
      * @soap
      */
-    public function deleteCustomer($customerId, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function deleteCustomer($customerId, $integrationPassword) {
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
         
         $customerId = (int) $customerId;
@@ -101,7 +101,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "created"
      * @soap
      */
-    public function createItem($itemId, $customerId, $itemName, $itemIngredients, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function createItem($itemId, $customerId, $itemName, $itemIngredients, $integrationPassword) {
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
         
         $itemId = (int) $itemId;
@@ -132,7 +132,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "updated"
      * @soap
      */
-    public function updateItem($itemId, $customerId, $itemName, $itemIngredients, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function updateItem($itemId, $customerId, $itemName, $itemIngredients, $integrationPassword) {
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
         
         $itemId = (int) $itemId;
@@ -160,7 +160,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "deleted"
      * @soap
      */
-    public function deleteItem($itemId, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function deleteItem($itemId, $integrationPassword) {
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
         
         $itemId = (int) $itemId;
@@ -176,7 +176,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "created"
      * @soap
      */
-    public function createSale($saleId, $itemId, $saleQuantity, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function createSale($saleId, $itemId, $saleQuantity, $integrationPassword) {
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
         
         $saleId = (int) $saleId;
@@ -203,7 +203,7 @@ class ServiceController extends Controller {
      * @return string confirmation message "deleted"
      * @soap
      */
-    public function deleteSale($saleId, $integrationPassword = "sami-khalid-adil-bijith") {
+    public function deleteSale($saleId, $integrationPassword) {
         if($integrationPassword != $this->integPassword) exit("ERROR - KM192832");
         
         $saleId = (int) $saleId;
