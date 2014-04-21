@@ -17,7 +17,7 @@
         <meta name="twitter:description" content="<?php echo CHtml::encode($this->shareDesc); ?>">
         <meta name="twitter:image" content="<?php echo $this->shareImg; ?>">
 
-        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/km.main.css?ver=2' type='text/css' />
+        <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/km.main.css?ver=3' type='text/css' />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.carousel.css" type='text/css' />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.theme.css" type='text/css' />
 
@@ -67,11 +67,11 @@
 
             <nav>
                 <ul>
-                    <li><a href='<?php echo Yii::app()->createUrl('site/index'); ?>'>Home</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('site/about'); ?>'>About Us</a></li>
                     <li><a href='<?php echo Yii::app()->request->baseUrl; ?>/menu.pdf' target="_blank">Menu</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('box/index'); ?>'>Wokers</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('site/franchise'); ?>'>Franchise</a></li>
+                    <li><a href='<?php echo Yii::app()->createUrl('site/locations'); ?>'>Locations</a></li>
                     <li><a href='<?php echo Yii::app()->createUrl('site/contact'); ?>'>Contact Us</a></li>
                     <li id="orderOnline"><a href='http://www.talabat.com/kw/en/restaurant/953/wok--go-kuwait' target="_blank">Order Online <span>From 6alabat.com</span></a></li>
                     <li id="delivery"><a href='tel:22202225'>For Delivery <span>+965 2220 2225</span></a></li>

@@ -103,6 +103,14 @@ class SiteController extends Controller {
         //$this->layout = "main";
         $this->render('about');
     }
+    
+    /**
+     * Location Page
+     */
+    public function actionLocations() {
+        //$this->layout = "main";
+        $this->render('locations');
+    }
 
     /**
      * Franchise Page

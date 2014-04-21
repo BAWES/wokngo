@@ -527,7 +527,7 @@ header#page h1{color:#fff; font-size:1.625em;/*26px/16*/ padding-top:0.65em; wid
     #navLink{display:none;}
     /*DONE RESET*/
 
-    nav a,#signin a,#delivery a, #orderOnline a{padding-left:1.84615384615385em;/*24px/13*/ padding-right:1.84615384615385em;/*24px/13*/ 
+    nav a,#signin a,#delivery a, #orderOnline a{padding-left:1.82em; padding-right:1.82em;
                                                 padding-top:1.4375em; padding-bottom:1.4375em;
                                                 float:left; font-size:0.8125em;/*13px*/ border-left:1px solid #1794cb; border-top:0;
     }
