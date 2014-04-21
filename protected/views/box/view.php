@@ -8,7 +8,7 @@
 $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 
 //Share link
-$shareLink = Yii::app()->createUrl('box/view',array('seo'=>$box->item_seo_name));
+$shareLink = Yii::app()->createAbsoluteUrl('box/view',array('seo'=>$box->item_seo_name));
 ?>
 
 <header id='box'>
