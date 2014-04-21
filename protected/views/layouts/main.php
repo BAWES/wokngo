@@ -5,6 +5,17 @@
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta property="og:title" content="<?php echo CHtml::encode($this->pageTitle); ?>" /> 
+        <meta property="og:description" content="<?php echo CHtml::encode($this->shareDesc); ?>" />
+        <meta property="og:image" content="<?php echo $this->shareImg; ?>" /> 
+        
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@wokngo_kw">
+        <meta name="twitter:creator" content="@wokngo_kw">
+        <meta name="twitter:title" content="<?php echo CHtml::encode($this->pageTitle); ?>">
+        <meta name="twitter:description" content="<?php echo CHtml::encode($this->shareDesc); ?>">
+        <meta name="twitter:image" content="<?php echo $this->shareImg; ?>">
 
         <link rel='stylesheet' href='<?php echo Yii::app()->request->baseUrl; ?>/css/km.main.css?ver=2' type='text/css' />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/owl.carousel.css" type='text/css' />

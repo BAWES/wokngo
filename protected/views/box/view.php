@@ -7,6 +7,10 @@
 
 $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 
+//Share Image
+$this->shareImg = "http://wokandgo.me".$box->image;
+if($box->item_description) $this->shareDesc = $box->item_description;
+
 //Share link
 $shareLink = Yii::app()->createAbsoluteUrl('box/view',array('seo'=>$box->item_seo_name));
 ?>

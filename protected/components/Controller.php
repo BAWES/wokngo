@@ -23,4 +23,9 @@ class Controller extends CController
         
         //Page header used for regular content pages
         public $pageHeader = '';
+        
+        //Facebook + Twitter Share
+        public $shareImg = 'http://wokandgo.me/images/woklogo.jpg';
+        public $shareDesc = 'Wok&Go is about Fresh, Nutritious, Tasty food that is cooked in front of your eyes and served to you in minutes.';
+        
 }
