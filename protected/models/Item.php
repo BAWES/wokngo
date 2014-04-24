@@ -64,6 +64,15 @@ class Item extends CActiveRecord {
             return Yii::app()->request->baseUrl . "/images/box/" . $this->item_image;
         }
     }
+    
+    //return path of share image
+    public function getShareImage() {
+        if ($this->item_image == null) {
+            return Yii::app()->request->baseUrl . "/images/box/fbdefault.jpg";
+        } else {
+            return Yii::app()->request->baseUrl . "/images/box/" . $this->item_image;
+        }
+    }
 
     /**
      * @return array relational rules.

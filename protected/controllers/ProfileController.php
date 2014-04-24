@@ -130,12 +130,15 @@ class ProfileController extends Controller {
                 if($pic!==null){
                     $image = WideImage::load($pic->getTempName());
                     $resized = $image->resize(112, 112,'fill');
+                    $FBresized = $image->resize(250, 250,'fill');
 				
                     $fileName = time().rand(0,200).".".$pic->getExtensionName();
                     $model->logo=$fileName;
                     
                     $filePath = Yii::app()->basePath.'/../images/box/'.$fileName;
+                    $FBfilePath = Yii::app()->basePath.'/../images/box/fb'.$fileName;
                     $resized->saveToFile($filePath);
+                    $FBresized->saveToFile($FBfilePath);
 		}
                 
                 $approval = new Approval();

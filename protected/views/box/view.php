@@ -8,7 +8,7 @@
 $this->pageTitle = Yii::app()->name . ' - '.$box->item_name;
 
 //Share Image
-$this->shareImg = "http://wokandgo.me".$box->image;
+$this->shareImg = "http://wokandgo.me".$box->shareImage;
 if($box->item_description) $this->shareDesc = $box->item_description;
 
 //Share link
