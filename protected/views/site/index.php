@@ -5,6 +5,9 @@
 /* @var $top10Boxes array */
 
 $this->pageTitle = Yii::app()->name;
+
+//set to true to show promotion area
+$showPromotion = false;
 ?>
 
 <!-- Slider -->
@@ -29,6 +32,7 @@ $this->pageTitle = Yii::app()->name;
 </div>
 
 <!-- Wokers Area -->
+<?php if($showPromotion){ ?>
 <section id='wokersArea'>
     <!-- New Wokers -->
     <section id='newWok' class="wokersList">
@@ -132,6 +136,7 @@ $this->pageTitle = Yii::app()->name;
     </section>
     <div class='clear'></div>
 </section>
+<?php } ?>
 
 <!-- About Banner -->
 <section id='aboutBanner' style='background-image:url(<?php echo Yii::app()->request->baseUrl; ?>/images/layout/foodbanner.jpg);'>
